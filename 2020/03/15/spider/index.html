@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="如何制作一个简单的网络爬虫？nodejs实现"><meta name="keywords" content="网站,服务器,操作,对象,疫情,字符,算法,数据,页面,javascript,base64,网页"><meta name="author" content="TankNee"><meta name="copyright" content="TankNee"><title>如何制作一个简单的网络爬虫？nodejs实现 | 归舟棹远</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.1"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#丁香园数据爬取"><span class="toc-number">1.</span> <span class="toc-text">丁香园数据爬取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#联想虚拟货币爬取"><span class="toc-number">2.</span> <span class="toc-text">联想虚拟货币爬取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#信息获取的方式"><span class="toc-number">3.</span> <span class="toc-text">信息获取的方式</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://img.tanknee.cn/blogpicbed/2020/06/2020060186bc451656937.png"></div><div class="author-info__name text-center">TankNee</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/TankNee" target="_blank" rel="noopener">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">83</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">174</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://img.tanknee.cn/blogpicbed/2020/06/20200601a55d4871b02bf.png/imgzip)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">归舟棹远</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">如何制作一个简单的网络爬虫？nodejs实现</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-03-15</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Code/">Code</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1.5k</span><span class="post-meta__separator">|</span><span>阅读时长: 4 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><!--markdown-->接下来有打算每半个月写一点东西，不然写东西的频率太低就会造成正反馈，产出越来越少了。
+
+<p>这段时间一共做了三个爬虫：</p>
+<ul>
+<li>爬取丁香园的疫情数据</li>
+<li>爬取联想的虚拟货币乐豆</li>
+<li>第三个跟第一个类似，不过工作量大一点</li>
+</ul>
+<p>一共用了两种不同的技术，前两个是自己的思路，用的是nodejs+express+superagent，实话实说，nodejs做后台确实对数据很友好，再用一下Sequelize做ORM对象映射，真的非常的方便。</p>
+<p>做这个也是为了熟悉express的架构为以后填坑，虽然坑也不是特别多。</p>
+<p>自己还给Sequelize文档做了一个镜像仓库，方便访问。<a href="https://git.tanknee.cn/tanknee/Sequelize-Docs-zh-CN" target="_blank" rel="noopener">文档</a></p>
+<p>不过用JavaScript写程序有一点着实无法避免，那就是异步操作。</p>
+<p>JavaScript作为浏览器的主要逻辑实现语言，少不了对网络操作的支持，如果浏览器不使用异步来获取数据的话就会有页面加载缓慢等问题，而在JavaScript写的后端中也是避免不了处理异步操作，<strong>比较头疼的就是循环异步操作</strong>，我查了网上很多的文档，主要的解决方案是循环递归嵌套promise，然后保证获取到最后一个promise对象，然后等待他的resolve或者reject。</p>
+<p>来详细说说这几个工程吧。</p>
+<h2 id="丁香园数据爬取"><a href="#丁香园数据爬取" class="headerlink" title="丁香园数据爬取"></a>丁香园数据爬取</h2><p>这个项目是我自发进行的，做了大概有三四天的样子吧。</p>
+<p>分析页面数据</p>
+<p>打开<a href="https://ncov.dxy.cn/ncovh5/view/pneumonia?scene=2&clicktime=1579582238&enterid=1579582238&from=timeline&isappinstalled=0" target="_blank" rel="noopener">丁香园</a>的网站，右键查看网页源码，可以看到丁香园的数据是后端渲染的，所有需要的数据都以json的形式嵌入到html的JavaScript中。</p>
+<img src="https://img.tanknee.cn/blogpicbed/2020/03/202003155d1421c9ee328.png/imgzip"/>
+
+<p>其实最开始的丁香园页面并不是这个样子的，最开始并没有那么直观，都是写在html标签页里。</p>
+<blockquote>
+<p>　我估计是为了方便各位网友爬取它的数据？毕竟写成html＋JavaScript的非常利于爬取</p>
+</blockquote>
+<p>而且里面的数据几乎都已经是完美严格的json格式，只需要使用<code>JSON.parse()</code>就好了。后台也没什么好说的，直接写一个定时器，定时爬取即可。<del>暴露一些接口就能在GitHub上收割</del>。</p>
+<h2 id="联想虚拟货币爬取"><a href="#联想虚拟货币爬取" class="headerlink" title="联想虚拟货币爬取"></a>联想虚拟货币爬取</h2><p>这是酷安老哥找我做的一个项目，毕竟是人生中<strong>第一笔</strong>外包，我犹豫了两分钟马上就开始做了。第一天花了半天研究了页面，分析了重难点。</p>
+<ul>
+<li>每一个账号的货币数量是不同的，需要登陆账号</li>
+<li>联想对单个IP有登录限制，如果单位时间内请求过多就会封锁IP一段时间</li>
+<li>获取网页元素</li>
+</ul>
+<p>第一点是我在这部分中遇到的第一个坑。因为以前做的都是不用登陆的页面，只需要获取的HTML数据就可以直接分析了，所以上网查了一些资料。</p>
+<p>其实要解决起来也很简单，就是模拟登陆操作，获取联想服务器返回的cookie数据，然后之后都带着这个cookie去访问货币查询的页面就好了。</p>
+<blockquote>
+<p>这里穿插一些我对网页安全性的思考：</p>
+<p>网页是安全的吗？</p>
+<p>不是，没有网页是安全的，纯粹的网页几乎不可能是完全安全的，所以很多的网银都需要插上一些硬件工具去确保安全性。</p>
+<p>那么网页可以做到相对安全吗？</p>
+<p>可以，也是应该的。</p>
+<p>使用session或者cookie或是token来区别用户属性，避免未登录的未知用户查看敏感页面，并加上过期特性，保证数据的安全。</p>
+<p>使用不可逆的加密方式对用户输入的密码加以保护，只有这样，后台在不需要知道用户真实密码的情况下确认用户的登录状态。我个人认为MD5加密是一种对我这个水平而言相对较好的用户信息加密方式。</p>
+</blockquote>
+<p>在分析联想的登录界面时，发现了一个让我哭笑不得的地方。</p>
+<ul>
+<li>联想的登录页面的密码是加密的</li>
+<li>加密用的算法是base64，这个不是不可逆的加密算法</li>
+</ul>
+<blockquote>
+<p><strong>百度百科</strong></p>
+<p>Base64是网络上最常见的用于传输8Bit<a href="https://baike.baidu.com/item/字节码/9953683" target="_blank" rel="noopener">字节码</a>的编码方式之一，Base64就是一种基于64个可打印字符来表示<a href="https://baike.baidu.com/item/二进制/361457" target="_blank" rel="noopener">二进制</a>数据的方法。可查看RFC2045～RFC2049，上面有MIME的详细规范。</p>
+<p>Base64编码是从二进制到字符的过程，可用于在<a href="https://baike.baidu.com/item/HTTP" target="_blank" rel="noopener">HTTP</a>环境下传递较长的标识信息。采用Base64编码具有不可读性，需要解码后才能阅读。</p>
+</blockquote>
+<p>甚至在联想的某些登录页面，密码是明文传输的…<strong>我对联想的技术水平是真的无语了</strong>，我就不说是哪几个页面了。</p>
+<p>解决了登录这个问题之后就基本上搞定了一大半。</p>
+<p>而后是运维和调优，其间遇到IP被封锁，我就设了爬取时间间隔，就基本上没出过问题了。</p>
+<h2 id="信息获取的方式"><a href="#信息获取的方式" class="headerlink" title="信息获取的方式"></a>信息获取的方式</h2><p>现在网页主要是两种</p>
+<ol>
+<li>后端渲染的SSR页面，或者是prerender预渲染</li>
+<li>单页面应用，前端请求数据前端渲染</li>
+</ol>
+<p>第二种对爬虫不友好，只能手动去找前端接口，然后看运气能能不能请求到对应的数据，比较随缘。</p>
+<p>第一种的话我现在大多是用的正则表达式，JavaScript对正则还是比较友好的，操作dom也很方便，基本流程就是</p>
+<ul>
+<li>查看网页源码</li>
+<li>找到需要数据</li>
+<li>寻找唯一标识符</li>
+<li>编写正则表达式</li>
+<li>挑选数据并保存或者发送</li>
+</ul>
+<p>在使用正则表达式之前可以使用dom操作工具将需要搜索的范围缩小，便于匹配。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">TankNee</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://neeto.cn/2020/03/15/spider/">https://neeto.cn/2020/03/15/spider/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://neeto.cn">归舟棹远</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%AB%99/">网站</a><a class="post-meta__tags" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><a class="post-meta__tags" href="/tags/%E6%93%8D%E4%BD%9C/">操作</a><a class="post-meta__tags" href="/tags/%E5%AF%B9%E8%B1%A1/">对象</a><a class="post-meta__tags" href="/tags/%E7%96%AB%E6%83%85/">疫情</a><a class="post-meta__tags" href="/tags/%E5%AD%97%E7%AC%A6/">字符</a><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE/">数据</a><a class="post-meta__tags" href="/tags/%E9%A1%B5%E9%9D%A2/">页面</a><a class="post-meta__tags" href="/tags/javascript/">javascript</a><a class="post-meta__tags" href="/tags/base64/">base64</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E9%A1%B5/">网页</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/03/22/558/"><i class="fa fa-chevron-left">  </i><span>WenZhou 202003</span></a></div><div class="next-post pull-right"><a href="/2020/03/09/556/"><span>Shell脚本编程最简尝试</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'tJv0hJ0qmpEgSvlqwrqQbBL9-gzGzoHsz',
+  appKey:'YQyMpfNKSaHjrlBu3kMjwAo1',
+  placeholder:'Write Your Ideas',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer class="footer-bg" style="background-image: url(https://img.tanknee.cn/blogpicbed/2020/06/20200601a55d4871b02bf.png/imgzip)"><div class="layout" id="footer"><div class="copyright">&copy;2019 - 2020 By TankNee</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="icp"><a><span>浙ICP备19040955号</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script src="/js/katex.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

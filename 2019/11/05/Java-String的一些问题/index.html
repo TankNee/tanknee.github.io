@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Java String的一些问题"><meta name="keywords" content="Java,scode,创建,string,对象,abc"><meta name="author" content="TankNee"><meta name="copyright" content="TankNee"><title>Java String的一些问题 | 归舟棹远</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.1"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://img.tanknee.cn/blogpicbed/2020/06/2020060186bc451656937.png"></div><div class="author-info__name text-center">TankNee</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/TankNee" target="_blank" rel="noopener">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">83</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">174</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://img.tanknee.cn/blogpicbed/2020/06/20200601a55d4871b02bf.png/imgzip)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">归舟棹远</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">Java String的一些问题</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-05</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Code/">Code</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1k</span><span class="post-meta__separator">|</span><span>阅读时长: 3 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><!--markdown-->[scode type="share"]String str=new String("abc");   紧接着这段代码之后的往往是这个问题，那就是这行代码究竟创建了几个String对象呢？[/scode]
+
+<p>[scode type=”blue”]相信大家对这道题并不陌生，答案也是众所周知的，2个。[/scode]</p>
+<p>[scode type=”green”] 接下来我们就从这道题展开，一起回顾一下与创建String对象相关的一些JAVA知识。  [/scode]</p>
+<p>我们可以把上面这行代码分成</p>
+<p><code>String str、=、&quot;abc&quot;</code></p>
+<p>和</p>
+<p><code>new String()</code></p>
+<p>四部分来看待。String str只是定义了一个名为str的String类型的变量，因此它并没有创建对象；=是对变量str进行初始化，将某个对象的引用（或者叫句柄）赋值给它，显然也没有创建对象；现在只剩下<code>new String(&quot;abc&quot;)</code>了。那么，<code>new String(&quot;abc&quot;)</code>为什么又能被看成”abc”和new String()呢？</p>
+<p>[scode type=”green”]我们来看一下被我们调用了的String的构造器：  [/scode]</p>
+<p> <code>public String(String original) {  //other code ...  }</code></p>
+<p> 大家都知道，我们常用的创建一个类的实例（对象）的方法有以下两种:</p>
+<ol>
+<li><p>使用<code>new</code>创建对象。 </p>
+</li>
+<li><p>调用<code>Class</code>类的<code>newInstance</code>方法，利用反射机制创建对象。</p>
+</li>
+</ol>
+<p>我们正是使用<code>new</code>调用了String类的上面那个构造器方法创建了一个对象，并将它的引用赋值给了<code>str</code>变量。同时我们注意到，被调用的构造器方法接受的参数也是一个<code>String</code>对象，这个对象正是<code>&quot;abc&quot;</code>。由此我们又要引入另外一种创建<code>String</code>对象的方式的讨论——引号内包含文本。</p>
+<p>这种方式是<code>String</code>特有的，并且它与new的方式存在很大区别。  </p>
+<p><code>String str=&quot;abc&quot;;</code></p>
+<p>毫无疑问，这行代码创建了一个<code>String</code>对象。  </p>
+<p><code>String a=&quot;abc&quot;;  String b=&quot;abc&quot;;</code>那这里呢？</p>
+<p>答案还是一个。  </p>
+<p><code>String a=&quot;ab&quot;+&quot;cd&quot;;</code>   再看看这里呢？</p>
+<p>答案是三个。</p>
+<p>说到这里，我们就需要引入对字符串池相关知识的回顾了。  </p>
+<p>在JAVA虚拟机（JVM）中存在着一个字符串池，其中保存着很多String对象，并且可以被共享使用，因此它提高了效率。由于String类是final的，它的值一经创建就不可改变，因此我们不用担心String对象共享而带来程序的混乱。字符串池由String类维护，我们可以调用intern()方法来访问字符串池。  </p>
+<p>我们再回头看看<code>String a=&quot;abc&quot;;</code>，这行代码被执行的时候，JAVA虚拟机首先在字符串池中查找是否已经存在了值为”abc”的这么一个对象，它的<strong>判断依据是String类equals(Object obj)方法的返回值</strong>。如果有，则不再创建新的对象，直接返回已存在对象的引用；如果没有，则先创建这个对象，然后把它加入到字符串池中，再将它的引用返回。因此，我们不难理解前面三个例子中头两个例子为什么是这个答案了。</p>
+<p><strong>只有使用引号包含文本的方式创建的String对象之间使用“+”连接产生的新对象才会被加入字符串池中。</strong>对于所有包含new方式新建对象（包括null）的“+”连接表达式，它所产生的新对象都不会被加入字符串池中，对此我们不再赘述。<strong>因此我们提倡大家用引号包含文本的方式来创建String对象以提高效率</strong>，实际上这也是我们在编程中常采用的。</p>
+<p>栈（stack）：主要保存基本类型（或者叫<strong>内置类型</strong>）（char、byte、short、int、long、float、double、boolean）和<strong>对象的引用</strong>，数据可以共享，速度仅次于寄存器（register），快于堆。 </p>
+<p>堆（heap）：<strong>用于存储对象</strong> –自定义的一些类，还有Java自带的一些相对而言比较高级的类</p>
+<p>转载自<a href="https://home.cnblogs.com/u/ydpvictor/" target="_blank" rel="noopener">云端飘</a></p>
+<p><a href="https://www.cnblogs.com/ydpvictor/archive/2012/09/09/2677260.html" target="_blank" rel="noopener">原文链接</a></p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">TankNee</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://neeto.cn/2019/11/05/Java-String%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">https://neeto.cn/2019/11/05/Java-String%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://neeto.cn">归舟棹远</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java</a><a class="post-meta__tags" href="/tags/scode/">scode</a><a class="post-meta__tags" href="/tags/%E5%88%9B%E5%BB%BA/">创建</a><a class="post-meta__tags" href="/tags/string/">string</a><a class="post-meta__tags" href="/tags/%E5%AF%B9%E8%B1%A1/">对象</a><a class="post-meta__tags" href="/tags/abc/">abc</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2019/11/09/cross/"><i class="fa fa-chevron-left">  </i><span>时光机</span></a></div><div class="next-post pull-right"><a href="/2019/10/31/%E5%8D%81%E6%9C%88October/"><span>十月October</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'tJv0hJ0qmpEgSvlqwrqQbBL9-gzGzoHsz',
+  appKey:'YQyMpfNKSaHjrlBu3kMjwAo1',
+  placeholder:'Write Your Ideas',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer class="footer-bg" style="background-image: url(https://img.tanknee.cn/blogpicbed/2020/06/20200601a55d4871b02bf.png/imgzip)"><div class="layout" id="footer"><div class="copyright">&copy;2019 - 2020 By TankNee</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="icp"><a><span>浙ICP备19040955号</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script src="/js/katex.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
