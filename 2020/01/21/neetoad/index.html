@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Neeto - 我所期待的MD编辑器 | 归舟棹远</title><meta name="description" content="或许，这个简陋的项目更应该被称为Electron &amp;&amp; JavaScript 的最佳实践！  Neeto的起源最初这个项目是基于Steve Kinney的 《Electron跨平台开发实战》 一书第三章的Fire Sale项目。这本书写的挺好，通俗易懂，并且比较有借鉴价值。本来的计划是抛开那本书重新构建Neeto的架构，但有些代码我也不想做重复工作，所以就没有另开一个工程。 Ne"><meta name="keywords" content="服务器,操作,时候,汇编,文件,对象,类型,按钮,图床,markdown,length,列表,node,neeto,file,typora,图片"><meta name="author" content="TankNee,nee@tanknee.cn"><meta name="copyright" content="TankNee"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://img.tanknee.cn/blogpicbed/2020/06/2020060186bc451656937.png/imgzip"><link rel="canonical" href="https://www.tanknee.cn/2020/01/21/neetoad/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta property="og:type" content="article"><meta property="og:title" content="Neeto - 我所期待的MD编辑器"><meta property="og:url" content="https://www.tanknee.cn/2020/01/21/neetoad/"><meta property="og:site_name" content="归舟棹远"><meta property="og:description" content="或许，这个简陋的项目更应该被称为Electron &amp;&amp; JavaScript 的最佳实践！  Neeto的起源最初这个项目是基于Steve Kinney的 《Electron跨平台开发实战》 一书第三章的Fire Sale项目。这本书写的挺好，通俗易懂，并且比较有借鉴价值。本来的计划是抛开那本书重新构建Neeto的架构，但有些代码我也不想做重复工作，所以就没有另开一个工程。 Ne"><meta property="og:image" content="https://img.tanknee.cn/blogpicbed/2020/06/20200601a55d4871b02bf.png/imgzip"><meta property="article:published_time" content="2020-01-21T13:16:27.000Z"><meta property="article:modified_time" content="2020-06-04T06:00:08.178Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="prev" title="WuHan-nCoV-2019疫情数据接口" href="https://www.tanknee.cn/2020/01/29/ncov/"><link rel="next" title="Neeto - 为补全缺憾而生的Markdown编辑器" href="https://www.tanknee.cn/2020/01/09/neeto/"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c9060137f2d96a8e0024c07f8a1f643b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="归舟棹远" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://img.tanknee.cn/blogpicbed/2020/06/2020060186bc451656937.png/imgzip" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">79</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">189</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-inbox"></i><span> Message</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> Other</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/cross/"><i class="fa-fw fas fa-envelope"></i><span> Cross</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-mountain"></i><span> Gallery</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Book</span></a></li></ul></div></div></div></div><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Neeto的起源"><span class="toc-number">1.</span> <span class="toc-text">Neeto的起源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Neeto的背景"><span class="toc-number">2.</span> <span class="toc-text">Neeto的背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Neeto的设计思路"><span class="toc-number">3.</span> <span class="toc-text">Neeto的设计思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些简单的小功能的实现"><span class="toc-number">4.</span> <span class="toc-text">一些简单的小功能的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一键复制到微信公众号平台"><span class="toc-number">4.1.</span> <span class="toc-text">一键复制到微信公众号平台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图片拖入后上传"><span class="toc-number">4.2.</span> <span class="toc-text">图片拖入后上传</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#直面问题"><span class="toc-number">5.</span> <span class="toc-text">直面问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附录"><span class="toc-number">6.</span> <span class="toc-text">附录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MarkDown语法"><span class="toc-number">6.1.</span> <span class="toc-text">MarkDown语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LaTeX"><span class="toc-number">6.2.</span> <span class="toc-text">LaTeX</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如果你对Neeto感兴趣"><span class="toc-number">7.</span> <span class="toc-text">如果你对Neeto感兴趣</span></a></li></ol></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://pic.tanknee.cn/blogpicbed/2020/01/20200121fafdbc463733c.png/blur)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">归舟棹远</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fas fa-inbox"></i><span> Message</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> Other</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/cross/"><i class="fa-fw fas fa-envelope"></i><span> Cross</span></a></li><li><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-mountain"></i><span> Gallery</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> Book</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Neeto - 我所期待的MD编辑器</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2020-01-21 21:16:27"><i class="far fa-calendar-alt fa-fw"></i> Created 2020-01-21</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2020-06-04 14:00:08"><i class="fas fa-history fa-fw"></i> Updated 2020-06-04</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fas fa-inbox fa-fw post-meta__icon"></i><a class="post-meta__categories" href="/categories/Code/">Code</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta__icon"></i><span>Word count:</span><span class="word-count">2.3k</span><span class="post-meta__separator">|</span><i class="far fa-clock fa-fw post-meta__icon"></i><span>Reading time: 8 min</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="far fa-eye fa-fw post-meta__icon"></i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><blockquote>
+<p>或许，这个简陋的项目更应该被称为<code>Electron &amp;&amp; JavaScript</code> 的<strong>最佳实践</strong>！</p>
+</blockquote>
+<h2 id="Neeto的起源"><a href="#Neeto的起源" class="headerlink" title="Neeto的起源"></a>Neeto的起源</h2><p>最初这个项目是基于Steve Kinney的 <strong>《Electron跨平台开发实战》</strong> 一书第三章的Fire Sale项目。这本书写的挺好，通俗易懂，并且比较有借鉴价值。本来的计划是抛开那本书重新构建Neeto的架构，但有些代码我也不想做重复工作，所以就没有另开一个工程。</p>
+<h2 id="Neeto的背景"><a href="#Neeto的背景" class="headerlink" title="Neeto的背景"></a>Neeto的背景</h2><p>这个项目用了很多node仓库里的第三方模块，没有这些模块我也很难在十天左右的开发工期里完成Neeto的编写。比较核心的有下面这几个：</p>
+<ul>
+<li><code>&quot;jquery&quot;: &quot;^3.4.1&quot;</code></li>
+<li><code>&quot;mdui&quot;: &quot;^0.4.3&quot;</code>一个Google MD设计规范的UI库</li>
+<li><code>&quot;showdown&quot;: &quot;^1.9.1&quot;</code> Neeto使用的markdown语法解析器</li>
+<li><code>&quot;showdown-highlight&quot;: &quot;^2.1.3&quot;</code> showdown的代码语法解析插件</li>
+<li><code>&quot;showdown-katex&quot;: &quot;^0.6.0&quot;</code>showdown的LaTeX语法解析插件</li>
+<li><code>&quot;simplemde&quot;: &quot;^1.11.2&quot;</code> 替代原本的textarea组件，实现更加丰富的操作</li>
+</ul>
+<p>不过我在写Neeto时基本没有用到当下流行的第三方库：<code>Vue or React or Angular</code>，因为我想要在下个版本中用Vue重写Neeto，有很多方面都有改进的空间。并且因为我是基本上用的纯<code>JavaScript</code>写的，所以好多地方都十分的原始而简陋。我执意用原生js写的另一个目的就是尽可能熟悉js的一些用法，包括回调，异步，非阻塞性等等。</p>
+<h2 id="Neeto的设计思路"><a href="#Neeto的设计思路" class="headerlink" title="Neeto的设计思路"></a>Neeto的设计思路</h2><p>说到思路，不得提我最喜欢的Markdown编辑器-<code>Typora</code> 毫无疑问，我相信<code>Typora</code>一定是Windows与MacOs上最优秀的编辑器，简洁，功能丰富，设计优雅。我的数据结构复习与汇编复习都是用<code>Typora</code>完成的，它是如此的完美以至于让我都快忘记了它的一些瑕疵。</p>
+<img src= "/img/loading.gif" data-src="https://pic.tanknee.cn/blogpicbed/2020/01/20200121fafdbc463733c.png">
+
+<p>它所见即所得（WYSIWYG）的实现效果让我理所当然的觉得，一款编辑器不就应该这样吗。当你写下你的灵感，编辑器将你的灵感完整无误地渲染成你所想的样子。</p>
+<p>因此我在改写之时，就准备将<code>Typora</code>作为Neeto最好的榜样，并且我希望能比<code>Typora</code>做的更好！</p>
+<p>所以说，这个项目更像是补全，弥补我在<code>Typora</code>中未能得到的遗憾：</p>
+<ul>
+<li>自定义图片上传的图床√</li>
+<li>云笔记功能-未实现</li>
+<li>一次写作，多个写作平台（知乎，微信，CSDN等）完整实现效果√</li>
+<li>Web网页管理云笔记-未实现</li>
+<li>小程序查看云笔记-未实现</li>
+</ul>
+<p>可以比较清晰的看到，我所想要实现的几个需求基本上都与网络相关，而<code>Typora</code>给自己的定位就仅仅是<br><img src= "/img/loading.gif" data-src="https://pic.tanknee.cn/blogpicbed/2020/01/2020012118cd17564fd0a.png"></p>
+<p><code>Readable &amp; Writable</code> 读写是<code>Typora</code>的核心功能，可以预见，作者并不准备为<code>Typora</code>提供与网络相关的功能，在win与mac两个平台上，也仅仅只有mac可以用一个插件来上传本地图片。</p>
+<blockquote>
+<p>Neeto的后期计划表里也有打算实现插件系统，不过应该会是很后面</p>
+</blockquote>
+<p>我在这个版本<code>Version_1.0.8</code>中，使用json文件来存储图床的配置信息，这只是实验性的尝试，并不保证长期有效性</p>
+<img src= "/img/loading.gif" data-src="https://pic.tanknee.cn/blogpicbed/2020/01/20200121de7ec9af61ac3.png">
+
+<p>后续我会支持更多的图床，如阿里云OSS，腾讯云COS，七牛云CDN等等。</p>
+<blockquote>
+<p><strong>什么是图床:</strong></br><br>图床是网络图片的一种存储方式，Web页面通过一条URL来获取图片。用户将图片上传到图床之后，图床服务器返回一条JSON消息，其中包含上传图片的网络URL，使用图床给定的图片链接就可以在多个地方调用图片，而不会出现本地图片无法直接使用的尴尬场面。</p>
+</blockquote>
+<h2 id="一些简单的小功能的实现"><a href="#一些简单的小功能的实现" class="headerlink" title="一些简单的小功能的实现"></a>一些简单的小功能的实现</h2><h3 id="一键复制到微信公众号平台"><a href="#一键复制到微信公众号平台" class="headerlink" title="一键复制到微信公众号平台"></a>一键复制到微信公众号平台</h3><p>点击Neeto头部的菜单栏，可以看到文件菜单选项。</p>
+<img src= "/img/loading.gif" data-src="https://pic.tanknee.cn/blogpicbed/2020/01/2020012123c54dc8bed04.png">
+
+<p>点击之后会出现复制成功的提示</p>
+<img src= "/img/loading.gif" data-src="https://pic.tanknee.cn/blogpicbed/2020/01/20200121c297065f7218d.png">
+
+<p>然后直接前往微信公众号后台粘贴就可以实现带格式粘贴。</p>
+<img src= "/img/loading.gif" data-src="https://pic.tanknee.cn/blogpicbed/2020/01/20200121fcc41916a6643.png">
+
+<p>使用时需要注意的几个地方：</p>
+<ul>
+<li>复制时使用的图片应为网络图片，如果使用本地图片会出现上传失败的问题？</li>
+<li>尽量使用体积小的图片。</li>
+</ul>
+<blockquote>
+<p><strong>图片上传技巧</strong></br><br>可以将图片直接拖入左侧的文本编辑区域，也可以用QQ，Wechat等软件的截图工具截图后，直接在文本编辑区内粘贴，粘贴成功后顶部会出现LightTip提示上传成功。</p>
+</blockquote>
+<h3 id="图片拖入后上传"><a href="#图片拖入后上传" class="headerlink" title="图片拖入后上传"></a>图片拖入后上传</h3><p>这个功能是基于原书上拖入事件更改的，但我觉得是一个很有意思的部分，可以通过这一部分理解JS的处理哲学。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 监听drop事件--JavaScript是事件驱动的</span></span><br><span class="line">smde.codemirror.on(<span class="string">"drop"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">editor, e</span>) </span>&#123;</span><br><span class="line">		<span class="comment">//获取文件对象</span></span><br><span class="line">    <span class="keyword">const</span> file = getDroppedFile(e)</span><br><span class="line">    <span class="comment">//获取dataTransfer对象</span></span><br><span class="line">    <span class="keyword">var</span> df = e.dataTransfer</span><br><span class="line">		<span class="comment">//处理文件</span></span><br><span class="line">    dealWithFile(file, df)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> dealWithFile = <span class="function">(<span class="params">file, df</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 文件对象数组</span></span><br><span class="line">    <span class="keyword">var</span> dropFiles = []</span><br><span class="line">    <span class="built_in">console</span>.log(file)</span><br><span class="line">    <span class="keyword">if</span> (fileTypeIsSupported(file)) &#123;</span><br><span class="line">				<span class="comment">// 如果这个文件是图片类型的，就去处理这个文件对象</span></span><br><span class="line">        <span class="keyword">if</span> (file.type.indexOf(<span class="string">"image"</span>) !== <span class="number">-1</span>) &#123;</span><br><span class="line">            <span class="comment">// 获取图片的File对象</span></span><br><span class="line">            <span class="keyword">if</span> (df.items !== <span class="literal">undefined</span>) &#123;</span><br><span class="line">                <span class="comment">// Chrome有items属性，对Chrome的单独处理</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; df.items.length; i++) &#123;</span><br><span class="line">                    <span class="keyword">var</span> item = df.items[i];</span><br><span class="line">                    <span class="built_in">console</span>.log(item.getAsFile())</span><br><span class="line">                    <span class="comment">// 用webkitGetAsEntry禁止上传目录</span></span><br><span class="line">                    <span class="keyword">if</span> (item.kind === <span class="string">"file"</span> &amp;&amp; item.webkitGetAsEntry().isFile) &#123;</span><br><span class="line">                        <span class="keyword">var</span> dropFile = item.getAsFile();</span><br><span class="line">												<span class="comment">// 判断完这个对象之后压入数组中</span></span><br><span class="line">                        dropFiles.push(dropFile);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 上传到图床</span></span><br><span class="line">            dropFiles.forEach(<span class="function"><span class="params">file</span> =&gt;</span> &#123;</span><br><span class="line">								<span class="comment">// formdata的作用是构建post的请求body部分</span></span><br><span class="line">                <span class="keyword">const</span> formdata = <span class="keyword">new</span> FormData()</span><br><span class="line">                formdata.append(<span class="string">'image'</span>, file)</span><br><span class="line">								<span class="comment">// loading是加载动画的一段语句，在图片上传的过程中用于占位</span></span><br><span class="line">                smde.codemirror.doc.replaceSelection(loading)</span><br><span class="line">                <span class="keyword">if</span> (baseConfig.picBedUrl) &#123;</span><br><span class="line">                    uploadToPicBeds(formdata, baseConfig.picBedUrl, baseConfig.token)</span><br><span class="line">                        .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">                            <span class="keyword">var</span> finalUrl = <span class="string">`&lt;img src="<span class="subst">$&#123;res&#125;</span>"&gt;`</span></span><br><span class="line">                            smde.codemirror.doc.undoSelection()</span><br><span class="line">                            smde.codemirror.doc.replaceSelection(finalUrl)</span><br><span class="line">                            rendererMarkDownToHtml(smde.value())</span><br><span class="line">														<span class="comment">//LightTip是LuLuUI库的一个组件，我认为挺好看的，所以很多地方都用到了这个组件</span></span><br><span class="line">                            <span class="keyword">new</span> LightTip().success(<span class="string">'图床图片上传成功'</span>, <span class="number">2000</span>);</span><br><span class="line">                        &#125;)</span><br><span class="line">                        .catch(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">                            smde.codemirror.doc.undoSelection()</span><br><span class="line">                            <span class="keyword">new</span> LightTip().error(<span class="string">'图床图片上传失败，请检查图床配置'</span>, <span class="number">4000</span>);</span><br><span class="line">                            finalUrl = <span class="string">`![<span class="subst">$&#123;file.name&#125;</span>](<span class="subst">$&#123;file.path&#125;</span>)`</span></span><br><span class="line">                            smde.codemirror.doc.replaceSelection(finalUrl)</span><br><span class="line">                            rendererMarkDownToHtml(smde.value())</span><br><span class="line">                        &#125;)</span><br><span class="line"></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">var</span> finalUrl = <span class="string">`![<span class="subst">$&#123;file.name&#125;</span>](<span class="subst">$&#123;file.path&#125;</span>)`</span></span><br><span class="line">                    smde.codemirror.doc.undoSelection()</span><br><span class="line">                    smde.codemirror.doc.replaceSelection(finalUrl)</span><br><span class="line">                    rendererMarkDownToHtml(smde.value())</span><br><span class="line">                    <span class="keyword">new</span> LightTip().success(<span class="string">'本地图片添加成功'</span>, <span class="number">2000</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            mainProcess.openFile(currentWindow, file.path)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> LightTip().error(<span class="string">'该文件类型暂时无法上传'</span>, <span class="number">4000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="直面问题"><a href="#直面问题" class="headerlink" title="直面问题"></a>直面问题</h2><p>不得不承认，有很多地方我都没有做完，甚至完成度只有$60%$,但我急于进入Vue的学习开发，就不得不将纯JavaScript的版本早点完结。</p>
+<ul>
+<li>左右界面的同步滚动问题，由于我一直找不到好的同步滚动解决方案，因此我采用的是两个显示部分距离顶部的长度相等，这样确实不太好很多时候都会出现奇怪的问题…</li>
+<li>左侧UI布局不是特别的合理</li>
+<li>很多按钮都是废弃的按钮，我已经没有什么精力去将他们一一修正了。</li>
+<li>tasklist列表还是显示不正常</li>
+</ul>
+<p>如果你使用了Neeto并且有任何意见或是反馈，请及时告知我，告知的方法也很简单，点击左侧下部的小飞机按钮，填写建议还有您的联系方式即可，万分感谢</p>
+<img src= "/img/loading.gif" data-src="https://pic.tanknee.cn/blogpicbed/2020/01/20200121a677c9b6e7214.png">
+
+
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="MarkDown语法"><a href="#MarkDown语法" class="headerlink" title="MarkDown语法"></a>MarkDown语法</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Markdown Guide</span><br><span class="line">Emphasis</span><br><span class="line"><span class="strong">**bold**</span></span><br><span class="line"><span class="emphasis">*italics*</span></span><br><span class="line">~~strikethrough~~</span><br><span class="line">Headers</span><br><span class="line"><span class="section"># Big header</span></span><br><span class="line"><span class="section">## Medium header</span></span><br><span class="line"><span class="section">### Small header</span></span><br><span class="line"><span class="section">#### Tiny header</span></span><br><span class="line">Lists</span><br><span class="line"><span class="bullet">* </span>Generic list item</span><br><span class="line"><span class="bullet">* </span>Generic list item</span><br><span class="line"><span class="bullet">* </span>Generic list item</span><br><span class="line"></span><br><span class="line"><span class="bullet">1. </span>Numbered list item</span><br><span class="line"><span class="bullet">2. </span>Numbered list item</span><br><span class="line"><span class="bullet">3. </span>Numbered list item</span><br><span class="line"></span><br><span class="line">Links</span><br><span class="line">[<span class="string">Text to display</span>](<span class="link">http://www.example.com</span>)</span><br><span class="line"></span><br><span class="line">Quotes</span><br><span class="line"><span class="quote">&gt; This is a quote.</span></span><br><span class="line"><span class="quote">&gt; It can span multiple lines!</span></span><br><span class="line"></span><br><span class="line">Images   Need to upload an image? Imgur has a great interface.</span><br><span class="line">![](http://www.example.com/image.jpg)</span><br><span class="line"></span><br><span class="line">Tables</span><br><span class="line">| Column 1 | Column 2 | Column 3 |</span><br><span class="line">| -------- | -------- | -------- |</span><br><span class="line">| John     | Doe      | Male     |</span><br><span class="line">| Mary     | Smith    | Female   |</span><br><span class="line"></span><br><span class="line">Or without aligning the columns...</span><br><span class="line"></span><br><span class="line">| Column 1 | Column 2 | Column 3 |</span><br><span class="line">| -------- | -------- | -------- |</span><br><span class="line">| John | Doe | Male |</span><br><span class="line">| Mary | Smith | Female |</span><br><span class="line"></span><br><span class="line">Displaying code</span><br><span class="line"><span class="code">`var example = "hello!";`</span></span><br><span class="line"></span><br><span class="line">Or spanning multiple lines...</span><br><span class="line"></span><br><span class="line">code</span><br><span class="line">var example = "hello!";</span><br><span class="line">alert(example);</span><br><span class="line">code</span><br></pre></td></tr></table></figure>
+
+<h3 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h3><p><strong>数学公式实现</strong>：支持LaTeX语法</p>
+<p>$\alpha, \beta, \Beta, \gamma, \Gamma, \pi, \Pi, \phi, \varphi, \mu, \Phi$</p>
+<p>$\cos(2 \theta) = \cos ^ 2 \theta - \sin ^ 2 \theta$</p>
+<p>$\lim_{x \to \infty}^ (e^(-x)) = 0$</p>
+<img src= "/img/loading.gif" data-src="https://pic.tanknee.cn/blogpicbed/2020/01/202001219ab3dd2c8994b.png">
+
+<blockquote>
+<p><strong>写在最后</strong></br><br>说实话吧，好长一段时间里我都听不喜欢前端的，因为在我的刻板前端不就是切图吗，然后写点小动画，有什么前途，但是说来容易做时难啊，真正放开手去做的时候才能切身感受到前端也已经不仅仅是前端了，不过，还是要两头兼顾，前后端都要掌握。</p>
+</blockquote>
+<blockquote>
+<p>最后一些屁话，应该没有人真的会看到这里吧。说真的，大学越活越糊涂我是真的有点难受，学习也整不起来，技术也学不明白，身体也没有很好//PS:本武汉（回来的）人已经14天未见异常了，所以我不是患者！！但是我好像有点感冒…</p>
+</blockquote>
+<h2 id="如果你对Neeto感兴趣"><a href="#如果你对Neeto感兴趣" class="headerlink" title="如果你对Neeto感兴趣"></a>如果你对Neeto感兴趣</h2><p>可以前往<a href="https://neeto.cn" target="_blank" rel="noopener">Neeto官网</a> 查看源码和更多信息，项目已经在GitHub和Gitea开源了，如果可以的话，能为我点个Star吗！！！！<strong>这对我真的很重要</strong>(cxx语气)</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:nee@tanknee.cn">TankNee</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://www.tanknee.cn/2020/01/21/neetoad/">https://www.tanknee.cn/2020/01/21/neetoad/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><a class="post-meta__tags" href="/tags/%E6%93%8D%E4%BD%9C/">操作</a><a class="post-meta__tags" href="/tags/%E6%97%B6%E5%80%99/">时候</a><a class="post-meta__tags" href="/tags/%E6%B1%87%E7%BC%96/">汇编</a><a class="post-meta__tags" href="/tags/%E6%96%87%E4%BB%B6/">文件</a><a class="post-meta__tags" href="/tags/%E5%AF%B9%E8%B1%A1/">对象</a><a class="post-meta__tags" href="/tags/%E7%B1%BB%E5%9E%8B/">类型</a><a class="post-meta__tags" href="/tags/%E6%8C%89%E9%92%AE/">按钮</a><a class="post-meta__tags" href="/tags/%E5%9B%BE%E5%BA%8A/">图床</a><a class="post-meta__tags" href="/tags/markdown/">markdown</a><a class="post-meta__tags" href="/tags/length/">length</a><a class="post-meta__tags" href="/tags/%E5%88%97%E8%A1%A8/">列表</a><a class="post-meta__tags" href="/tags/node/">node</a><a class="post-meta__tags" href="/tags/neeto/">neeto</a><a class="post-meta__tags" href="/tags/file/">file</a><a class="post-meta__tags" href="/tags/typora/">typora</a><a class="post-meta__tags" href="/tags/%E5%9B%BE%E7%89%87/">图片</a></div><div class="post_share"><div class="addthis_inline_share_toolbox"></div><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ed5a3fd25ab3792" async="async"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/01/29/ncov/"><img class="prev-cover" data-src="https://img.tanknee.cn/blogpicbed/2020/01/20200129bfa81ed0c5c5c.png/imgzip" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">WuHan-nCoV-2019疫情数据接口</div></div></a></div><div class="next-post pull-right"><a href="/2020/01/09/neeto/"><img class="next-cover" data-src="https://img.tanknee.cn/blogpicbed/2020/01/202001103a1ef34bc448f.png/imgzip" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Neeto - 为补全缺憾而生的Markdown编辑器</div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var requiredFields = requestSetting(['nick','mail'],'')
+
+window.valine = new Valine({
+  el:'#vcomment',
+  appId: 'tJv0hJ0qmpEgSvlqwrqQbBL9-gzGzoHsz',
+  appKey: 'YQyMpfNKSaHjrlBu3kMjwAo1',
+  placeholder: 'Write Your Ideas',
+  avatar: 'mm',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'zh-cn',
+  recordIP: true,
+  serverURLs: '',
+  emojiCDN: '',
+  emojiMaps: "",
+  enableQQ: true,
+  requiredFields: requiredFields
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By TankNee</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="icp"><a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener"><img class="icp-icon" src="/img/icp.png"/><span>浙ICP备19040955号</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font_plus" title="Increase Font Size"><i class="fas fa-plus"></i></button><button id="font_minus" title="Decrease Font Size"><i class="fas fa-minus"></i></button><button class="translate_chn_to_cht" id="translateLink" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="Setting"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="scroll_to_comment fas fa-comments"></i></a><button class="close" id="mobile-toc-button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/search/local-search.js"></script><script>var endLoading = function () {
+  document.body.style.overflow = 'auto';
+  document.getElementById('loading-box').classList.add("loaded")
+}
+window.addEventListener('load',endLoading)</script></body></html>
