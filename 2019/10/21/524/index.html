@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>数据结构--树（BST） - 归舟棹远</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="归舟棹远"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="归舟棹远"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="​    树是一种简单的数据结构，其插入查找的速度都相对均匀：O(logN)，这里用到的主要是二叉查找树binary search tree。  了解树在文件系统里的应用 计算算术表达式的值，如中缀表达式等 树是如何实现以O(logN)的平均时间进行查找操作，以及最坏时间O(logN)。  树的基本模型"><meta property="og:type" content="blog"><meta property="og:title" content="数据结构--树（BST）"><meta property="og:url" content="https://www.tanknee.cn/2019/10/21/524/"><meta property="og:site_name" content="归舟棹远"><meta property="og:description" content="​    树是一种简单的数据结构，其插入查找的速度都相对均匀：O(logN)，这里用到的主要是二叉查找树binary search tree。  了解树在文件系统里的应用 计算算术表达式的值，如中缀表达式等 树是如何实现以O(logN)的平均时间进行查找操作，以及最坏时间O(logN)。  树的基本模型"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://img.tanknee.cn/img/20191021233841.png"><meta property="article:published_time" content="2019-10-21T15:57:00.000Z"><meta property="article:modified_time" content="2022-06-16T13:09:47.181Z"><meta property="article:author" content="TankNee"><meta property="article:tag" content="节点"><meta property="article:tag" content="查找"><meta property="article:tag" content="右子树"><meta property="article:tag" content="二叉树"><meta property="article:tag" content="左子树"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://img.tanknee.cn/img/20191021233841.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.tanknee.cn/2019/10/21/524/"},"headline":"数据结构--树（BST）","image":["https://img.tanknee.cn/img/20191021233841.png"],"datePublished":"2019-10-21T15:57:00.000Z","dateModified":"2022-06-16T13:09:47.181Z","author":{"@type":"Person","name":"TankNee"},"publisher":{"@type":"Organization","name":"归舟棹远","logo":{"@type":"ImageObject","url":"https://www.tanknee.cn/img/logo.svg"}},"description":"​    树是一种简单的数据结构，其插入查找的速度都相对均匀：O(logN)，这里用到的主要是二叉查找树binary search tree。  了解树在文件系统里的应用 计算算术表达式的值，如中缀表达式等 树是如何实现以O(logN)的平均时间进行查找操作，以及最坏时间O(logN)。  树的基本模型"}</script><link rel="canonical" href="https://www.tanknee.cn/2019/10/21/524/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="归舟棹远" type="application/atom+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="归舟棹远" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://img.tanknee.cn/img/20191021233841.png" alt="数据结构--树（BST）"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-10-21T15:57:00.000Z" title="2019/10/21 23:57:00">2019-10-21</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/Code/">Code</a></span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">数据结构--树（BST）</h1><div class="content"><p>​    树是一种简单的数据结构，其插入查找的速度都相对均匀：O(logN)，这里用到的主要是二叉查找树binary search tree。</p>
+<ul>
+<li>了解树在文件系统里的应用</li>
+<li>计算算术表达式的值，如中缀表达式等</li>
+<li>树是如何实现以O(logN)的平均时间进行查找操作，以及最坏时间O(logN)。</li>
+</ul>
+<h3 id="树的基本模型"><a href="#树的基本模型" class="headerlink" title="树的基本模型"></a>树的基本模型</h3><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/20191021233841.png" alt="tree">
+
+<h4 id="树的构成："><a href="#树的构成：" class="headerlink" title="树的构成："></a>树的构成：</h4><p>​    每棵树都有根节点和数个非空子树组成</p>
+<p>​    一棵树是<code>N</code>个节点和<code>N-1</code>条边的集合，原因很简单，除了根节点之外，每个节点都与其父节点有一条边相连接。</p>
+<h4 id="树的路径长度，高度与深度："><a href="#树的路径长度，高度与深度：" class="headerlink" title="树的路径长度，高度与深度："></a>树的路径长度，高度与深度：</h4><ul>
+<li>长度：<code>n1</code>-<code>nk</code>的路径上的边的条数，树上的任意一个节点都有到跟的路径</li>
+<li>高度：任意<code>ni</code>节点到根节点的唯一路径的长度看作为该节点的高度，即节点越往下，高度越大，与根节点离得越远高度越大！</li>
+<li>深度：以<code>ni</code>为当前子树的根节点，向下寻找树叶，由该节点到树叶的路径的长度，记作该节点的高度</li>
+</ul>
+<blockquote>
+<p><strong>不管是深度也好，高度也好，基本上都是相对于你选择的根节点而言的，并不是完全固定不变的，是一个相对的数值，不过求出每一个高度和深度的路径都是唯一的</strong></p>
+</blockquote>
+<h3 id="树的代码实现"><a href="#树的代码实现" class="headerlink" title="树的代码实现"></a>树的代码实现</h3><h4 id="树的节点声明："><a href="#树的节点声明：" class="headerlink" title="树的节点声明："></a>树的节点声明：</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">PtrToNode</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>&#123;</span></span><br><span class="line">    ElementType Element; 	<span class="comment">//抽象数据类型，定义树节点存放的数据</span></span><br><span class="line">    PtrToNode FirstChild;	<span class="comment">//第一个子树的指针（第一儿子）</span></span><br><span class="line">    PtrToNode NextChild;	<span class="comment">//下一个子树的指针（下一个兄弟）</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>因为实现并不知道子树的个数，所以直接在声明里指定个数是不理智的，所以应该换一种方式，使用链表来存储树，具体的图明天再来画吧！</p>
+</blockquote>
+<h4 id="树的遍历及应用："><a href="#树的遍历及应用：" class="headerlink" title="树的遍历及应用："></a>树的遍历及应用：</h4><p><strong>UNIX文件系统</strong>：文件树的遍历</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ListD(DirectryOfFile D,<span class="type">int</span> Depth)&#123; 	<span class="comment">//文件目录，目录深度</span></span><br><span class="line">	<span class="comment">//D是一个合法的文件入口那么就进行遍历</span></span><br><span class="line">    <span class="keyword">if</span>(D is a legitimate entry)&#123;	</span><br><span class="line">        <span class="keyword">for</span> (child C : D)&#123;</span><br><span class="line">            ListD(C,Depth+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    经过几次递归之后就可以完全打印出文件目录。</p>
+<h4 id="遍历方式："><a href="#遍历方式：" class="headerlink" title="遍历方式："></a>遍历方式：</h4><ol>
+<li><p>先序遍历：</p>
+<p>在先序遍历中，<strong>对节点的处理在处理儿子结点之前</strong>！下面是线序遍历的图例，节点的数字代表遍历的顺序。</p>
+<img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/{DE7B9712-7186-0D99-EA2E-654CCD516AD9}.png"/>
+</li>
+<li><p>后序遍历：</p>
+<p>在后序遍历中，<strong>对节点的处理在处理儿子节点之后</strong>！下面是后序遍历的图例。</p>
+<img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/{9AC8C798-054F-F3D1-8F4E-81D6968F2C52}.png"/>
+
+<blockquote>
+<p>一些个人理解：不管是先序遍历还是后序遍历还是层序遍历，其本质都是一件事情：<strong>递归</strong>，通过一种相似的查找方式打印出需要遍历的树中所有的节点。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><h4 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h4><p>​    二叉树是一种树，其中每个节点的子节点不得多于两个。二叉树的一个重要性质是平均二叉树的深度要比N要小得多为O($\sqrt{N} $),而二叉查找树的平均深度是O($\log{N}$)。</p>
+<h4 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">PtrToNode</span>;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">PtrNode</span> <span class="title">Tree</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>&#123;</span></span><br><span class="line">    ElementType Element;	<span class="comment">//节点的值</span></span><br><span class="line">    Tree left;	<span class="comment">//左子树</span></span><br><span class="line">    Tree right;	<span class="comment">//右子树</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>每个有<code>N</code>个节点的二叉树都有<code>N+1</code>个<code>NULL</code>空指针</strong></p>
+</blockquote>
+<h4 id="表达式树："><a href="#表达式树：" class="headerlink" title="表达式树："></a>表达式树：</h4><p>​    利用二叉树实现中缀表达式，前缀表达式等等，还需要结合队列来实现整个数据结构！<br>​      </p>
+<ul>
+<li>表达式树的树叶表示表达式的操作数，比如变量或者常量，而其他的根结点代表操作符。</li>
+<li>所有的操作符都是二元操作符。<br>下面给出一个例子：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">左子树a+(b*c)。右子树(((d*e）+f)*g)</span><br></pre></td></tr></table></figure>
+<img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/15718298842588.jpg" alt=""></li>
+</ul>
+<p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/15718305015386.jpg" alt=""></p>
+<p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/15718305204381.jpg" alt=""></p>
+<h4 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h4><ul>
+<li>概念：对于二叉查找树中的任意节点<code>X</code>，它的左子树所有关键字值小于该节点所代表的关键字的值，而其右子树的所有关键字的值大于<code>X</code>的关键字值。因此该二叉树的所有元素都可以用某种统一的方式排序。 </li>
+</ul>
+<p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/15718309179352.jpg" alt=""></p>
+<blockquote>
+<p>这里有一个二叉查找树的查找时间复杂度的计算问题，我之前上课的时候没怎么想明白，刚刚上网查了一下发现是我智障了。<br>其实二叉查找树的原理跟二分法的原理是完全一样的：在<code>N</code>个数据的数组里取第<code>Ｎ／2</code>个元素，将这个元素与输入元素进行对比，如果小与输入元素就去该节点的右子树中查找，如果大于就去左子树。假设查找的次数为<code>x</code>次，那么表达式就是：N*（$1/2$）^X = 1，即最坏情况是查找到首尾元素，最后即可得出查找的时间复杂度为O($\log{N}$).</p>
+</blockquote>
+<ul>
+<li>增删查改：<ol>
+<li>Insert</li>
+<li>Delete：删除操作是相对困难的一部分，这里仅仅讨论处理有两个儿子的操作。<ul>
+<li>一般的删除策略是用其右子树的最小数据（右子树的最左侧的那个节点）代替该节点的数据，并递归地删除那个（被替换掉的）节点。由于该节点不可能有左子树，所以第二次删除要容易。接下来是一个例子</li>
+<li><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/15718341677778.jpg" alt=""></li>
+<li>然后被移动的关键字3像之前删除2一样删除！ </li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>数据结构--树（BST）</p><p><a href="https://www.tanknee.cn/2019/10/21/524/">https://www.tanknee.cn/2019/10/21/524/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>TankNee</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2019-10-21</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-06-16</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E8%8A%82%E7%82%B9/">节点</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%9F%A5%E6%89%BE/">查找</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%8F%B3%E5%AD%90%E6%A0%91/">右子树</a><a class="link-muted mr-2" rel="tag" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%B7%A6%E5%AD%90%E6%A0%91/">左子树</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://img.tanknee.cn/profile/AliPay.jpg" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://img.tanknee.cn/profile/wechatPay.jpg" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2019/10/31/%E5%8D%81%E6%9C%88October/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">十月October</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2019/10/20/%E6%B1%87%E7%BC%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"><span class="level-item">汇编程序设计</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content" id="valine-thread"></div><script src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/valine/1.4.16/Valine.min.js"></script><script>new Valine({
+            el: '#valine-thread',
+            appId: "tJv0hJ0qmpEgSvlqwrqQbBL9-gzGzoHsz",
+            appKey: "YQyMpfNKSaHjrlBu3kMjwAo1",
+            placeholder: "留言清风过，抚菁杂草生。",
+            avatar: "mm",
+            avatarForce: false,
+            meta: ["nick","mail","link"],
+            pageSize: 10,
+            lang: "zh-CN",
+            visitor: false,
+            highlight: true,
+            recordIP: true,
+            
+            
+            
+            enableQQ: true,
+            requiredFields: [],
+        });</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://img.tanknee.cn/profile/girlavatar.jpg" alt="Tank Nee"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Tank Nee</p><p class="is-size-6 is-block">HUST 🛫️ HITsz</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">78</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">186</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/TankNee" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/TankNee"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.tanknee.cn" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Blog</span></span><span class="level-right"><span class="level-item tag">www.tanknee.cn</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/AiLearning/"><span class="level-start"><span class="level-item">AiLearning</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Caprice/"><span class="level-start"><span class="level-item">Caprice</span></span><span class="level-end"><span class="level-item tag">35</span></span></a></li><li><a class="level is-mobile" href="/categories/Code/"><span class="level-start"><span class="level-item">Code</span></span><span class="level-end"><span class="level-item tag">40</span></span></a></li><li><a class="level is-mobile" href="/categories/Month/"><span class="level-start"><span class="level-item">Month</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-07-08T10:12:42.000Z">2020-07-08</time></p><p class="title"><a href="/2020/07/08/Hexo%E8%B1%86%E7%93%A3%E6%96%87%E7%AB%A0%E6%8F%92%E4%BB%B6/">Hexo豆瓣文章插件</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-07-07T08:49:29.000Z">2020-07-07</time></p><p class="title"><a href="/2020/07/07/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E7%AE%80%E6%B4%81%E5%AE%9E%E7%8E%B0/">线性回归的简洁实现</a></p><p class="categories"><a href="/categories/AiLearning/">AiLearning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-07-04T04:00:00.000Z">2020-07-04</time></p><p class="title"><a href="/2020/07/04/twenty/">Twenty</a></p><p class="categories"><a href="/categories/Month/">Month</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-06-06T12:58:21.000Z">2020-06-06</time></p><p class="title"><a href="/2020/06/06/aliyunAiDayThree/">阿里云Ai训练营DayThree</a></p><p class="categories"><a href="/categories/Code/">Code</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-06-05T13:29:12.000Z">2020-06-05</time></p><p class="title"><a href="/2020/06/05/aliyunAiDayTwo/">阿里云Ai训练营DayTwo</a></p><p class="categories"><a href="/categories/Code/">Code</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/06/"><span class="level-start"><span class="level-item">六月 2020</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/02/"><span class="level-start"><span class="level-item">二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/12/"><span class="level-start"><span class="level-item">十二月 2019</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/11/"><span class="level-start"><span class="level-item">十一月 2019</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/10/"><span class="level-start"><span class="level-item">十月 2019</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/09/"><span class="level-start"><span class="level-item">九月 2019</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/08/"><span class="level-start"><span class="level-item">八月 2019</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/07/"><span class="level-start"><span class="level-item">七月 2019</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="归舟棹远" height="28"></a><p class="is-size-7"><span>&copy; 2022 TankNee</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>

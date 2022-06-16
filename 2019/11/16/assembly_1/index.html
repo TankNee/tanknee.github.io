@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>汇编-1 寻址方式 - 归舟棹远</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="归舟棹远"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="归舟棹远"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="寻址方式 汇编进行数据操作运算时第一步是要找到对应的操作数。  操作数分为源操作数与目的操作数，一般来说改变的是目的操作数，源操作数在操作或者运算之后是不会发生变化的  操作数有多个存放地址：  寄存器 主存储器 I&amp;#x2F;O设备端口处   寄存器寻址"><meta property="og:type" content="blog"><meta property="og:title" content="汇编-1 寻址方式"><meta property="og:url" content="https://www.tanknee.cn/2019/11/16/assembly_1/"><meta property="og:site_name" content="归舟棹远"><meta property="og:description" content="寻址方式 汇编进行数据操作运算时第一步是要找到对应的操作数。  操作数分为源操作数与目的操作数，一般来说改变的是目的操作数，源操作数在操作或者运算之后是不会发生变化的  操作数有多个存放地址：  寄存器 主存储器 I&amp;#x2F;O设备端口处   寄存器寻址"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://www.tanknee.cn/img/og_image.png"><meta property="article:published_time" content="2019-11-16T03:57:13.000Z"><meta property="article:modified_time" content="2022-06-16T13:09:47.182Z"><meta property="article:author" content="TankNee"><meta property="article:tag" content="操作"><meta property="article:tag" content="对象"><meta property="article:tag" content="汇编"><meta property="article:tag" content="SS"><meta property="article:tag" content="mov"><meta property="article:tag" content="寄存器"><meta property="article:tag" content="存储器"><meta property="article:tag" content="字节"><meta property="article:tag" content="偏移"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.tanknee.cn/2019/11/16/assembly_1/"},"headline":"汇编-1 寻址方式","image":["https://www.tanknee.cn/img/og_image.png"],"datePublished":"2019-11-16T03:57:13.000Z","dateModified":"2022-06-16T13:09:47.182Z","author":{"@type":"Person","name":"TankNee"},"publisher":{"@type":"Organization","name":"归舟棹远","logo":{"@type":"ImageObject","url":"https://www.tanknee.cn/img/logo.svg"}},"description":"寻址方式 汇编进行数据操作运算时第一步是要找到对应的操作数。  操作数分为源操作数与目的操作数，一般来说改变的是目的操作数，源操作数在操作或者运算之后是不会发生变化的  操作数有多个存放地址：  寄存器 主存储器 I&#x2F;O设备端口处   寄存器寻址"}</script><link rel="canonical" href="https://www.tanknee.cn/2019/11/16/assembly_1/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="归舟棹远" type="application/atom+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="归舟棹远" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-11-16T03:57:13.000Z" title="2019/11/16 11:57:13">2019-11-16</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/Code/">Code</a></span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">汇编-1 寻址方式</h1><div class="content"><h2 id="寻址方式"><a href="#寻址方式" class="headerlink" title="寻址方式"></a>寻址方式</h2><blockquote>
+<p>汇编进行数据操作运算时第一步是要找到对应的操作数。</p>
+<blockquote>
+<p>操作数分为源操作数与目的操作数，一般来说改变的是目的操作数，源操作数在操作或者运算之后是不会发生变化的</p>
+</blockquote>
+<p>操作数有多个存放地址：</p>
+<ul>
+<li>寄存器</li>
+<li>主存储器</li>
+<li>I/O设备端口处</li>
+</ul>
+</blockquote>
+<h3 id="寄存器寻址"><a href="#寄存器寻址" class="headerlink" title="寄存器寻址"></a>寄存器寻址</h3><p>顾名思义，就是直接通过寄存器来寻找操作数，操作数存放在寄存器中而不是主存或者端口中</p>
+<h4 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mov ax,bx</span><br></pre></td></tr></table></figure>
+
+<p>将<code>BX</code>中的内容赋值赋到<code>AX</code>中去，而寻找内容的方式，就是去<code>AX</code>这个CPU自带的通用寄存器<code>EAX</code>中寻找<code>低16位</code>的寄存器<code>AX</code>。</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点:"></a>特点:</h4><p>操作数的位数决定了操作的类型，例如，16位的寄存器就代表整个操作是字类型，8位代表字节类型</p>
+<blockquote>
+<ol>
+<li><code>32位 - 双字</code></li>
+<li><code>16位 - 字</code></li>
+<li><code>8位 - 字节</code></li>
+</ol>
+</blockquote>
+<p>相对其他的寻址方式，寄存器由于是CPU内部的存储单元，所以响应速度更快。</p>
+<h3 id="寄存器间接寻址"><a href="#寄存器间接寻址" class="headerlink" title="寄存器间接寻址"></a>寄存器间接寻址</h3><p>寄存器间接寻址本质上不是去往寄存器里寻找所需要的操作数，而是去<strong>主存储器</strong>中找对应的操作数！在这种方式里，寄存器相对而言只是一个<strong>跳板</strong>的作用,提供偏移地址！</p>
+<h4 id="举例：-1"><a href="#举例：-1" class="headerlink" title="举例："></a>举例：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mov ax,[bx]</span><br></pre></td></tr></table></figure>
+
+<h4 id="内在的逻辑与顺序"><a href="#内在的逻辑与顺序" class="headerlink" title="内在的逻辑与顺序"></a>内在的逻辑与顺序</h4><ol>
+<li>读取给定的寄存器的内容</li>
+<li>以该内容为偏移地址<code>EA</code></li>
+<li>选取对应的段首</li>
+<li>组合之后得到物理地址<code>PA</code></li>
+</ol>
+<h4 id="一些默认规定"><a href="#一些默认规定" class="headerlink" title="一些默认规定"></a>一些默认规定</h4><ol>
+<li>除了<code>EBP，BP，ESP</code>三个寄存器默认选取的段寄存器是<code>SS</code>之外，其他的<code>32位/16位寄存器</code>选取的段寄存器都默认位<code>DS</code></li>
+</ol>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>这里的寄存器可以选择任意的32位的寄存器(<code>EDI,ESI,EBP,ESP</code>等等都是可以使用的)</p>
+<p>或者是四个十六位存储器：<code>BX,DI,SI,BP</code>(少了一个<code>SP</code>，多了一个<code>BX</code>)</p>
+<p><strong>但是不可以选择八位的存储器，因为八位存储器只能存储一个字节的内容，而偏移地址至少需要16位两个字节的内容，所以不能使用。</strong></p>
+<h3 id="变址寻址"><a href="#变址寻址" class="headerlink" title="变址寻址"></a>变址寻址</h3><p>变址寻址所搜寻的操作数存放于主存储器中，而事实上，除了寄存器（直接）寻址以为，介绍的全部的寻址方式均是在主存储器中寻找操作数！</p>
+<h4 id="举例：-2"><a href="#举例：-2" class="headerlink" title="举例："></a>举例：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">格式[R*F+V]	V[R*F]	[R*F]+V</span><br></pre></td></tr></table></figure>
+
+<p>除了带有运算符的两个数外，其他的运算全部都是加法运算，只要全部加起来就好了。</p>
+<p>其中<code>F</code> 为比例因子，<code>R</code>为寄存器， <code>V</code>为偏移量。而整个运算操作的对象是R寄存器中的内容！！</p>
+<p>寄存器中的内容读取并不需要通过<code>段地址：偏移地址</code>的方式，因为寄存器的地址都早已经被读取入计算机，因此相对而言速度更快！</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mov al,[ebx*2+4]	</span><br></pre></td></tr></table></figure>
+
+<h4 id="内在逻辑与顺序"><a href="#内在逻辑与顺序" class="headerlink" title="内在逻辑与顺序"></a>内在逻辑与顺序</h4><ol>
+<li>读取出<code>ebx</code>中的内容</li>
+<li>运算整个表达式<code>ebx*2+4</code></li>
+<li>以这个表达式为偏移地址，选取对应的段地址生成物理地址</li>
+</ol>
+<h4 id="注意：-1"><a href="#注意：-1" class="headerlink" title="注意："></a>注意：</h4><ul>
+<li>当选取的运算的寄存器是EBP或者16位寄存器时，比例因子<code>F</code>只能为1，并且缩略不写</li>
+<li><code>V</code>偏移量不能过长，否则会被截断</li>
+<li>关于偏移量：<ul>
+<li>由于在内存中默认的单元是字而不是字节！因此一般而言需要跳转到下一个单元时需要改变两个字节，而不是一个字节，当有相对应的操作时也应该乘以二！</li>
+</ul>
+</li>
+</ul>
+<h3 id="基址加变址寻址"><a href="#基址加变址寻址" class="headerlink" title="基址加变址寻址"></a>基址加变址寻址</h3><p>相当于上面的变址寻址多了一个基址罢了</p>
+<h4 id="举例：-3"><a href="#举例：-3" class="headerlink" title="举例："></a>举例：</h4><h5 id="格式：V-BR-IR-F-V-IR-F-BR"><a href="#格式：V-BR-IR-F-V-IR-F-BR" class="headerlink" title="格式：V[BR][IR*F]    V[IR*F+BR]"></a>格式：<code>V[BR][IR*F]    V[IR*F+BR]</code></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mov al,4[ebx*2+ecx]</span><br></pre></td></tr></table></figure>
+
+<p>原理：将变址寄存器<code>IR</code>的内容乘以比例因子<code>F</code>，再与基址寄存器<code>BR</code>的内容还有偏移量<code>V</code>相加，得到的结果作为整个的偏移地址。然后<strong>再根据基址寄存器寻找默认的段寄存器</strong>。</p>
+<h4 id="注意：-2"><a href="#注意：-2" class="headerlink" title="注意："></a>注意：</h4><p>当使用的基址寄存器为BX或者BP中的一个时，IR只能选择SI或者DI，而且根据变址寻址的规则，当选用16位的寄存器时，比例系数只能为1！</p>
+<h4 id="默认段寄存器的选用："><a href="#默认段寄存器的选用：" class="headerlink" title="默认段寄存器的选用："></a>默认段寄存器的选用：</h4><ul>
+<li><code>BX - DS</code></li>
+<li><code>BP - SS</code></li>
+<li><code>ESP,EBP - SS</code></li>
+<li><code>其他的32位寄存器全部使用DS作为默认的段寄存器</code></li>
+</ul>
+<h3 id="立即寻址"><a href="#立即寻址" class="headerlink" title="立即寻址"></a>立即寻址</h3><p>实际上立即寻址并不用到任何一个主存储器或者寄存器，因为它的操作数已经直接被读入到操作码中，这应该是最快的操作方式？</p>
+<h4 id="举例：-4"><a href="#举例：-4" class="headerlink" title="举例："></a>举例：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mov word ptr [si],12H	</span><br></pre></td></tr></table></figure>
+
+<p>其中的<code>12H</code>就是立即数，它会直接赋值给以<code>si寄存器</code>的内容为偏移地址的内存块（这里的目的操作数使用的是寄存器间接寻址）</p>
+<h4 id="注意：-3"><a href="#注意：-3" class="headerlink" title="注意："></a>注意：</h4><ul>
+<li>其中有一块代码是<code>word ptr</code>是为了指定操作数的类型为字类型，也就是有两个字节，两块内存单元，即以<code>[SI]</code>为首地址向下寻找一个字单元，然后放入对应的立即数！</li>
+<li>操作的时候会将<code>12H</code>翻译成<code>0012H</code>以适应字类型的操作要求，这里的翻译原因就是前面的<code>word ptr</code>，当使用的是<code>byte ptr</code>时就不会翻译了</li>
+<li>其中当遇到负数时会有翻译成补码的要求，而实际上所有的立即数的操作都是以补码的形式进行的，只不过无符号数和正数的补码与原码相同罢了！</li>
+</ul>
+<h3 id="直接寻址"><a href="#直接寻址" class="headerlink" title="直接寻址"></a>直接寻址</h3><p>这个直接寻址有点类似于上面的寄存器间接寻址，只不过把寄存器的内容换成了立即数，相当于：立即数（间接）寻址。</p>
+<h4 id="举例：-5"><a href="#举例：-5" class="headerlink" title="举例："></a>举例：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mov ds:[20H],cl</span><br></pre></td></tr></table></figure>
+
+<p>相当于把立即数当作偏移地址，然后去指定的段寄存器中寻找需要的操作数。这里的操作数是存放于主存储器中！</p>
+<h4 id="注意：-4"><a href="#注意：-4" class="headerlink" title="注意："></a>注意：</h4><p>当使用直接寻址给内存单元赋值/运算的时候需要指定操作类型。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sub word ptr ds:[1000H],55AAH</span><br></pre></td></tr></table></figure>
+
+<p>这里就是指定了为偏移地址为<code>1000H</code>，段寄存器为<code>DS</code>的那个内存单元进行减法操作，操作类型（或者说是范围）是字类型，也就是操作对象是两个字节！</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><p>而已上六种寻址方式可以分为三大类：寄存器方式，存储器方式以及立即数方式。</p>
+<ul>
+<li>寄存器：寄存器寻址</li>
+<li>存储器方式：<ol>
+<li>寄存器间接寻址</li>
+<li>变址寻址</li>
+<li>基址加变址寻址</li>
+<li>直接寻址</li>
+</ol>
+</li>
+<li>立即数方式：立即寻址</li>
+</ul>
+<h4 id="操作数来源"><a href="#操作数来源" class="headerlink" title="操作数来源"></a>操作数来源</h4><p>双操作数的指令中的目的操作数与源操作数的类型必须是以下几种：</p>
+<ol>
+<li>寄存器对寄存器</li>
+<li>寄存器对存储器</li>
+<li>存储器对寄存器</li>
+<li>立即方式对寄存器–立即方式只能用于源操作数</li>
+<li>立即方式对存储器–立即方式只能用于源操作数</li>
+</ol>
+<p>其中绝对不能两个操作数均来自存储器！</p>
+<h4 id="操作数类型"><a href="#操作数类型" class="headerlink" title="操作数类型"></a>操作数类型</h4><h5 id="不确定类型的操作数："><a href="#不确定类型的操作数：" class="headerlink" title="不确定类型的操作数："></a>不确定类型的操作数：</h5><ul>
+<li>寄存器间接寻址</li>
+<li>立即数</li>
+<li>直接寻址</li>
+</ul>
+<h5 id="一些规定："><a href="#一些规定：" class="headerlink" title="一些规定："></a>一些规定：</h5><ul>
+<li>两个操作数至少要有一个操作数的类型是明确的</li>
+<li>如果两个操作数的类型都是明确的，那么两个操作数的类型必须都要相同（均是字类型，或者均是字节类型等等）</li>
+<li>如果都不明确那么必须要指定一个操作数的类型！</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>汇编-1 寻址方式</p><p><a href="https://www.tanknee.cn/2019/11/16/assembly_1/">https://www.tanknee.cn/2019/11/16/assembly_1/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>TankNee</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2019-11-16</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-06-16</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%93%8D%E4%BD%9C/">操作</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%AF%B9%E8%B1%A1/">对象</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%B1%87%E7%BC%96/">汇编</a><a class="link-muted mr-2" rel="tag" href="/tags/SS/">SS</a><a class="link-muted mr-2" rel="tag" href="/tags/mov/">mov</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%AF%84%E5%AD%98%E5%99%A8/">寄存器</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%AD%98%E5%82%A8%E5%99%A8/">存储器</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%AD%97%E8%8A%82/">字节</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%81%8F%E7%A7%BB/">偏移</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://img.tanknee.cn/profile/AliPay.jpg" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://img.tanknee.cn/profile/wechatPay.jpg" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2019/11/16/assembly_2/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">汇编-2 宏汇编语言</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2019/11/15/FuckTheRegulation/"><span class="level-item">FuckTheRegulation</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content" id="valine-thread"></div><script src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/valine/1.4.16/Valine.min.js"></script><script>new Valine({
+            el: '#valine-thread',
+            appId: "tJv0hJ0qmpEgSvlqwrqQbBL9-gzGzoHsz",
+            appKey: "YQyMpfNKSaHjrlBu3kMjwAo1",
+            placeholder: "留言清风过，抚菁杂草生。",
+            avatar: "mm",
+            avatarForce: false,
+            meta: ["nick","mail","link"],
+            pageSize: 10,
+            lang: "zh-CN",
+            visitor: false,
+            highlight: true,
+            recordIP: true,
+            
+            
+            
+            enableQQ: true,
+            requiredFields: [],
+        });</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://img.tanknee.cn/profile/girlavatar.jpg" alt="Tank Nee"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Tank Nee</p><p class="is-size-6 is-block">HUST 🛫️ HITsz</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">78</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">4</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">186</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/TankNee" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/TankNee"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.tanknee.cn" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Blog</span></span><span class="level-right"><span class="level-item tag">www.tanknee.cn</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/AiLearning/"><span class="level-start"><span class="level-item">AiLearning</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Caprice/"><span class="level-start"><span class="level-item">Caprice</span></span><span class="level-end"><span class="level-item tag">35</span></span></a></li><li><a class="level is-mobile" href="/categories/Code/"><span class="level-start"><span class="level-item">Code</span></span><span class="level-end"><span class="level-item tag">40</span></span></a></li><li><a class="level is-mobile" href="/categories/Month/"><span class="level-start"><span class="level-item">Month</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-07-08T10:12:42.000Z">2020-07-08</time></p><p class="title"><a href="/2020/07/08/Hexo%E8%B1%86%E7%93%A3%E6%96%87%E7%AB%A0%E6%8F%92%E4%BB%B6/">Hexo豆瓣文章插件</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-07-07T08:49:29.000Z">2020-07-07</time></p><p class="title"><a href="/2020/07/07/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E7%AE%80%E6%B4%81%E5%AE%9E%E7%8E%B0/">线性回归的简洁实现</a></p><p class="categories"><a href="/categories/AiLearning/">AiLearning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-07-04T04:00:00.000Z">2020-07-04</time></p><p class="title"><a href="/2020/07/04/twenty/">Twenty</a></p><p class="categories"><a href="/categories/Month/">Month</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-06-06T12:58:21.000Z">2020-06-06</time></p><p class="title"><a href="/2020/06/06/aliyunAiDayThree/">阿里云Ai训练营DayThree</a></p><p class="categories"><a href="/categories/Code/">Code</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-06-05T13:29:12.000Z">2020-06-05</time></p><p class="title"><a href="/2020/06/05/aliyunAiDayTwo/">阿里云Ai训练营DayTwo</a></p><p class="categories"><a href="/categories/Code/">Code</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/06/"><span class="level-start"><span class="level-item">六月 2020</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/02/"><span class="level-start"><span class="level-item">二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/12/"><span class="level-start"><span class="level-item">十二月 2019</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/11/"><span class="level-start"><span class="level-item">十一月 2019</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/10/"><span class="level-start"><span class="level-item">十月 2019</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/09/"><span class="level-start"><span class="level-item">九月 2019</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/08/"><span class="level-start"><span class="level-item">八月 2019</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/07/"><span class="level-start"><span class="level-item">七月 2019</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="归舟棹远" height="28"></a><p class="is-size-7"><span>&copy; 2022 TankNee</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>
