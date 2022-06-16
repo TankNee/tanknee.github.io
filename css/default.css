@@ -11639,19 +11639,19 @@ figure.highlight.foldable div.level-left {
 }
 @media screen and (min-width: 1280px) {
   .is-1-column .container,
-  .is-2-column .container {
-    max-width: 960px;
-    width: 960px;
+  .is-1.75-column .container {
+    max-width: 976px;
+    width: 976px;
   }
 }
 @media screen and (min-width: 1472px) {
-  .is-2-column .container {
-    max-width: 1152px;
-    width: 1152px;
+  .is-1.75-column .container {
+    max-width: 1168px;
+    width: 1168px;
   }
   .is-1-column .container {
-    max-width: 960px;
-    width: 960px;
+    max-width: 976px;
+    width: 976px;
   }
 }
 @media screen and (min-width: 769px), print {
