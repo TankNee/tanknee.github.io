@@ -1,0 +1,79 @@
+/assets/algolia/algoliasearch.js
+	https://ajax.cdnjs.com/ajax/libs/algoliasearch/3.35.1/algoliasearch.js
+	https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.35.1/algoliasearch.js
+	https://cdn.jsdelivr.net/gh/cdnjs/cdnjs/ajax/libs/algoliasearch/3.35.1/algoliasearch.js
+	https://lf6-cdn-tos.bytecdntp.com/cdn/expire-6-M/algoliasearch/3.35.1/algoliasearch.js
+	https://cdnjs.loli.net/ajax/libs/algoliasearch/3.35.1/algoliasearch.js
+	https://lib.baomitu.com/algoliasearch/3.35.1/algoliasearch.js
+	https://cdn.staticfile.org/algoliasearch/3.35.1/algoliasearch.js
+	https://cdn.bootcss.com/algoliasearch/3.35.1/algoliasearch.js
+	https://cdn.bootcdn.net/ajax/libs/algoliasearch/3.35.1/algoliasearch.js
+	https://unpkg.com/algoliasearch@3.35.1/dist/algoliasearch.js
+	hash=wTy+bA17BRfbG6Ii7LnJMB1pxo1znxoz8P/05qTKL3k=
+
+/assets/algolia/algoliasearch.min.js
+	https://ajax.cdnjs.com/ajax/libs/algoliasearch/3.35.1/algoliasearch.min.js
+	https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.35.1/algoliasearch.min.js
+	https://cdn.jsdelivr.net/gh/cdnjs/cdnjs/ajax/libs/algoliasearch/3.35.1/algoliasearch.min.js
+	https://lf6-cdn-tos.bytecdntp.com/cdn/expire-6-M/algoliasearch/3.35.1/algoliasearch.min.js
+	https://cdnjs.loli.net/ajax/libs/algoliasearch/3.35.1/algoliasearch.min.js
+	https://lib.baomitu.com/algoliasearch/3.35.1/algoliasearch.min.js
+	https://cdn.staticfile.org/algoliasearch/3.35.1/algoliasearch.min.js
+	https://cdn.bootcss.com/algoliasearch/3.35.1/algoliasearch.min.js
+	https://cdn.bootcdn.net/ajax/libs/algoliasearch/3.35.1/algoliasearch.min.js
+	https://unpkg.com/algoliasearch@3.35.1/dist/algoliasearch.min.js
+	hash=k5vAt55RMe6XgN8dqlVTcCQfRCs0oI/aSWXQxnZBYBU=
+
+/assets/algolia/algoliasearchLite.js
+	https://ajax.cdnjs.com/ajax/libs/algoliasearch/3.35.1/algoliasearchLite.js
+	https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.35.1/algoliasearchLite.js
+	https://cdn.jsdelivr.net/gh/cdnjs/cdnjs/ajax/libs/algoliasearch/3.35.1/algoliasearchLite.js
+	https://lf6-cdn-tos.bytecdntp.com/cdn/expire-6-M/algoliasearch/3.35.1/algoliasearchLite.js
+	https://cdnjs.loli.net/ajax/libs/algoliasearch/3.35.1/algoliasearchLite.js
+	https://lib.baomitu.com/algoliasearch/3.35.1/algoliasearchLite.js
+	https://cdn.staticfile.org/algoliasearch/3.35.1/algoliasearchLite.js
+	https://cdn.bootcss.com/algoliasearch/3.35.1/algoliasearchLite.js
+	https://cdn.bootcdn.net/ajax/libs/algoliasearch/3.35.1/algoliasearchLite.js
+	https://unpkg.com/algoliasearch@3.35.1/dist/algoliasearchLite.js
+	hash=Lo1hgzpep12pGfO8ze7kq63+xtFp5zNuoEjQbclVP6I=
+
+/assets/algolia/algoliasearchLite.min.js
+	https://ajax.cdnjs.com/ajax/libs/algoliasearch/3.35.1/algoliasearchLite.min.js
+	https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.35.1/algoliasearchLite.min.js
+	https://cdn.jsdelivr.net/gh/cdnjs/cdnjs/ajax/libs/algoliasearch/3.35.1/algoliasearchLite.min.js
+	https://lf6-cdn-tos.bytecdntp.com/cdn/expire-6-M/algoliasearch/3.35.1/algoliasearchLite.min.js
+	https://cdnjs.loli.net/ajax/libs/algoliasearch/3.35.1/algoliasearchLite.min.js
+	https://lib.baomitu.com/algoliasearch/3.35.1/algoliasearchLite.min.js
+	https://cdn.staticfile.org/algoliasearch/3.35.1/algoliasearchLite.min.js
+	https://cdn.bootcss.com/algoliasearch/3.35.1/algoliasearchLite.min.js
+	https://cdn.bootcdn.net/ajax/libs/algoliasearch/3.35.1/algoliasearchLite.min.js
+	https://unpkg.com/algoliasearch@3.35.1/dist/algoliasearchLite.min.js
+	hash=5rOQwvvJdM9oDYQYCGzaJuuTy6SUALjma3OtzEGyJM0=
+
+/assets/css/APlayer.min.css
+	https://ajax.cdnjs.com/ajax/libs/aplayer/1.10.1/APlayer.min.css
+	https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css
+	https://cdn.jsdelivr.net/gh/cdnjs/cdnjs/ajax/libs/aplayer/1.10.1/APlayer.min.css
+	https://lf6-cdn-tos.bytecdntp.com/cdn/expire-6-M/aplayer/1.10.1/APlayer.min.css
+	https://cdnjs.loli.net/ajax/libs/aplayer/1.10.1/APlayer.min.css
+	https://lib.baomitu.com/aplayer/1.10.1/APlayer.min.css
+	https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css
+	https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css
+	https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css
+	https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css
+	https://pagecdn.io/lib/aplayer/1.10.1/APlayer.min.css
+	hash=uqQQGnDcmRKvhKwc5Vm4XT1GQ2oV6t1U0NR2N9tV+BQ=
+
+/assets/js/APlayer.min.js
+	https://ajax.cdnjs.com/ajax/libs/aplayer/1.10.1/APlayer.min.js
+	https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js
+	https://cdn.jsdelivr.net/gh/cdnjs/cdnjs/ajax/libs/aplayer/1.10.1/APlayer.min.js
+	https://lf6-cdn-tos.bytecdntp.com/cdn/expire-6-M/aplayer/1.10.1/APlayer.min.js
+	https://cdnjs.loli.net/ajax/libs/aplayer/1.10.1/APlayer.min.js
+	https://lib.baomitu.com/aplayer/1.10.1/APlayer.min.js
+	https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js
+	https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js
+	https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js
+	https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js
+	https://pagecdn.io/lib/aplayer/1.10.1/APlayer.min.js
+	hash=6Y7CJDaltoeNgk+ZftgCD9jLgmGv4xKUo8nQ0HgAwVo=

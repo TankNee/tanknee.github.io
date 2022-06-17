@@ -10953,6 +10953,7 @@ a.article-nav-next span {
   flex-grow: 1;
   flex-shrink: 0;
   overflow-x: auto;
+  background-color: transparent;
 }
 .navbar-main .navbar-start {
   justify-content: flex-start;
@@ -10985,6 +10986,12 @@ a.article-nav-next span {
 }
 .navbar-logo img {
   max-height: 1.75rem;
+}
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0.8);
+  position: sticky;
+  top: 0;
 }
 @media screen and (min-width: 1088px) {
   .navbar > .container .navbar-menu,
