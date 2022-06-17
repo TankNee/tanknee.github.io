@@ -32,9 +32,9 @@
 <h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><p>起初我以为是要安装什么命令行之类的。最初的设想是使用ngnix的webdav模块，不过之后找到了更好一点的解决办法！</p>
 <p>那就是用<strong>cloudreve</strong>！</p>
 <p>这个是树洞外链作者的一个新作品，虽然我不知道树洞外链是什么，有机会再去看看，应该比较有趣！<a target="_blank" rel="noopener" href="https://cloudreve.org/">cloudreve</a>←这个是作者的网址。</p>
-<img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/20191017220747.png" alt="网站"/>
+<img src="https://img.tanknee.cn/img/20191017220747.png" alt="网站"/>
 
-<img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/20191017220942.png"/>
+<img src="https://img.tanknee.cn/img/20191017220942.png"/>
 
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><blockquote>
 <p>我的云主机用的是宝塔面板，所以很多部分都比较简略，命令行基本在这里没怎么用到。</p>
@@ -45,10 +45,10 @@
 <li><p>解压缩</p>
 </li>
 <li><p>在宝塔面板创建一个新的网站</p>
-<img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2019/12/201912094c43b7e501342.png"/>
+<img src="https://img.tanknee.cn/blogpicbed/2019/12/201912094c43b7e501342.png"/>
 </li>
 <li><p>用phpmyadmin将压缩包的根目录下的sql文件导入到该数据库里</p>
-<img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/20191017221613.png/imgzip"/>
+<img src="https://img.tanknee.cn/img/20191017221613.png/imgzip"/>
 </li>
 <li><p>在application文件夹里找到databse_sample.php文件，更改里面的数据库设置，然后重命名保存为database.php文件。</p>
 </li>
@@ -57,7 +57,7 @@
 <li><p>这个时候应该已经可以打开界面了，但是点击按钮均会404，所以还需要配置伪静态。</p>
 </li>
 </ol>
-<h3 id="配置伪静态"><a href="#配置伪静态" class="headerlink" title="配置伪静态"></a>配置伪静态</h3><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/20191017222023.png"/>
+<h3 id="配置伪静态"><a href="#配置伪静态" class="headerlink" title="配置伪静态"></a>配置伪静态</h3><img src="https://img.tanknee.cn/img/20191017222023.png"/>
 
 <p>宝塔面板可以在这里直接设置。</p>
 <p>由于cloudreve是基于thinkphp创建的，所以可以直接选择模板里的thinkphp模板，没有的话也可以直接用这个</p>
@@ -143,9 +143,4 @@
             }
         });</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
             loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>
+        });</script></body></html>

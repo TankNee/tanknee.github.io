@@ -34,7 +34,7 @@
 <li>计算算术表达式的值，如中缀表达式等</li>
 <li>树是如何实现以O(logN)的平均时间进行查找操作，以及最坏时间O(logN)。</li>
 </ul>
-<h3 id="树的基本模型"><a href="#树的基本模型" class="headerlink" title="树的基本模型"></a>树的基本模型</h3><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/20191021233841.png" alt="tree">
+<h3 id="树的基本模型"><a href="#树的基本模型" class="headerlink" title="树的基本模型"></a>树的基本模型</h3><img src="https://img.tanknee.cn/img/20191021233841.png" alt="tree">
 
 <h4 id="树的构成："><a href="#树的构成：" class="headerlink" title="树的构成："></a>树的构成：</h4><p>​    每棵树都有根节点和数个非空子树组成</p>
 <p>​    一棵树是<code>N</code>个节点和<code>N-1</code>条边的集合，原因很简单，除了根节点之外，每个节点都与其父节点有一条边相连接。</p>
@@ -58,11 +58,11 @@
 <h4 id="遍历方式："><a href="#遍历方式：" class="headerlink" title="遍历方式："></a>遍历方式：</h4><ol>
 <li><p>先序遍历：</p>
 <p>在先序遍历中，<strong>对节点的处理在处理儿子结点之前</strong>！下面是线序遍历的图例，节点的数字代表遍历的顺序。</p>
-<img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/{DE7B9712-7186-0D99-EA2E-654CCD516AD9}.png"/>
+<img src="https://img.tanknee.cn/img/{DE7B9712-7186-0D99-EA2E-654CCD516AD9}.png"/>
 </li>
 <li><p>后序遍历：</p>
 <p>在后序遍历中，<strong>对节点的处理在处理儿子节点之后</strong>！下面是后序遍历的图例。</p>
-<img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/{9AC8C798-054F-F3D1-8F4E-81D6968F2C52}.png"/>
+<img src="https://img.tanknee.cn/img/{9AC8C798-054F-F3D1-8F4E-81D6968F2C52}.png"/>
 
 <blockquote>
 <p>一些个人理解：不管是先序遍历还是后序遍历还是层序遍历，其本质都是一件事情：<strong>递归</strong>，通过一种相似的查找方式打印出需要遍历的树中所有的节点。</p>
@@ -79,14 +79,14 @@
 <ul>
 <li>表达式树的树叶表示表达式的操作数，比如变量或者常量，而其他的根结点代表操作符。</li>
 <li>所有的操作符都是二元操作符。<br>下面给出一个例子：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">左子树a+(b*c)。右子树(((d*e）+f)*g)</span><br></pre></td></tr></table></figure>
-<img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/15718298842588.jpg" alt=""></li>
+<img src="https://img.tanknee.cn/img/15718298842588.jpg" alt=""></li>
 </ul>
-<p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/15718305015386.jpg" alt=""></p>
-<p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/15718305204381.jpg" alt=""></p>
+<p><img src="https://img.tanknee.cn/img/15718305015386.jpg" alt=""></p>
+<p><img src="https://img.tanknee.cn/img/15718305204381.jpg" alt=""></p>
 <h4 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h4><ul>
 <li>概念：对于二叉查找树中的任意节点<code>X</code>，它的左子树所有关键字值小于该节点所代表的关键字的值，而其右子树的所有关键字的值大于<code>X</code>的关键字值。因此该二叉树的所有元素都可以用某种统一的方式排序。 </li>
 </ul>
-<p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/15718309179352.jpg" alt=""></p>
+<p><img src="https://img.tanknee.cn/img/15718309179352.jpg" alt=""></p>
 <blockquote>
 <p>这里有一个二叉查找树的查找时间复杂度的计算问题，我之前上课的时候没怎么想明白，刚刚上网查了一下发现是我智障了。<br>其实二叉查找树的原理跟二分法的原理是完全一样的：在<code>N</code>个数据的数组里取第<code>Ｎ／2</code>个元素，将这个元素与输入元素进行对比，如果小与输入元素就去该节点的右子树中查找，如果大于就去左子树。假设查找的次数为<code>x</code>次，那么表达式就是：N*（$1/2$）^X = 1，即最坏情况是查找到首尾元素，最后即可得出查找的时间复杂度为O($\log{N}$).</p>
 </blockquote>
@@ -95,7 +95,7 @@
 <li>Insert</li>
 <li>Delete：删除操作是相对困难的一部分，这里仅仅讨论处理有两个儿子的操作。<ul>
 <li>一般的删除策略是用其右子树的最小数据（右子树的最左侧的那个节点）代替该节点的数据，并递归地删除那个（被替换掉的）节点。由于该节点不可能有左子树，所以第二次删除要容易。接下来是一个例子</li>
-<li><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/img/15718341677778.jpg" alt=""></li>
+<li><img src="https://img.tanknee.cn/img/15718341677778.jpg" alt=""></li>
 <li>然后被移动的关键字3像之前删除2一样删除！</li>
 </ul>
 </li>
@@ -180,9 +180,4 @@
             }
         });</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
             loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>
+        });</script></body></html>

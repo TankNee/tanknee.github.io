@@ -33,7 +33,7 @@
 </blockquote>
 <p>​    Hexo是静态网站，因此只需要服务器能够发送静态网页就足够了，国内的选择是<code>coding pages</code>或者是<code>gitee pages</code>但是后者码云的免费版并不能提供自定义域名服务，所以不予考虑。国外的可以选择 <code>GitHub Pages</code>。</p>
 <p>​    🆗，首先你需要一个域名，然后在你的域名服务供应商那里做如下设置。</p>
-<p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/06/20200602c491318874016.png" alt="将域名的CNAME记录指向github page"></p>
+<p><img src="https://img.tanknee.cn/blogpicbed/2020/06/20200602c491318874016.png" alt="将域名的CNAME记录指向github page"></p>
 <p>​    将域名的<code>CNAME</code>记录指向<code>github page</code>，此处需要DNS服务商提供对应的解析线路，将境外线路应用给<code>github page</code>,同理，将境内线路或是默认线路给到<code>coding pages</code>。</p>
 <blockquote>
 <p>此处会遇到<code>coding pages</code>时常抽风导致无法访问的问题，我的建议是使用自己买的服务器来部署，虽然这样就脱离了使用静态网站的初心–省钱</p>
@@ -122,9 +122,4 @@
             }
         });</script><script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
             loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script><script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>
+        });</script></body></html>
