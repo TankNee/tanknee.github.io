@@ -27,10 +27,10 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;h2 id=&quot;Github项目地址&quot;&gt;&lt;a href=&quot;#Github项目地址&quot; class=&quot;headerlink&quot; title=&quot;Github项目地址&quot;&gt;&lt;/a&gt;Github项目地址&lt;/h2&gt;&lt;p&gt;github地址: &lt;a href=&quot;https://github.com/TankNee/hexo-douban-card&quot;&gt;https://github.com/TankNee/hexo-douban-card&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果可以的话,希望你能给我一个star⭐&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -57,10 +57,8 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;h2 id=&quot;线性回归&quot;&gt;&lt;a href=&quot;#线性回归&quot; class=&quot;headerlink&quot; title=&quot;线性回归&quot;&gt;&lt;/a&gt;线性回归&lt;/h2&gt;&lt;p&gt;个人理解是通过建立反馈机制,逐层优化筛选最优的权重参数,以达到对最佳算法的逼近.也就是通过数值解逼近解析解.&lt;/p&gt;
+&lt;h3 id=&quot;预测二手房价格&quot;&gt;&lt;a href=&quot;#预测二手房价格&quot; class=&quot;headerlink&quot; title=&quot;预测二手房价格&quot;&gt;&lt;/a&gt;预测二手房价格&lt;/h3&gt;
     
     </summary>
     
@@ -87,10 +85,9 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;p&gt;本想写几句无关痛痒的话，放几张莫名其妙的图片就了事，但今天做完工程实训的答辩，确实有很多很多的话想说出来。无意写成实训的心得感悟，只是于此往前回顾时有种一眼&lt;strong&gt;万年&lt;/strong&gt;的&lt;strong&gt;陌生&lt;/strong&gt;感。一年多前，用着蹩脚的安卓写一个烂的不行的&lt;code&gt;ToDoList&lt;/code&gt;现在想想虽然觉得有点可笑，但那种翻遍万书仍然不得答案的感觉仍然会一下涌上来。&lt;/p&gt;
+&lt;p&gt;成长这个词已经用烂了，我没有长大，我只是对这些都熟悉了，仅此而已。但我也拿不准我还是不是昨天躺下睡着前的那个我，或许是的，但为何今早掠过河边看对岸的&lt;strong&gt;藤架&lt;/strong&gt;仍有种熟悉而陌生的感觉。&lt;/p&gt;
+&lt;h2 id=&quot;噩梦一则&quot;&gt;&lt;a href=&quot;#噩梦一则&quot; class=&quot;headerlink&quot; title=&quot;噩梦一则&quot;&gt;&lt;/a&gt;噩梦一则&lt;/h2&gt;
     
     </summary>
     
@@ -117,10 +114,8 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;h2 id=&quot;主题&quot;&gt;&lt;a href=&quot;#主题&quot; class=&quot;headerlink&quot; title=&quot;主题&quot;&gt;&lt;/a&gt;主题&lt;/h2&gt;&lt;p&gt;今天的主题是制作AI识别相册.&lt;/p&gt;
+&lt;h3 id=&quot;实例截图&quot;&gt;&lt;a href=&quot;#实例截图&quot; class=&quot;headerlink&quot; title=&quot;实例截图&quot;&gt;&lt;/a&gt;实例截图&lt;/h3&gt;
     
     </summary>
     
@@ -147,10 +142,8 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;h3 id=&quot;主题&quot;&gt;&lt;a href=&quot;#主题&quot; class=&quot;headerlink&quot; title=&quot;主题&quot;&gt;&lt;/a&gt;主题&lt;/h3&gt;&lt;p&gt;今天的主题是使用&lt;code&gt;springboot starter&lt;/code&gt;和阿里云的AI识别sdk构建一个身份证识别应用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif&quot; data-original=&quot;https://img.tanknee.cn/blogpicbed/2020/06/2020060603434bc5632e5.png/imgzip&quot; alt=&quot;image-20200606123248413&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -177,10 +170,12 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;h2 id=&quot;视觉生产&quot;&gt;&lt;a href=&quot;#视觉生产&quot; class=&quot;headerlink&quot; title=&quot;视觉生产&quot;&gt;&lt;/a&gt;视觉生产&lt;/h2&gt;&lt;p&gt;生产是输入输出的过程&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;给予一定的生产素材&lt;/li&gt;
+&lt;li&gt;然后通过视觉生产基础框架对素材，需求进行一定的语义分析理解&lt;/li&gt;
+&lt;li&gt;再经过视觉生产模型产出对应的产品。&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -207,10 +202,11 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;blockquote&gt;
+&lt;p&gt;多线部署：将同一个域名解析到多个服务器，并让不同地区的用户访问不同地区的服务器，以获得最好的访问体验&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;​    Hexo是静态网站，因此只需要服务器能够发送静态网页就足够了，国内的选择是&lt;code&gt;coding pages&lt;/code&gt;或者是&lt;code&gt;gitee pages&lt;/code&gt;但是后者码云的免费版并不能提供自定义域名服务，所以不予考虑。国外的可以选择 &lt;code&gt;GitHub Pages&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;​    🆗，首先你需要一个域名，然后在你的域名服务供应商那里做如下设置。&lt;/p&gt;
     
     </summary>
     
@@ -231,14 +227,16 @@
     <published>2020-06-01T06:51:00.000Z</published>
     <updated>2022-06-16T13:09:47.178Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-ZeshuEIA" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="28402351" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><p>提笔落字时总觉自己文疏才浅，阅历浅薄，无从着笔。</p><p>五月共三十一天，步数超过3000的日子大概不足十天，倒是出去吃饭吃了很多次。</p><p>一号结束了为期两个月的打工生涯，小半年也算是搞到了第一笔大额资金。</p><p>八号往鹅厂投了简历，挣扎了两三天，终是没过，虽然也没给原因，大概就是因为我太菜了吧，一问三不知。</p><blockquote><p>2020年5月8日</p><p>电话面试，深圳总部面试</p><ol><li>dom事件的冒泡与捕获</li><li>CSS中的样式优先级是怎样分布的</li><li>React-Native的底层实现，是如何与原生系统进行交互的</li><li>算法题：找出一个字符串的最长重复子序列</li></ol><p>2020年5月15日</p><p>电话面试，武汉腾讯</p><ol><li>JavaScript原型链的实现（不了解）</li><li>http协议中数据传输的编码方式，发送json格式的数据时的content-type</li><li>说一下auth2.0</li><li>说一下当下前端框架对Dom做了哪些优化</li><li>用户登录的实现<ol><li>使用了什么加密方式–jwt</li><li>jwt有什么缺点</li><li>session和cookie</li></ol></li><li>讲一下MySQL的索引实现（不了解）</li></ol></blockquote><p>明年再努力吧。</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/06/20200601c27bb1c554117.jpg" alt="c7b90c865a856dc54deab5445817f0c"></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-gWWdqalT" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="28402351" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><p>提笔落字时总觉自己文疏才浅，阅历浅薄，无从着笔。</p><p>五月共三十一天，步数超过3000的日子大概不足十天，倒是出去吃饭吃了很多次。</p><p>一号结束了为期两个月的打工生涯，小半年也算是搞到了第一笔大额资金。</p><p>八号往鹅厂投了简历，挣扎了两三天，终是没过，虽然也没给原因，大概就是因为我太菜了吧，一问三不知。</p><blockquote><p>2020年5月8日</p><p>电话面试，深圳总部面试</p><ol><li>dom事件的冒泡与捕获</li><li>CSS中的样式优先级是怎样分布的</li><li>React-Native的底层实现，是如何与原生系统进行交互的</li><li>算法题：找出一个字符串的最长重复子序列</li></ol><p>2020年5月15日</p><p>电话面试，武汉腾讯</p><ol><li>JavaScript原型链的实现（不了解）</li><li>http协议中数据传输的编码方式，发送json格式的数据时的content-type</li><li>说一下auth2.0</li><li>说一下当下前端框架对Dom做了哪些优化</li><li>用户登录的实现<ol><li>使用了什么加密方式–jwt</li><li>jwt有什么缺点</li><li>session和cookie</li></ol></li><li>讲一下MySQL的索引实现（不了解）</li></ol></blockquote><p>明年再努力吧。</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/06/20200601c27bb1c554117.jpg" alt="c7b90c865a856dc54deab5445817f0c"></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;
+    &lt;div id=&quot;aplayer-gWWdqalT&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;28402351&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
+
+
+&lt;p&gt;提笔落字时总觉自己文疏才浅，阅历浅薄，无从着笔。&lt;/p&gt;
+&lt;p&gt;五月共三十一天，步数超过3000的日子大概不足十天，倒是出去吃饭吃了很多次。&lt;/p&gt;
     
     </summary>
     
@@ -271,14 +269,14 @@
     <published>2020-05-02T09:25:00.000Z</published>
     <updated>2022-06-16T13:09:47.179Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-PvJDMgiA" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="450567505" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><h3 id="Gitea-Contribution"><a href="#Gitea-Contribution" class="headerlink" title="Gitea Contribution"></a>Gitea Contribution</h3><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/2020050214eb2f8ad8224.png" alt="Gitea Contribution"></p><h3 id="Github-Contribution"><a href="#Github-Contribution" class="headerlink" title="Github Contribution"></a>Github Contribution</h3><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021736d66679c34.png" alt="Github Contribution"></p><p>断断续续写了一快一整年的月报了，还是没有确定究竟要留下一个什么样的形式。偶尔会有段时间很在意某种格式，但也经常过了一会儿就不太在意了。</p><p>前两天在公众号里发了一张图片：</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021550268653b2f.jpg" alt=""></p><p>暴力终究也会递归式地催生新的暴力反抗。</p><p>好几次在社交平台看到触动以致激怒我的言论，反驳的字已经全部打进了输入框，最后却哐哐哐全都删掉。</p><p>诚然，有那么一瞬间，想把作者的脑袋拧下来，问候他到底有没有读过书，整天逼逼赖赖发这些脑瘫言论？</p><p>但是当我全部删掉之后，突然就有那么一瞬间平静下来。</p><p>暴力是如此的易于传播，以致于每一次都会上当。</p><p>发完这张图片之后，又在原博评论里看到新的东西：</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021cae5c08d3bf2.png" alt="评论"></p><blockquote><p>达克效应（D-K effect）</p><p>全称为邓宁-克鲁格效应（Dunning-Kruger effect）。它是一种认知偏差现象，指的是能力欠缺的人在自己欠考虑的决定的基础上得出错误结论，但是无法正确认识到自身的不足，辨别错误行为。这些能力欠缺者们沉浸在自我营造的虚幻的优势之中，常常高估自己的能力水平，却无法客观评价他人的能力。</p></blockquote><p>上了大学之后，看到的无知的事情越来越多，起初是愤懑，想着义正言辞地反驳，幻想我这一段狗屁不通的言论能起到一点点我设想的效果，后来也就慢慢冷静。</p><p><strong>没有人想听你的教诲和理由，你是什么，他又是什么？</strong></p><p>碰了几鼻子的灰之后再也没有跟人抬杠的心情，挺好的。</p><p>Keep hungry and keep stupid!</p><hr><p>也祝五月返校的各位开学愉快，暑假相会</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-IqZkysWK" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="450567505" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><h3 id="Gitea-Contribution"><a href="#Gitea-Contribution" class="headerlink" title="Gitea Contribution"></a>Gitea Contribution</h3><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/2020050214eb2f8ad8224.png" alt="Gitea Contribution"></p><h3 id="Github-Contribution"><a href="#Github-Contribution" class="headerlink" title="Github Contribution"></a>Github Contribution</h3><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021736d66679c34.png" alt="Github Contribution"></p><p>断断续续写了一快一整年的月报了，还是没有确定究竟要留下一个什么样的形式。偶尔会有段时间很在意某种格式，但也经常过了一会儿就不太在意了。</p><p>前两天在公众号里发了一张图片：</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021550268653b2f.jpg" alt=""></p><p>暴力终究也会递归式地催生新的暴力反抗。</p><p>好几次在社交平台看到触动以致激怒我的言论，反驳的字已经全部打进了输入框，最后却哐哐哐全都删掉。</p><p>诚然，有那么一瞬间，想把作者的脑袋拧下来，问候他到底有没有读过书，整天逼逼赖赖发这些脑瘫言论？</p><p>但是当我全部删掉之后，突然就有那么一瞬间平静下来。</p><p>暴力是如此的易于传播，以致于每一次都会上当。</p><p>发完这张图片之后，又在原博评论里看到新的东西：</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021cae5c08d3bf2.png" alt="评论"></p><blockquote><p>达克效应（D-K effect）</p><p>全称为邓宁-克鲁格效应（Dunning-Kruger effect）。它是一种认知偏差现象，指的是能力欠缺的人在自己欠考虑的决定的基础上得出错误结论，但是无法正确认识到自身的不足，辨别错误行为。这些能力欠缺者们沉浸在自我营造的虚幻的优势之中，常常高估自己的能力水平，却无法客观评价他人的能力。</p></blockquote><p>上了大学之后，看到的无知的事情越来越多，起初是愤懑，想着义正言辞地反驳，幻想我这一段狗屁不通的言论能起到一点点我设想的效果，后来也就慢慢冷静。</p><p><strong>没有人想听你的教诲和理由，你是什么，他又是什么？</strong></p><p>碰了几鼻子的灰之后再也没有跟人抬杠的心情，挺好的。</p><p>Keep hungry and keep stupid!</p><hr><p>也祝五月返校的各位开学愉快，暑假相会</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;
+    &lt;div id=&quot;aplayer-IqZkysWK&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;450567505&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;Gitea-Contribution&quot;&gt;&lt;a href=&quot;#Gitea-Contribution&quot; class=&quot;headerlink&quot; title=&quot;Gitea Contribution&quot;&gt;&lt;/a&gt;Gitea Contribution&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif&quot; data-original=&quot;https://img.tanknee.cn/blogpicbed/2020/05/2020050214eb2f8ad8224.png&quot; alt=&quot;Gitea Contribution&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -286,11 +284,11 @@
       <category term="Caprice" scheme="https://www.tanknee.cn/categories/Caprice/"/>
     
     
-      <category term="meting" scheme="https://www.tanknee.cn/tags/meting/"/>
-    
       <category term="netease" scheme="https://www.tanknee.cn/tags/netease/"/>
     
       <category term="type" scheme="https://www.tanknee.cn/tags/type/"/>
+    
+      <category term="meting" scheme="https://www.tanknee.cn/tags/meting/"/>
     
       <category term="server" scheme="https://www.tanknee.cn/tags/server/"/>
     
@@ -317,10 +315,11 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;blockquote&gt;
+&lt;p&gt;但愿旧世界的火光能够燃尽晦暗&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在前端的路上走走停停，玩了快大半年，发现自己确实还没有能力承载一个完成的项目，每次都是做了一半就已经十分的疲倦。&lt;/p&gt;
+&lt;h2 id=&quot;Tribute-and-Disclaimer&quot;&gt;&lt;a href=&quot;#Tribute-and-Disclaimer&quot; class=&quot;headerlink&quot; title=&quot;Tribute and Disclaimer&quot;&gt;&lt;/a&gt;Tribute and Disclaimer&lt;/h2&gt;
     
     </summary>
     
@@ -369,10 +368,15 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;h2 id=&quot;作业排程问题&quot;&gt;&lt;a href=&quot;#作业排程问题&quot; class=&quot;headerlink&quot; title=&quot;作业排程问题&quot;&gt;&lt;/a&gt;作业排程问题&lt;/h2&gt;&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Automobile factory with two assembly lines(汽车厂两条装配线)&lt;/p&gt;
+&lt;p&gt;– Each line has n stations: S1,1, . . . , S1,n and S2,1, . . . , S2,n(每条装&lt;/p&gt;
+&lt;p&gt;配线有n个工序站台)&lt;/p&gt;
+&lt;p&gt;– Corresponding stations S1, j and S2, j perform the same function &lt;/p&gt;
+&lt;p&gt;but can take different amounts of time a1, j and a2, j (每条装配线的&lt;/p&gt;
+&lt;p&gt;第j个站台的功能相同,但是效率不一致)&lt;/p&gt;
+&lt;p&gt;– Entry times e1 and e2 and exit times x1 and x2(上线和下线时间)&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -425,10 +429,9 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;h2 id=&quot;单源最短路径算法&quot;&gt;&lt;a href=&quot;#单源最短路径算法&quot; class=&quot;headerlink&quot; title=&quot;单源最短路径算法&quot;&gt;&lt;/a&gt;单源最短路径算法&lt;/h2&gt;&lt;img src=&quot;https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif&quot; data-original=&quot;https://img.tanknee.cn/blogpicbed/2020/04/2020040778f593c139c85.png&quot;&gt;
+
+&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;
     
     </summary>
     
@@ -473,10 +476,7 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;h2 id=&quot;Strassen矩阵算法&quot;&gt;&lt;a href=&quot;#Strassen矩阵算法&quot; class=&quot;headerlink&quot; title=&quot;Strassen矩阵算法&quot;&gt;&lt;/a&gt;Strassen矩阵算法&lt;/h2&gt;&lt;h3 id=&quot;矩阵分割&quot;&gt;&lt;a href=&quot;#矩阵分割&quot; class=&quot;headerlink&quot; title=&quot;矩阵分割&quot;&gt;&lt;/a&gt;矩阵分割&lt;/h3&gt;&lt;p&gt;将 &lt;/p&gt;
     
     </summary>
     
@@ -515,10 +515,7 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;h2 id=&quot;排序算法&quot;&gt;&lt;a href=&quot;#排序算法&quot; class=&quot;headerlink&quot; title=&quot;排序算法&quot;&gt;&lt;/a&gt;排序算法&lt;/h2&gt;&lt;h3 id=&quot;main函数代码&quot;&gt;&lt;a href=&quot;#main函数代码&quot; class=&quot;headerlink&quot; title=&quot;main函数代码&quot;&gt;&lt;/a&gt;&lt;code&gt;main&lt;/code&gt;函数代码&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;65&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;66&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;67&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;68&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;69&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;70&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title function_&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;插入排序-------------------------------------&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;[] num = randomCreate(max);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(num);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;bt&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;[] temp1 = insertSort(num);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;et&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;排序用时：&amp;quot;&lt;/span&gt; + (et - bt + &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp1);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;合并排序-------------------------------------&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;[] temp4 = randomCreate(max);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp4);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;bt2&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    mergeSort(temp4);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;et2&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;排序用时：&amp;quot;&lt;/span&gt; + (et2 - bt2 + &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp4);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;快速排序-------------------------------------&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;[] temp5 = randomCreate(max);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp5);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;bt3&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    quickSort(temp5, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, temp5.length - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;et3&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;排序用时：&amp;quot;&lt;/span&gt; + (et3 - bt3 + &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp5);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;随机化快速排序--------------------------------&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;[] temp9 = randomCreate(max);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp9);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;bt7&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    quickSort(temp9, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, temp9.length - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;et7&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;排序用时：&amp;quot;&lt;/span&gt; + (et2 - bt2 + &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp9);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;桶排序---------------------------------------&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;[] temp6 = randomCreate(max);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp6);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;bt4&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    temp6 = bucketSort(temp6, max);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;et4&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;排序用时：&amp;quot;&lt;/span&gt; + (et4 - bt4 + &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp6);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;计数排序-------------------------------------&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;[] temp7 = randomCreate(max);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp7);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;bt5&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    temp7 = countSort(temp7);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;et5&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;排序用时：&amp;quot;&lt;/span&gt; + (et5 - bt5 + &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp7);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;基数排序-------------------------------------&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;[] temp8 = randomCreate(max);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp8);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;bt6&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    radixSort(temp8, (max + &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;).length());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;type&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;et6&lt;/span&gt; &lt;span class=&quot;operator&quot;&gt;=&lt;/span&gt; System.nanoTime();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;排序用时：&amp;quot;&lt;/span&gt; + (et6 - bt6 + &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    printResult(temp8);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    System.out.println(&lt;span class=&quot;string&quot;&gt;&amp;quot;---------------------------------------------&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -555,10 +552,8 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;iframe width=&quot;360&quot; height=&quot;315&quot; align=&quot;center&quot; src=&quot;https://www.youtube-nocookie.com/embed/XU9FVqwO4TM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
     
     </summary>
     
@@ -575,14 +570,17 @@
     <published>2020-04-03T10:34:25.000Z</published>
     <updated>2022-06-16T13:09:47.177Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-iRIzaaHx" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="494858498" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><blockquote><p>鬼知道我这个月经历了什么东西。</p></blockquote><p>每日高强度Coding，我都怀疑自己已经不太像个正常人了…</p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/04/20200401e3face62152d6.png" alt="真实高强度Coding"/><p>原来我也会有对着电脑感到生理性呕吐的时候..</p><p>昨天人机交互课上老师随口一句：<strong>高考都要延迟了，你们开学是别想了</strong></p><p>等疫情过了想出去好好看看…毕竟谁也不想永远呆在家里。</p><h2 id="一代宗师：宗师，一代（人）"><a href="#一代宗师：宗师，一代（人）" class="headerlink" title="一代宗师：宗师，一代（人）"></a>一代宗师：宗师，一代（人）</h2><p>前两天抽空看了一代宗师，说来惭愧，以前一直以为一代宗师是指的叶问四部曲的第一部，后来才明白是王家卫的电影。王家卫的电影看的很少，基本算是没有吧，最近的一次交集应该是知道了《<a href="https://movie.douban.com/subject/1292213/">大话西游之大圣娶亲</a>》里那句流传甚广的<strong>爱你一万年</strong>是出自他的《<a href="https://movie.douban.com/subject/1291999/">重庆森林</a>》。</p><p>一代宗师更像是一部小说，对白更多的辅助人物形象的刻画，以及时代特征的描述，而不是像更多的武侠电影那样去推动剧情的发展。</p><p><strong>一如其冷静，不占烟火气的格调。</strong></p><blockquote><p>如果人生有四季，四十岁前，我的人生都是春天。</p></blockquote><blockquote><p>做羹要讲究火候。火候不到，众口难调，火候过了，事情就焦。做人也是这样。</p></blockquote><blockquote><p>暗事好做，明事难成。</p></blockquote><blockquote><p>宝森不是想当英雄，是想造时势。现在这炉子里，需要这根新柴。</p></blockquote><blockquote><p>让他搭手多大的面子，姓叶的不识抬举，咱可不要坏了规矩。</p></blockquote><blockquote><p>别跟他们一般见识，老人死守着规矩，新人什么时候才能出头啊。叶问是个好材料，就看他这次能不能出头。<br>宫家没有败绩，您又在这儿，他凭什么出头。</p></blockquote><blockquote><p>你的脾气啊，就是爹年轻的时候。眼睛里只有胜负，没有人情世故。人要往远看，过了山，眼界就开阔了。但凡一个人见不得人好，见不得人高明，是没有容人之心。咱们宫家的门槛高，但是不出小人。</p></blockquote><blockquote><p>人活这一世，能耐还在其次。有的成了面子，有的成了里子，都是时势使然。这次让你下来，是想求个始终，让你看看，爹是怎么退下来的。你从小是看着我跟人交手长大的，这是最后一次。你是订了亲的人了，江湖的事，和你没关系。当个好大夫，平平安安的，就是尽孝心了。</p></blockquote><p><a href="https://note.tanknee.cn/wapp/pages/view/share/s/1oyM5w17Uh7G2emBkt3pWCWG3ywNqR3DGAsg2RaZqQ1J2QPK">台词剪辑</a></p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/202003222594d66d57866.png/imgzip" alt="清河公园"></p><p>日丽风和，云销雨霁</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-bDRbBLOx" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="494858498" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><blockquote><p>鬼知道我这个月经历了什么东西。</p></blockquote><p>每日高强度Coding，我都怀疑自己已经不太像个正常人了…</p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/04/20200401e3face62152d6.png" alt="真实高强度Coding"/><p>原来我也会有对着电脑感到生理性呕吐的时候..</p><p>昨天人机交互课上老师随口一句：<strong>高考都要延迟了，你们开学是别想了</strong></p><p>等疫情过了想出去好好看看…毕竟谁也不想永远呆在家里。</p><h2 id="一代宗师：宗师，一代（人）"><a href="#一代宗师：宗师，一代（人）" class="headerlink" title="一代宗师：宗师，一代（人）"></a>一代宗师：宗师，一代（人）</h2><p>前两天抽空看了一代宗师，说来惭愧，以前一直以为一代宗师是指的叶问四部曲的第一部，后来才明白是王家卫的电影。王家卫的电影看的很少，基本算是没有吧，最近的一次交集应该是知道了《<a href="https://movie.douban.com/subject/1292213/">大话西游之大圣娶亲</a>》里那句流传甚广的<strong>爱你一万年</strong>是出自他的《<a href="https://movie.douban.com/subject/1291999/">重庆森林</a>》。</p><p>一代宗师更像是一部小说，对白更多的辅助人物形象的刻画，以及时代特征的描述，而不是像更多的武侠电影那样去推动剧情的发展。</p><p><strong>一如其冷静，不占烟火气的格调。</strong></p><blockquote><p>如果人生有四季，四十岁前，我的人生都是春天。</p></blockquote><blockquote><p>做羹要讲究火候。火候不到，众口难调，火候过了，事情就焦。做人也是这样。</p></blockquote><blockquote><p>暗事好做，明事难成。</p></blockquote><blockquote><p>宝森不是想当英雄，是想造时势。现在这炉子里，需要这根新柴。</p></blockquote><blockquote><p>让他搭手多大的面子，姓叶的不识抬举，咱可不要坏了规矩。</p></blockquote><blockquote><p>别跟他们一般见识，老人死守着规矩，新人什么时候才能出头啊。叶问是个好材料，就看他这次能不能出头。<br>宫家没有败绩，您又在这儿，他凭什么出头。</p></blockquote><blockquote><p>你的脾气啊，就是爹年轻的时候。眼睛里只有胜负，没有人情世故。人要往远看，过了山，眼界就开阔了。但凡一个人见不得人好，见不得人高明，是没有容人之心。咱们宫家的门槛高，但是不出小人。</p></blockquote><blockquote><p>人活这一世，能耐还在其次。有的成了面子，有的成了里子，都是时势使然。这次让你下来，是想求个始终，让你看看，爹是怎么退下来的。你从小是看着我跟人交手长大的，这是最后一次。你是订了亲的人了，江湖的事，和你没关系。当个好大夫，平平安安的，就是尽孝心了。</p></blockquote><p><a href="https://note.tanknee.cn/wapp/pages/view/share/s/1oyM5w17Uh7G2emBkt3pWCWG3ywNqR3DGAsg2RaZqQ1J2QPK">台词剪辑</a></p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/202003222594d66d57866.png/imgzip" alt="清河公园"></p><p>日丽风和，云销雨霁</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;
+    &lt;div id=&quot;aplayer-bDRbBLOx&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;494858498&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;鬼知道我这个月经历了什么东西。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;每日高强度Coding，我都怀疑自己已经不太像个正常人了…&lt;/p&gt;
     
     </summary>
     
@@ -615,10 +613,11 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;p&gt;&lt;a href=&quot;https://git.tanknee.cn/explore/repos&quot;&gt;我的个人Git仓库&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/TankNee&quot;&gt;我的GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实做法很简单，就是编写批处理程序。Linux下用bash，windows下用bat写，Linux我没有测试，但是应该没有什么问题。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -651,10 +650,13 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;p&gt;接下来有打算每半个月写一点东西，不然写东西的频率太低就会造成正反馈，产出越来越少了。&lt;/p&gt;
+&lt;p&gt;这段时间一共做了三个爬虫：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;爬取丁香园的疫情数据&lt;/li&gt;
+&lt;li&gt;爬取联想的虚拟货币乐豆&lt;/li&gt;
+&lt;li&gt;第三个跟第一个类似，不过工作量大一点&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -699,10 +701,8 @@
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;h2 id=&quot;Shell&quot;&gt;&lt;a href=&quot;#Shell&quot; class=&quot;headerlink&quot; title=&quot;Shell&quot;&gt;&lt;/a&gt;Shell&lt;/h2&gt;&lt;p&gt;每一个shell脚本都需要一个注解，形如&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta prompt_&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;language-bash&quot;&gt;! /bin/bash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -733,14 +733,17 @@
     <published>2020-03-02T07:19:00.000Z</published>
     <updated>2022-06-16T13:09:47.178Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-CnsiSrTm" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="3932159" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><blockquote><p>闰年的二月也没有比普通年份的二月更加特别</p></blockquote><p>在家里的生活平淡的像一盆水，翻不出什么花样。每天早上起来：八点了，那就再睡半个钟头，才七点？那就玩会儿手机，然后跑到电脑前上神经兮兮的网课。</p><p>网课很好的证明了大学里上不上课基本上是<strong>没什么区别</strong>的，除非你真的在听课？<strong>你不会真的有听课吧？</strong></p><p>25号的时候村里终于开放了出去的权限，只有血统纯正的村里人，才能进出无阻，甚至还能在路边打到滴滴。</p><p>那天碰见的滴滴司机是个外省人，老婆孩子都回去了，疫情爆发，自己没来得及回家，导致现在一个人待在异乡，连吃了半个月的面，最后两天甚至连菜叶都没有，迫不得已去拿隔壁阿婆的菜。</p><p>无心评价对错。</p><blockquote><p>村里不给外村人发配菜，外村人家里弹尽粮绝，隔壁阿婆蔬菜满园。</p></blockquote><p>怎么个选法也不必多说吧。反正我家还有火锅吃。</p><p>前几天还看到站在KFC门口点外卖的段子，愣是让外卖小哥站着血赚配送费，没想到自己到了KFC门口时，也活成了段子…</p><p><strong>日子也没啥过头，天天歌舞升平，看片吃肉</strong></p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/2020030276ae2c9ca5514.png"/><p>这一个月看的电影，怕是比我前几年加起来看的都多。在家里把公立里<strong>祖传</strong>的投影仪架起来，投在家里那面潮的不行的破墙上，看着还挺舒服哈哈哈。</p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/2020030247e74e47f31b9.jpg" alt="你永远不知道墙上会出现什么东西"/><blockquote><p>恐怖直播</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-HfiVcVMN" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="3932159" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><blockquote><p>闰年的二月也没有比普通年份的二月更加特别</p></blockquote><p>在家里的生活平淡的像一盆水，翻不出什么花样。每天早上起来：八点了，那就再睡半个钟头，才七点？那就玩会儿手机，然后跑到电脑前上神经兮兮的网课。</p><p>网课很好的证明了大学里上不上课基本上是<strong>没什么区别</strong>的，除非你真的在听课？<strong>你不会真的有听课吧？</strong></p><p>25号的时候村里终于开放了出去的权限，只有血统纯正的村里人，才能进出无阻，甚至还能在路边打到滴滴。</p><p>那天碰见的滴滴司机是个外省人，老婆孩子都回去了，疫情爆发，自己没来得及回家，导致现在一个人待在异乡，连吃了半个月的面，最后两天甚至连菜叶都没有，迫不得已去拿隔壁阿婆的菜。</p><p>无心评价对错。</p><blockquote><p>村里不给外村人发配菜，外村人家里弹尽粮绝，隔壁阿婆蔬菜满园。</p></blockquote><p>怎么个选法也不必多说吧。反正我家还有火锅吃。</p><p>前几天还看到站在KFC门口点外卖的段子，愣是让外卖小哥站着血赚配送费，没想到自己到了KFC门口时，也活成了段子…</p><p><strong>日子也没啥过头，天天歌舞升平，看片吃肉</strong></p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/2020030276ae2c9ca5514.png"/><p>这一个月看的电影，怕是比我前几年加起来看的都多。在家里把公立里<strong>祖传</strong>的投影仪架起来，投在家里那面潮的不行的破墙上，看着还挺舒服哈哈哈。</p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/2020030247e74e47f31b9.jpg" alt="你永远不知道墙上会出现什么东西"/><blockquote><p>恐怖直播</p></blockquote>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;
+    &lt;div id=&quot;aplayer-HfiVcVMN&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;3932159&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;闰年的二月也没有比普通年份的二月更加特别&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在家里的生活平淡的像一盆水，翻不出什么花样。每天早上起来：八点了，那就再睡半个钟头，才七点？那就玩会儿手机，然后跑到电脑前上神经兮兮的网课。&lt;/p&gt;
     
     </summary>
     
@@ -750,11 +753,11 @@
     
       <category term="生活" scheme="https://www.tanknee.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="meting" scheme="https://www.tanknee.cn/tags/meting/"/>
-    
       <category term="netease" scheme="https://www.tanknee.cn/tags/netease/"/>
     
       <category term="type" scheme="https://www.tanknee.cn/tags/type/"/>
+    
+      <category term="meting" scheme="https://www.tanknee.cn/tags/meting/"/>
     
       <category term="server" scheme="https://www.tanknee.cn/tags/server/"/>
     
