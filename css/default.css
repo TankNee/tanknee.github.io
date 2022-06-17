@@ -10844,7 +10844,11 @@ article.article .content blockquote.pullquote {
   font-size: 1.15rem;
   position: relative;
 }
-article.article .content blockquote footer strong + cite {
+article.article .content a img {
+  margin: auto;
+  display: block;
+}
+article.article .content a footer strong + cite {
   margin-left: 0.5em;
 }
 article.article .content .message.message-immersive {
