@@ -227,12 +227,12 @@
     <published>2020-06-01T06:51:00.000Z</published>
     <updated>2022-06-17T07:24:21.668Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-gVSJiQrD" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="28402351" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><p>提笔落字时总觉自己文疏才浅，阅历浅薄，无从着笔。</p><p>五月共三十一天，步数超过3000的日子大概不足十天，倒是出去吃饭吃了很多次。</p><p>一号结束了为期两个月的打工生涯，小半年也算是搞到了第一笔大额资金。</p><p>八号往鹅厂投了简历，挣扎了两三天，终是没过，虽然也没给原因，大概就是因为我太菜了吧，一问三不知。</p><blockquote><p>2020年5月8日</p><p>电话面试，深圳总部面试</p><ol><li>dom事件的冒泡与捕获</li><li>CSS中的样式优先级是怎样分布的</li><li>React-Native的底层实现，是如何与原生系统进行交互的</li><li>算法题：找出一个字符串的最长重复子序列</li></ol><p>2020年5月15日</p><p>电话面试，武汉腾讯</p><ol><li>JavaScript原型链的实现（不了解）</li><li>http协议中数据传输的编码方式，发送json格式的数据时的content-type</li><li>说一下auth2.0</li><li>说一下当下前端框架对Dom做了哪些优化</li><li>用户登录的实现<ol><li>使用了什么加密方式–jwt</li><li>jwt有什么缺点</li><li>session和cookie</li></ol></li><li>讲一下MySQL的索引实现（不了解）</li></ol></blockquote><p>明年再努力吧。</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/06/20200601c27bb1c554117.jpg" alt="c7b90c865a856dc54deab5445817f0c"></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-BGNuiHYr" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="28402351" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><p>提笔落字时总觉自己文疏才浅，阅历浅薄，无从着笔。</p><p>五月共三十一天，步数超过3000的日子大概不足十天，倒是出去吃饭吃了很多次。</p><p>一号结束了为期两个月的打工生涯，小半年也算是搞到了第一笔大额资金。</p><p>八号往鹅厂投了简历，挣扎了两三天，终是没过，虽然也没给原因，大概就是因为我太菜了吧，一问三不知。</p><blockquote><p>2020年5月8日</p><p>电话面试，深圳总部面试</p><ol><li>dom事件的冒泡与捕获</li><li>CSS中的样式优先级是怎样分布的</li><li>React-Native的底层实现，是如何与原生系统进行交互的</li><li>算法题：找出一个字符串的最长重复子序列</li></ol><p>2020年5月15日</p><p>电话面试，武汉腾讯</p><ol><li>JavaScript原型链的实现（不了解）</li><li>http协议中数据传输的编码方式，发送json格式的数据时的content-type</li><li>说一下auth2.0</li><li>说一下当下前端框架对Dom做了哪些优化</li><li>用户登录的实现<ol><li>使用了什么加密方式–jwt</li><li>jwt有什么缺点</li><li>session和cookie</li></ol></li><li>讲一下MySQL的索引实现（不了解）</li></ol></blockquote><p>明年再努力吧。</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/06/20200601c27bb1c554117.jpg" alt="c7b90c865a856dc54deab5445817f0c"></p>]]></content>
     
     <summary type="html">
     
       &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;
-    &lt;div id=&quot;aplayer-gVSJiQrD&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;28402351&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;aplayer-BGNuiHYr&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;28402351&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
 
 
 &lt;p&gt;提笔落字时总觉自己文疏才浅，阅历浅薄，无从着笔。&lt;/p&gt;
@@ -269,12 +269,12 @@
     <published>2020-05-02T09:25:00.000Z</published>
     <updated>2022-06-17T07:24:21.689Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-FqWhsQpI" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="450567505" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><h3 id="Gitea-Contribution"><a href="#Gitea-Contribution" class="headerlink" title="Gitea Contribution"></a>Gitea Contribution</h3><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/2020050214eb2f8ad8224.png" alt="Gitea Contribution"></p><h3 id="Github-Contribution"><a href="#Github-Contribution" class="headerlink" title="Github Contribution"></a>Github Contribution</h3><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021736d66679c34.png" alt="Github Contribution"></p><p>断断续续写了一快一整年的月报了，还是没有确定究竟要留下一个什么样的形式。偶尔会有段时间很在意某种格式，但也经常过了一会儿就不太在意了。</p><p>前两天在公众号里发了一张图片：</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021550268653b2f.jpg" alt=""></p><p>暴力终究也会递归式地催生新的暴力反抗。</p><p>好几次在社交平台看到触动以致激怒我的言论，反驳的字已经全部打进了输入框，最后却哐哐哐全都删掉。</p><p>诚然，有那么一瞬间，想把作者的脑袋拧下来，问候他到底有没有读过书，整天逼逼赖赖发这些脑瘫言论？</p><p>但是当我全部删掉之后，突然就有那么一瞬间平静下来。</p><p>暴力是如此的易于传播，以致于每一次都会上当。</p><p>发完这张图片之后，又在原博评论里看到新的东西：</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021cae5c08d3bf2.png" alt="评论"></p><blockquote><p>达克效应（D-K effect）</p><p>全称为邓宁-克鲁格效应（Dunning-Kruger effect）。它是一种认知偏差现象，指的是能力欠缺的人在自己欠考虑的决定的基础上得出错误结论，但是无法正确认识到自身的不足，辨别错误行为。这些能力欠缺者们沉浸在自我营造的虚幻的优势之中，常常高估自己的能力水平，却无法客观评价他人的能力。</p></blockquote><p>上了大学之后，看到的无知的事情越来越多，起初是愤懑，想着义正言辞地反驳，幻想我这一段狗屁不通的言论能起到一点点我设想的效果，后来也就慢慢冷静。</p><p><strong>没有人想听你的教诲和理由，你是什么，他又是什么？</strong></p><p>碰了几鼻子的灰之后再也没有跟人抬杠的心情，挺好的。</p><p>Keep hungry and keep stupid!</p><hr><p>也祝五月返校的各位开学愉快，暑假相会</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-AXhVhrYU" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="450567505" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><h3 id="Gitea-Contribution"><a href="#Gitea-Contribution" class="headerlink" title="Gitea Contribution"></a>Gitea Contribution</h3><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/2020050214eb2f8ad8224.png" alt="Gitea Contribution"></p><h3 id="Github-Contribution"><a href="#Github-Contribution" class="headerlink" title="Github Contribution"></a>Github Contribution</h3><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021736d66679c34.png" alt="Github Contribution"></p><p>断断续续写了一快一整年的月报了，还是没有确定究竟要留下一个什么样的形式。偶尔会有段时间很在意某种格式，但也经常过了一会儿就不太在意了。</p><p>前两天在公众号里发了一张图片：</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021550268653b2f.jpg" alt=""></p><p>暴力终究也会递归式地催生新的暴力反抗。</p><p>好几次在社交平台看到触动以致激怒我的言论，反驳的字已经全部打进了输入框，最后却哐哐哐全都删掉。</p><p>诚然，有那么一瞬间，想把作者的脑袋拧下来，问候他到底有没有读过书，整天逼逼赖赖发这些脑瘫言论？</p><p>但是当我全部删掉之后，突然就有那么一瞬间平静下来。</p><p>暴力是如此的易于传播，以致于每一次都会上当。</p><p>发完这张图片之后，又在原博评论里看到新的东西：</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/05/202005021cae5c08d3bf2.png" alt="评论"></p><blockquote><p>达克效应（D-K effect）</p><p>全称为邓宁-克鲁格效应（Dunning-Kruger effect）。它是一种认知偏差现象，指的是能力欠缺的人在自己欠考虑的决定的基础上得出错误结论，但是无法正确认识到自身的不足，辨别错误行为。这些能力欠缺者们沉浸在自我营造的虚幻的优势之中，常常高估自己的能力水平，却无法客观评价他人的能力。</p></blockquote><p>上了大学之后，看到的无知的事情越来越多，起初是愤懑，想着义正言辞地反驳，幻想我这一段狗屁不通的言论能起到一点点我设想的效果，后来也就慢慢冷静。</p><p><strong>没有人想听你的教诲和理由，你是什么，他又是什么？</strong></p><p>碰了几鼻子的灰之后再也没有跟人抬杠的心情，挺好的。</p><p>Keep hungry and keep stupid!</p><hr><p>也祝五月返校的各位开学愉快，暑假相会</p>]]></content>
     
     <summary type="html">
     
       &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;
-    &lt;div id=&quot;aplayer-FqWhsQpI&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;450567505&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;aplayer-AXhVhrYU&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;450567505&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;Gitea-Contribution&quot;&gt;&lt;a href=&quot;#Gitea-Contribution&quot; class=&quot;headerlink&quot; title=&quot;Gitea Contribution&quot;&gt;&lt;/a&gt;Gitea Contribution&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif&quot; data-original=&quot;https://img.tanknee.cn/blogpicbed/2020/05/2020050214eb2f8ad8224.png&quot; alt=&quot;Gitea Contribution&quot;&gt;&lt;/p&gt;
     
@@ -284,13 +284,13 @@
       <category term="Caprice" scheme="https://www.tanknee.cn/categories/Caprice/"/>
     
     
-      <category term="server" scheme="https://www.tanknee.cn/tags/server/"/>
-    
       <category term="meting" scheme="https://www.tanknee.cn/tags/meting/"/>
     
       <category term="netease" scheme="https://www.tanknee.cn/tags/netease/"/>
     
       <category term="type" scheme="https://www.tanknee.cn/tags/type/"/>
+    
+      <category term="server" scheme="https://www.tanknee.cn/tags/server/"/>
     
       <category term="图片" scheme="https://www.tanknee.cn/tags/%E5%9B%BE%E7%89%87/"/>
     
@@ -390,13 +390,13 @@
     
       <category term="字符" scheme="https://www.tanknee.cn/tags/%E5%AD%97%E7%AC%A6/"/>
     
-      <category term="int" scheme="https://www.tanknee.cn/tags/int/"/>
+      <category term="flag" scheme="https://www.tanknee.cn/tags/flag/"/>
     
       <category term="length" scheme="https://www.tanknee.cn/tags/length/"/>
     
       <category term="node" scheme="https://www.tanknee.cn/tags/node/"/>
     
-      <category term="flag" scheme="https://www.tanknee.cn/tags/flag/"/>
+      <category term="int" scheme="https://www.tanknee.cn/tags/int/"/>
     
       <category term="arr" scheme="https://www.tanknee.cn/tags/arr/"/>
     
@@ -447,9 +447,9 @@
     
       <category term="Java" scheme="https://www.tanknee.cn/tags/Java/"/>
     
-      <category term="int" scheme="https://www.tanknee.cn/tags/int/"/>
-    
       <category term="length" scheme="https://www.tanknee.cn/tags/length/"/>
+    
+      <category term="int" scheme="https://www.tanknee.cn/tags/int/"/>
     
       <category term="this" scheme="https://www.tanknee.cn/tags/this/"/>
     
@@ -486,9 +486,9 @@
     
       <category term="算法" scheme="https://www.tanknee.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="int" scheme="https://www.tanknee.cn/tags/int/"/>
-    
       <category term="length" scheme="https://www.tanknee.cn/tags/length/"/>
+    
+      <category term="int" scheme="https://www.tanknee.cn/tags/int/"/>
     
       <category term="数据" scheme="https://www.tanknee.cn/tags/%E6%95%B0%E6%8D%AE/"/>
     
@@ -527,13 +527,13 @@
     
       <category term="算法" scheme="https://www.tanknee.cn/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="int" scheme="https://www.tanknee.cn/tags/int/"/>
-    
-      <category term="temp" scheme="https://www.tanknee.cn/tags/temp/"/>
-    
       <category term="length" scheme="https://www.tanknee.cn/tags/length/"/>
     
+      <category term="int" scheme="https://www.tanknee.cn/tags/int/"/>
+    
       <category term="arr" scheme="https://www.tanknee.cn/tags/arr/"/>
+    
+      <category term="temp" scheme="https://www.tanknee.cn/tags/temp/"/>
     
       <category term="排序" scheme="https://www.tanknee.cn/tags/%E6%8E%92%E5%BA%8F/"/>
     
@@ -569,12 +569,12 @@
     <published>2020-04-03T10:34:25.000Z</published>
     <updated>2022-06-17T07:24:21.684Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-hHkKJtYY" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="494858498" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><blockquote><p>鬼知道我这个月经历了什么东西。</p></blockquote><p>每日高强度Coding，我都怀疑自己已经不太像个正常人了…</p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/04/20200401e3face62152d6.png" alt="真实高强度Coding"/><p>原来我也会有对着电脑感到生理性呕吐的时候..</p><p>昨天人机交互课上老师随口一句：<strong>高考都要延迟了，你们开学是别想了</strong></p><p>等疫情过了想出去好好看看…毕竟谁也不想永远呆在家里。</p><h2 id="一代宗师：宗师，一代（人）"><a href="#一代宗师：宗师，一代（人）" class="headerlink" title="一代宗师：宗师，一代（人）"></a>一代宗师：宗师，一代（人）</h2><p>前两天抽空看了一代宗师，说来惭愧，以前一直以为一代宗师是指的叶问四部曲的第一部，后来才明白是王家卫的电影。王家卫的电影看的很少，基本算是没有吧，最近的一次交集应该是知道了《<a href="https://movie.douban.com/subject/1292213/">大话西游之大圣娶亲</a>》里那句流传甚广的<strong>爱你一万年</strong>是出自他的《<a href="https://movie.douban.com/subject/1291999/">重庆森林</a>》。</p><p>一代宗师更像是一部小说，对白更多的辅助人物形象的刻画，以及时代特征的描述，而不是像更多的武侠电影那样去推动剧情的发展。</p><p><strong>一如其冷静，不占烟火气的格调。</strong></p><blockquote><p>如果人生有四季，四十岁前，我的人生都是春天。</p></blockquote><blockquote><p>做羹要讲究火候。火候不到，众口难调，火候过了，事情就焦。做人也是这样。</p></blockquote><blockquote><p>暗事好做，明事难成。</p></blockquote><blockquote><p>宝森不是想当英雄，是想造时势。现在这炉子里，需要这根新柴。</p></blockquote><blockquote><p>让他搭手多大的面子，姓叶的不识抬举，咱可不要坏了规矩。</p></blockquote><blockquote><p>别跟他们一般见识，老人死守着规矩，新人什么时候才能出头啊。叶问是个好材料，就看他这次能不能出头。<br>宫家没有败绩，您又在这儿，他凭什么出头。</p></blockquote><blockquote><p>你的脾气啊，就是爹年轻的时候。眼睛里只有胜负，没有人情世故。人要往远看，过了山，眼界就开阔了。但凡一个人见不得人好，见不得人高明，是没有容人之心。咱们宫家的门槛高，但是不出小人。</p></blockquote><blockquote><p>人活这一世，能耐还在其次。有的成了面子，有的成了里子，都是时势使然。这次让你下来，是想求个始终，让你看看，爹是怎么退下来的。你从小是看着我跟人交手长大的，这是最后一次。你是订了亲的人了，江湖的事，和你没关系。当个好大夫，平平安安的，就是尽孝心了。</p></blockquote><p><a href="https://note.tanknee.cn/wapp/pages/view/share/s/1oyM5w17Uh7G2emBkt3pWCWG3ywNqR3DGAsg2RaZqQ1J2QPK">台词剪辑</a></p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/202003222594d66d57866.png/imgzip" alt="清河公园"></p><p>日丽风和，云销雨霁</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-iYRSRREi" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="494858498" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><blockquote><p>鬼知道我这个月经历了什么东西。</p></blockquote><p>每日高强度Coding，我都怀疑自己已经不太像个正常人了…</p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/04/20200401e3face62152d6.png" alt="真实高强度Coding"/><p>原来我也会有对着电脑感到生理性呕吐的时候..</p><p>昨天人机交互课上老师随口一句：<strong>高考都要延迟了，你们开学是别想了</strong></p><p>等疫情过了想出去好好看看…毕竟谁也不想永远呆在家里。</p><h2 id="一代宗师：宗师，一代（人）"><a href="#一代宗师：宗师，一代（人）" class="headerlink" title="一代宗师：宗师，一代（人）"></a>一代宗师：宗师，一代（人）</h2><p>前两天抽空看了一代宗师，说来惭愧，以前一直以为一代宗师是指的叶问四部曲的第一部，后来才明白是王家卫的电影。王家卫的电影看的很少，基本算是没有吧，最近的一次交集应该是知道了《<a href="https://movie.douban.com/subject/1292213/">大话西游之大圣娶亲</a>》里那句流传甚广的<strong>爱你一万年</strong>是出自他的《<a href="https://movie.douban.com/subject/1291999/">重庆森林</a>》。</p><p>一代宗师更像是一部小说，对白更多的辅助人物形象的刻画，以及时代特征的描述，而不是像更多的武侠电影那样去推动剧情的发展。</p><p><strong>一如其冷静，不占烟火气的格调。</strong></p><blockquote><p>如果人生有四季，四十岁前，我的人生都是春天。</p></blockquote><blockquote><p>做羹要讲究火候。火候不到，众口难调，火候过了，事情就焦。做人也是这样。</p></blockquote><blockquote><p>暗事好做，明事难成。</p></blockquote><blockquote><p>宝森不是想当英雄，是想造时势。现在这炉子里，需要这根新柴。</p></blockquote><blockquote><p>让他搭手多大的面子，姓叶的不识抬举，咱可不要坏了规矩。</p></blockquote><blockquote><p>别跟他们一般见识，老人死守着规矩，新人什么时候才能出头啊。叶问是个好材料，就看他这次能不能出头。<br>宫家没有败绩，您又在这儿，他凭什么出头。</p></blockquote><blockquote><p>你的脾气啊，就是爹年轻的时候。眼睛里只有胜负，没有人情世故。人要往远看，过了山，眼界就开阔了。但凡一个人见不得人好，见不得人高明，是没有容人之心。咱们宫家的门槛高，但是不出小人。</p></blockquote><blockquote><p>人活这一世，能耐还在其次。有的成了面子，有的成了里子，都是时势使然。这次让你下来，是想求个始终，让你看看，爹是怎么退下来的。你从小是看着我跟人交手长大的，这是最后一次。你是订了亲的人了，江湖的事，和你没关系。当个好大夫，平平安安的，就是尽孝心了。</p></blockquote><p><a href="https://note.tanknee.cn/wapp/pages/view/share/s/1oyM5w17Uh7G2emBkt3pWCWG3ywNqR3DGAsg2RaZqQ1J2QPK">台词剪辑</a></p><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/202003222594d66d57866.png/imgzip" alt="清河公园"></p><p>日丽风和，云销雨霁</p>]]></content>
     
     <summary type="html">
     
       &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;
-    &lt;div id=&quot;aplayer-hHkKJtYY&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;494858498&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;aplayer-iYRSRREi&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;494858498&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;鬼知道我这个月经历了什么东西。&lt;/p&gt;
@@ -587,11 +587,11 @@
       <category term="Caprice" scheme="https://www.tanknee.cn/categories/Caprice/"/>
     
     
-      <category term="server" scheme="https://www.tanknee.cn/tags/server/"/>
-    
       <category term="netease" scheme="https://www.tanknee.cn/tags/netease/"/>
     
       <category term="type" scheme="https://www.tanknee.cn/tags/type/"/>
+    
+      <category term="server" scheme="https://www.tanknee.cn/tags/server/"/>
     
       <category term="时候" scheme="https://www.tanknee.cn/tags/%E6%97%B6%E5%80%99/"/>
     
@@ -663,9 +663,9 @@
       <category term="Code" scheme="https://www.tanknee.cn/categories/Code/"/>
     
     
-      <category term="网站" scheme="https://www.tanknee.cn/tags/%E7%BD%91%E7%AB%99/"/>
-    
       <category term="服务器" scheme="https://www.tanknee.cn/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="网站" scheme="https://www.tanknee.cn/tags/%E7%BD%91%E7%AB%99/"/>
     
       <category term="对象" scheme="https://www.tanknee.cn/tags/%E5%AF%B9%E8%B1%A1/"/>
     
@@ -732,12 +732,12 @@
     <published>2020-03-02T07:19:00.000Z</published>
     <updated>2022-06-17T07:24:21.680Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-rUgOCCvt" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="3932159" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><blockquote><p>闰年的二月也没有比普通年份的二月更加特别</p></blockquote><p>在家里的生活平淡的像一盆水，翻不出什么花样。每天早上起来：八点了，那就再睡半个钟头，才七点？那就玩会儿手机，然后跑到电脑前上神经兮兮的网课。</p><p>网课很好的证明了大学里上不上课基本上是<strong>没什么区别</strong>的，除非你真的在听课？<strong>你不会真的有听课吧？</strong></p><p>25号的时候村里终于开放了出去的权限，只有血统纯正的村里人，才能进出无阻，甚至还能在路边打到滴滴。</p><p>那天碰见的滴滴司机是个外省人，老婆孩子都回去了，疫情爆发，自己没来得及回家，导致现在一个人待在异乡，连吃了半个月的面，最后两天甚至连菜叶都没有，迫不得已去拿隔壁阿婆的菜。</p><p>无心评价对错。</p><blockquote><p>村里不给外村人发配菜，外村人家里弹尽粮绝，隔壁阿婆蔬菜满园。</p></blockquote><p>怎么个选法也不必多说吧。反正我家还有火锅吃。</p><p>前几天还看到站在KFC门口点外卖的段子，愣是让外卖小哥站着血赚配送费，没想到自己到了KFC门口时，也活成了段子…</p><p><strong>日子也没啥过头，天天歌舞升平，看片吃肉</strong></p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/2020030276ae2c9ca5514.png"/><p>这一个月看的电影，怕是比我前几年加起来看的都多。在家里把公立里<strong>祖传</strong>的投影仪架起来，投在家里那面潮的不行的破墙上，看着还挺舒服哈哈哈。</p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/2020030247e74e47f31b9.jpg" alt="你永远不知道墙上会出现什么东西"/><blockquote><p>恐怖直播</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-DgxSwbHD" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="3932159" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><blockquote><p>闰年的二月也没有比普通年份的二月更加特别</p></blockquote><p>在家里的生活平淡的像一盆水，翻不出什么花样。每天早上起来：八点了，那就再睡半个钟头，才七点？那就玩会儿手机，然后跑到电脑前上神经兮兮的网课。</p><p>网课很好的证明了大学里上不上课基本上是<strong>没什么区别</strong>的，除非你真的在听课？<strong>你不会真的有听课吧？</strong></p><p>25号的时候村里终于开放了出去的权限，只有血统纯正的村里人，才能进出无阻，甚至还能在路边打到滴滴。</p><p>那天碰见的滴滴司机是个外省人，老婆孩子都回去了，疫情爆发，自己没来得及回家，导致现在一个人待在异乡，连吃了半个月的面，最后两天甚至连菜叶都没有，迫不得已去拿隔壁阿婆的菜。</p><p>无心评价对错。</p><blockquote><p>村里不给外村人发配菜，外村人家里弹尽粮绝，隔壁阿婆蔬菜满园。</p></blockquote><p>怎么个选法也不必多说吧。反正我家还有火锅吃。</p><p>前几天还看到站在KFC门口点外卖的段子，愣是让外卖小哥站着血赚配送费，没想到自己到了KFC门口时，也活成了段子…</p><p><strong>日子也没啥过头，天天歌舞升平，看片吃肉</strong></p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/2020030276ae2c9ca5514.png"/><p>这一个月看的电影，怕是比我前几年加起来看的都多。在家里把公立里<strong>祖传</strong>的投影仪架起来，投在家里那面潮的不行的破墙上，看着还挺舒服哈哈哈。</p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200707dfb167a74f198.gif" data-original="https://img.tanknee.cn/blogpicbed/2020/03/2020030247e74e47f31b9.jpg" alt="你永远不知道墙上会出现什么东西"/><blockquote><p>恐怖直播</p></blockquote>]]></content>
     
     <summary type="html">
     
       &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;
-    &lt;div id=&quot;aplayer-rUgOCCvt&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;3932159&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;aplayer-DgxSwbHD&quot; class=&quot;aplayer aplayer-tag-marker meting-tag-marker&quot; data-id=&quot;3932159&quot; data-server=&quot;netease&quot; data-type=&quot;song&quot; data-mode=&quot;circulation&quot; data-autoplay=&quot;false&quot; data-mutex=&quot;true&quot; data-listmaxheight=&quot;340px&quot; data-preload=&quot;auto&quot; data-theme=&quot;#ad7a86&quot;&gt;&lt;/div&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;闰年的二月也没有比普通年份的二月更加特别&lt;/p&gt;
@@ -752,13 +752,13 @@
     
       <category term="生活" scheme="https://www.tanknee.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="server" scheme="https://www.tanknee.cn/tags/server/"/>
-    
       <category term="meting" scheme="https://www.tanknee.cn/tags/meting/"/>
     
       <category term="netease" scheme="https://www.tanknee.cn/tags/netease/"/>
     
       <category term="type" scheme="https://www.tanknee.cn/tags/type/"/>
+    
+      <category term="server" scheme="https://www.tanknee.cn/tags/server/"/>
     
       <category term="时候" scheme="https://www.tanknee.cn/tags/%E6%97%B6%E5%80%99/"/>
     

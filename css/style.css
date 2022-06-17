@@ -10997,6 +10997,11 @@ a.article-nav-next span {
   top: 0;
   z-index: 1000;
 }
+@media screen and (max-width: 1088px) {
+  .navbar .navbar-brand {
+    display: none;
+  }
+}
 @media screen and (min-width: 1088px) {
   .navbar > .container .navbar-menu,
   .container > .navbar .navbar-menu {
