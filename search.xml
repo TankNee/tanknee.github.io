@@ -83,35 +83,6 @@
     
     
     <entry>
-      <title>Twenty</title>
-      <link href="/2020/07/04/twenty/"/>
-      <url>/2020/07/04/twenty/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>本想写几句无关痛痒的话，放几张莫名其妙的图片就了事，但今天做完工程实训的答辩，确实有很多很多的话想说出来。无意写成实训的心得感悟，只是于此往前回顾时有种一眼<strong>万年</strong>的<strong>陌生</strong>感。一年多前，用着蹩脚的安卓写一个烂的不行的<code>ToDoList</code>现在想想虽然觉得有点可笑，但那种翻遍万书仍然不得答案的感觉仍然会一下涌上来。</p><p>成长这个词已经用烂了，我没有长大，我只是对这些都熟悉了，仅此而已。但我也拿不准我还是不是昨天躺下睡着前的那个我，或许是的，但为何今早掠过河边看对岸的<strong>藤架</strong>仍有种熟悉而陌生的感觉。</p><h2 id="噩梦一则"><a href="#噩梦一则" class="headerlink" title="噩梦一则"></a>噩梦一则</h2><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/20200703a8d6569dc3473.png" alt="记于6月4日03：26"></p><h2 id="Demo一支"><a href="#Demo一支" class="headerlink" title="Demo一支"></a>Demo一支</h2><iframe src="//player.bilibili.com/player.html?aid=541134374&bvid=BV1zi4y1G7rB&cid=208480513&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe><h2 id="彩蛋一副"><a href="#彩蛋一副" class="headerlink" title="彩蛋一副"></a>彩蛋一副</h2><blockquote><p>一段简单的伪代码</p></blockquote><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">AliPay</span> <span class="keyword">from</span> <span class="string">&#x27;YourApps&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Content</span> <span class="keyword">from</span> <span class="string">&#x27;ThisArticle&#x27;</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> words = <span class="title class_">Content</span>.<span class="property">words</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> redPocketToken = words.<span class="title function_">map</span>(<span class="function">(<span class="params">word</span>) =&gt;</span> word.<span class="property">isBold</span>).<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="title class_">AliPay</span>.<span class="title function_">launch</span>().<span class="title function_">then</span>(<span class="function">(<span class="params">AliPayMainScreen</span>) =&gt;</span> &#123;</span><br><span class="line"><span class="keyword">var</span> searchComponent = <span class="title class_">AliPayMainScreen</span>.<span class="title function_">getSearchComponent</span>();</span><br><span class="line">searchComponent.<span class="title function_">search</span>(<span class="string">&#x27;红包&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">RedPocketPage</span>) =&gt;</span> &#123;</span><br><span class="line"><span class="keyword">var</span> redPocketTokenComponent = <span class="title class_">RedPocketPage</span>.<span class="title function_">getRedPocketTokenComponent</span>();</span><br><span class="line">redPocketTokenComponent.<span class="title function_">search</span>(redPocketToken).<span class="title function_">then</span>(<span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Congratulation!&#x27;</span>));</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><blockquote><p>Tips：如果你实在看不懂并且找不到口令，那我这提示也太没意思了。</p></blockquote><hr><p><em>谢谢你看到这里</em></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Month </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 年度 </tag>
-            
-            <tag> 红包 </tag>
-            
-            <tag> 抽奖 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>阿里云Ai训练营DayThree</title>
       <link href="/2020/06/06/aliyunAiDayThree/"/>
       <url>/2020/06/06/aliyunAiDayThree/</url>
@@ -226,86 +197,6 @@
     
     
     <entry>
-      <title>五月May</title>
-      <link href="/2020/06/01/569/"/>
-      <url>/2020/06/01/569/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-vfuGpVfU" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="28402351" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><p>提笔落字时总觉自己文疏才浅，阅历浅薄，无从着笔。</p><p>五月共三十一天，步数超过3000的日子大概不足十天，倒是出去吃饭吃了很多次。</p><p>一号结束了为期两个月的打工生涯，小半年也算是搞到了第一笔大额资金。</p><p>八号往鹅厂投了简历，挣扎了两三天，终是没过，虽然也没给原因，大概就是因为我太菜了吧，一问三不知。</p><blockquote><p>2020年5月8日</p><p>电话面试，深圳总部面试</p><ol><li>dom事件的冒泡与捕获</li><li>CSS中的样式优先级是怎样分布的</li><li>React-Native的底层实现，是如何与原生系统进行交互的</li><li>算法题：找出一个字符串的最长重复子序列</li></ol><p>2020年5月15日</p><p>电话面试，武汉腾讯</p><ol><li>JavaScript原型链的实现（不了解）</li><li>http协议中数据传输的编码方式，发送json格式的数据时的content-type</li><li>说一下auth2.0</li><li>说一下当下前端框架对Dom做了哪些优化</li><li>用户登录的实现<ol><li>使用了什么加密方式–jwt</li><li>jwt有什么缺点</li><li>session和cookie</li></ol></li><li>讲一下MySQL的索引实现（不了解）</li></ol></blockquote><p>明年再努力吧。</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/06/20200601c27bb1c554117.jpg" alt="c7b90c865a856dc54deab5445817f0c"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Code </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 算法 </tag>
-            
-            <tag> 字符 </tag>
-            
-            <tag> 数据 </tag>
-            
-            <tag> dom </tag>
-            
-            <tag> 面试 </tag>
-            
-            <tag> 文疏 </tag>
-            
-            <tag> 实现 </tag>
-            
-            <tag> 着笔 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>四月April</title>
-      <link href="/2020/05/02/568/"/>
-      <url>/2020/05/02/568/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-QitpOJDN" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="450567505" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><h3 id="Gitea-Contribution"><a href="#Gitea-Contribution" class="headerlink" title="Gitea Contribution"></a>Gitea Contribution</h3><p><img src="https://img.tanknee.cn/blogpicbed/2020/05/2020050214eb2f8ad8224.png" alt="Gitea Contribution"></p><h3 id="Github-Contribution"><a href="#Github-Contribution" class="headerlink" title="Github Contribution"></a>Github Contribution</h3><p><img src="https://img.tanknee.cn/blogpicbed/2020/05/202005021736d66679c34.png" alt="Github Contribution"></p><p>断断续续写了一快一整年的月报了，还是没有确定究竟要留下一个什么样的形式。偶尔会有段时间很在意某种格式，但也经常过了一会儿就不太在意了。</p><p>前两天在公众号里发了一张图片：</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/05/202005021550268653b2f.jpg" alt=""></p><p>暴力终究也会递归式地催生新的暴力反抗。</p><p>好几次在社交平台看到触动以致激怒我的言论，反驳的字已经全部打进了输入框，最后却哐哐哐全都删掉。</p><p>诚然，有那么一瞬间，想把作者的脑袋拧下来，问候他到底有没有读过书，整天逼逼赖赖发这些脑瘫言论？</p><p>但是当我全部删掉之后，突然就有那么一瞬间平静下来。</p><p>暴力是如此的易于传播，以致于每一次都会上当。</p><p>发完这张图片之后，又在原博评论里看到新的东西：</p><p><img src="https://img.tanknee.cn/blogpicbed/2020/05/202005021cae5c08d3bf2.png" alt="评论"></p><blockquote><p>达克效应（D-K effect）</p><p>全称为邓宁-克鲁格效应（Dunning-Kruger effect）。它是一种认知偏差现象，指的是能力欠缺的人在自己欠考虑的决定的基础上得出错误结论，但是无法正确认识到自身的不足，辨别错误行为。这些能力欠缺者们沉浸在自我营造的虚幻的优势之中，常常高估自己的能力水平，却无法客观评价他人的能力。</p></blockquote><p>上了大学之后，看到的无知的事情越来越多，起初是愤懑，想着义正言辞地反驳，幻想我这一段狗屁不通的言论能起到一点点我设想的效果，后来也就慢慢冷静。</p><p><strong>没有人想听你的教诲和理由，你是什么，他又是什么？</strong></p><p>碰了几鼻子的灰之后再也没有跟人抬杠的心情，挺好的。</p><p>Keep hungry and keep stupid!</p><hr><p>也祝五月返校的各位开学愉快，暑假相会</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> server </tag>
-            
-            <tag> meting </tag>
-            
-            <tag> netease </tag>
-            
-            <tag> type </tag>
-            
-            <tag> 图片 </tag>
-            
-            <tag> effect </tag>
-            
-            <tag> 暴力 </tag>
-            
-            <tag> 言论 </tag>
-            
-            <tag> keep </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>昼夜双版Typecho主题SplityRemake-新世界的灰烬</title>
       <link href="/2020/04/15/splity-remake/"/>
       <url>/2020/04/15/splity-remake/</url>
@@ -326,9 +217,9 @@
             
             <tag> 文件 </tag>
             
-            <tag> wordpress </tag>
-            
             <tag> typecho </tag>
+            
+            <tag> wordpress </tag>
             
             <tag> 按钮 </tag>
             
@@ -381,21 +272,21 @@
             
             <tag> int </tag>
             
-            <tag> arr </tag>
-            
             <tag> length </tag>
             
             <tag> node </tag>
             
-            <tag> flag </tag>
+            <tag> arr </tag>
             
             <tag> line </tag>
-            
-            <tag> o </tag>
             
             <tag> this </tag>
             
             <tag> return </tag>
+            
+            <tag> flag </tag>
+            
+            <tag> o </tag>
             
             <tag> public </tag>
             
@@ -485,11 +376,11 @@
             
             <tag> this </tag>
             
-            <tag> return </tag>
-            
             <tag> trix </tag>
             
             <tag> matrix </tag>
+            
+            <tag> return </tag>
             
             <tag> dots </tag>
             
@@ -522,69 +413,15 @@
             
             <tag> int </tag>
             
-            <tag> arr </tag>
-            
             <tag> temp </tag>
             
             <tag> length </tag>
             
+            <tag> arr </tag>
+            
             <tag> 排序 </tag>
             
             <tag> noti </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>The Video Of WhuHan</title>
-      <link href="/2020/04/04/561/"/>
-      <url>/2020/04/04/561/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><iframe width="360" height="315" align="center" src="https://www.youtube-nocookie.com/embed/XU9FVqwO4TM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]]></content>
-      
-      
-      <categories>
-          
-          <category> Code </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>三月March</title>
-      <link href="/2020/04/03/560/"/>
-      <url>/2020/04/03/560/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-SPeyAPsl" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="494858498" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><blockquote><p>鬼知道我这个月经历了什么东西。</p></blockquote><p>每日高强度Coding，我都怀疑自己已经不太像个正常人了…</p><img src="https://img.tanknee.cn/blogpicbed/2020/04/20200401e3face62152d6.png" alt="真实高强度Coding"/><p>原来我也会有对着电脑感到生理性呕吐的时候..</p><p>昨天人机交互课上老师随口一句：<strong>高考都要延迟了，你们开学是别想了</strong></p><p>等疫情过了想出去好好看看…毕竟谁也不想永远呆在家里。</p><h2 id="一代宗师：宗师，一代（人）"><a href="#一代宗师：宗师，一代（人）" class="headerlink" title="一代宗师：宗师，一代（人）"></a>一代宗师：宗师，一代（人）</h2><p>前两天抽空看了一代宗师，说来惭愧，以前一直以为一代宗师是指的叶问四部曲的第一部，后来才明白是王家卫的电影。王家卫的电影看的很少，基本算是没有吧，最近的一次交集应该是知道了《<a href="https://movie.douban.com/subject/1292213/">大话西游之大圣娶亲</a>》里那句流传甚广的<strong>爱你一万年</strong>是出自他的《<a href="https://movie.douban.com/subject/1291999/">重庆森林</a>》。</p><p>一代宗师更像是一部小说，对白更多的辅助人物形象的刻画，以及时代特征的描述，而不是像更多的武侠电影那样去推动剧情的发展。</p><p><strong>一如其冷静，不占烟火气的格调。</strong></p><blockquote><p>如果人生有四季，四十岁前，我的人生都是春天。</p></blockquote><blockquote><p>做羹要讲究火候。火候不到，众口难调，火候过了，事情就焦。做人也是这样。</p></blockquote><blockquote><p>暗事好做，明事难成。</p></blockquote><blockquote><p>宝森不是想当英雄，是想造时势。现在这炉子里，需要这根新柴。</p></blockquote><blockquote><p>让他搭手多大的面子，姓叶的不识抬举，咱可不要坏了规矩。</p></blockquote><blockquote><p>别跟他们一般见识，老人死守着规矩，新人什么时候才能出头啊。叶问是个好材料，就看他这次能不能出头。<br>宫家没有败绩，您又在这儿，他凭什么出头。</p></blockquote><blockquote><p>你的脾气啊，就是爹年轻的时候。眼睛里只有胜负，没有人情世故。人要往远看，过了山，眼界就开阔了。但凡一个人见不得人好，见不得人高明，是没有容人之心。咱们宫家的门槛高，但是不出小人。</p></blockquote><blockquote><p>人活这一世，能耐还在其次。有的成了面子，有的成了里子，都是时势使然。这次让你下来，是想求个始终，让你看看，爹是怎么退下来的。你从小是看着我跟人交手长大的，这是最后一次。你是订了亲的人了，江湖的事，和你没关系。当个好大夫，平平安安的，就是尽孝心了。</p></blockquote><p><a href="https://note.tanknee.cn/wapp/pages/view/share/s/1oyM5w17Uh7G2emBkt3pWCWG3ywNqR3DGAsg2RaZqQ1J2QPK">台词剪辑</a></p><p><img src="https://img.tanknee.cn/blogpicbed/2020/03/202003222594d66d57866.png/webp" alt="清河公园"></p><p>日丽风和，云销雨霁</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> server </tag>
-            
-            <tag> netease </tag>
-            
-            <tag> type </tag>
-            
-            <tag> 时候 </tag>
-            
-            <tag> 疫情 </tag>
-            
-            <tag> o </tag>
             
         </tags>
       
@@ -613,9 +450,9 @@
             
             <tag> type </tag>
             
-            <tag> git </tag>
-            
             <tag> button </tag>
+            
+            <tag> git </tag>
             
             <tag> github </tag>
             
@@ -652,9 +489,9 @@
             
             <tag> 算法 </tag>
             
-            <tag> 操作 </tag>
-            
             <tag> 字符 </tag>
+            
+            <tag> 操作 </tag>
             
             <tag> 疫情 </tag>
             
@@ -704,96 +541,6 @@
             <tag> 行计数器 </tag>
             
             <tag> line </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>二月February</title>
-      <link href="/2020/03/02/555/"/>
-      <url>/2020/03/02/555/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-NJAsukkk" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="3932159" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><blockquote><p>闰年的二月也没有比普通年份的二月更加特别</p></blockquote><p>在家里的生活平淡的像一盆水，翻不出什么花样。每天早上起来：八点了，那就再睡半个钟头，才七点？那就玩会儿手机，然后跑到电脑前上神经兮兮的网课。</p><p>网课很好的证明了大学里上不上课基本上是<strong>没什么区别</strong>的，除非你真的在听课？<strong>你不会真的有听课吧？</strong></p><p>25号的时候村里终于开放了出去的权限，只有血统纯正的村里人，才能进出无阻，甚至还能在路边打到滴滴。</p><p>那天碰见的滴滴司机是个外省人，老婆孩子都回去了，疫情爆发，自己没来得及回家，导致现在一个人待在异乡，连吃了半个月的面，最后两天甚至连菜叶都没有，迫不得已去拿隔壁阿婆的菜。</p><p>无心评价对错。</p><blockquote><p>村里不给外村人发配菜，外村人家里弹尽粮绝，隔壁阿婆蔬菜满园。</p></blockquote><p>怎么个选法也不必多说吧。反正我家还有火锅吃。</p><p>前几天还看到站在KFC门口点外卖的段子，愣是让外卖小哥站着血赚配送费，没想到自己到了KFC门口时，也活成了段子…</p><p><strong>日子也没啥过头，天天歌舞升平，看片吃肉</strong></p><img src="https://img.tanknee.cn/blogpicbed/2020/03/2020030276ae2c9ca5514.png"/><p>这一个月看的电影，怕是比我前几年加起来看的都多。在家里把公立里<strong>祖传</strong>的投影仪架起来，投在家里那面潮的不行的破墙上，看着还挺舒服哈哈哈。</p><img src="https://img.tanknee.cn/blogpicbed/2020/03/2020030247e74e47f31b9.jpg" alt="你永远不知道墙上会出现什么东西"/><blockquote><p>恐怖直播</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 生活 </tag>
-            
-            <tag> server </tag>
-            
-            <tag> meting </tag>
-            
-            <tag> netease </tag>
-            
-            <tag> type </tag>
-            
-            <tag> 时候 </tag>
-            
-            <tag> 疫情 </tag>
-            
-            <tag> 网课 </tag>
-            
-            <tag> 外村 </tag>
-            
-            <tag> kfc </tag>
-            
-            <tag> 滴滴 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>一月January</title>
-      <link href="/2020/02/03/%E4%B8%80%E6%9C%88Jan/"/>
-      <url>/2020/02/03/%E4%B8%80%E6%9C%88Jan/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>[Meting]<br>[Music server=”netease” id=”208902” type=”song”/]<br>[/Meting]</p><blockquote><p>刚刚在翻以前写的博客时，突然想起来自己还没有写一月份的博客</p></blockquote><p>习惯性的想要给文章找一首歌，但因为这两天一直在家里，基本上就没怎么听歌，歌单里最新收藏的是蔡健雅的红色高跟鞋，没什么寓意，就是觉得熟悉，便收藏了。</p><p>三号早上考完了大物，自信满满地走出考场，结果到头来只有那么点分数，可能我是真的不配学物理，当然，汇编，数据结构，Java我大概也是都不配学的。</p><p>算了，好歹都过了，我就不强求了。</p><p>这个月随缘做项目，其实也不知道为了什么，可能就是为了开心吧，感觉这个寒假连游戏都没代码有意思，靠，这还是我吗，我震惊了。</p><p>根据一本electron的入门指导书做了一个简单的markdown编辑器，修修改改，甚至还想着用vue重写，但是应该是会懒得写了，也不一定是吧，说不定我开心我就写了呢？</p><blockquote><p>Neeto Markdown Editor</p></blockquote><img src="https://img.tanknee.cn/blogpicbed/2020/02/202002033efdd0d63160f.png"/><p>其实我写的还是挺漂亮的对吧…基本的功能我还是都做完了的呢。但是为什么没人给我⭐..//小声逼逼</p><p>刚做完markdown编辑器，冠状病毒就爆发了，前前后后去检查了好几次，被人用枪测了好几次体温，尽管如此，我还是不放心，花了两百大洋去乐清医院挂了号，拍了CT，最后当然是p事没有，有时候会肉疼自己的两百块钱，但一想到不测的话就会心慌好久，就没那么肉疼了。</p><p>之后又看到丁香园出的疫情地图，信息很全，正好手边也在看node js，就准备整一个疫情数据的接口，然后开放开源//收割⭐，走上人生巅峰（大雾）。</p><p>不过确实靠着这个项目拿到了目前为止最多的⭐（7个），每天早上爬起来看到⭐数目变多，api使用数增加就感到特别的满足，可能这就是<strong>程序员</strong>吧？</p><blockquote><p>WuHan-nCoV-2019-DataAPI</p></blockquote><img src="https://img.tanknee.cn/blogpicbed/2020/02/20200203c2dc608ffec63.png"/><p>手头还有两个在做的项目，我真的是精力充沛…希望不会秃的太早吧</p><p>武汉加油，温州加油，我想吃糯米饭（哭腔）</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> server </tag>
-            
-            <tag> meting </tag>
-            
-            <tag> netease </tag>
-            
-            <tag> type </tag>
-            
-            <tag> Java </tag>
-            
-            <tag> 汇编 </tag>
-            
-            <tag> node </tag>
-            
-            <tag> electron </tag>
-            
-            <tag> markdown </tag>
-            
-            <tag> 疫情 </tag>
-            
-            <tag> 逼逼 </tag>
             
         </tags>
       
@@ -877,11 +624,11 @@
             
             <tag> node </tag>
             
-            <tag> 时候 </tag>
-            
             <tag> 图床 </tag>
             
             <tag> markdown </tag>
+            
+            <tag> 时候 </tag>
             
             <tag> neeto </tag>
             
@@ -916,9 +663,9 @@
             
             <tag> 文件 </tag>
             
-            <tag> type </tag>
-            
             <tag> Java </tag>
+            
+            <tag> type </tag>
             
             <tag> 地址 </tag>
             
@@ -931,84 +678,6 @@
             <tag> electron </tag>
             
             <tag> markdown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2020 新世界的船票</title>
-      <link href="/2019/12/31/2020_newWorld/"/>
-      <url>/2019/12/31/2020_newWorld/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-XpJiLiwe" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="528272281" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191231304a09d78bd0b.jpg"/><blockquote><p>我是旧世界的残党，新世界没有能载我的船</p><p>——海贼王481集</p></blockquote><p>十年前的小学三年级，那时常有写日记的作业，学校发的日记本是泛黄的绿格子本，一页约莫只有百来个格子，最顶头是填日期的地方，我仍记得我歪歪扭扭地在年份的空里写下2010，却又感觉不甚熟悉。</p><h2 id="一晃眼，已经十年了"><a href="#一晃眼，已经十年了" class="headerlink" title="一晃眼，已经十年了"></a>一晃眼，已经十年了</h2><p>初二的时候吧，在寝室里，蛋蛋问我以后会去读什么专业，虽然我也不知道那时候怎么会突然提起这个话题，我脱口而出的就是软件工程。原因也很奇怪，那几天在一本杂志上看过一个人在澳洲读软件工程硕士的文章，只是单纯地觉得这个专业很酷，而且可以玩我平时很少能触及的电脑。没想到四年之后，阴差阳错还真的来到了这个专业，本是一心想学的计算机，结果报的全没上，也算是一种缘分吧。</p><p>不知道是长大了的原因还是其他的原因，这十年的记忆要比前十年的要清晰的多。我会永远地记得在楼道里上下奔走寻找我妈的教室的那段记忆，虽然这几年已经模糊了不少，但那种晕眩感和盲目无从的感觉，从未离开我那段记忆。</p><h2 id="重复轮播不停的十年"><a href="#重复轮播不停的十年" class="headerlink" title="重复轮播不停的十年"></a>重复轮播不停的十年</h2><p>两年小学，三年初中，三年高中，还有两年的大学，应该是这辈子第一次也是最后一次全在读书的十年了，你往回翻阅时，在每一年都能找到惊喜，失望，苦痛，欢愉，但是，这一年年的，又是何其的相似，无外乎上课，吃饭，寝室，所谓情绪，不过是这三点奔波间的插曲，我更像是无情的规则执行机器，按部就班地走着既定的线路。</p><p>每段学习的日子都会碰上几个难以忘怀的人，有的现在还有联系，有的热络了一段时间便沉寂下去，有的从冷落的通讯录中突然炸出，很快又冷却回去。</p><p>我真像个小孩，特别是在不承认这句话的时候，比如现在。</p><h2 id="怀疑的，自责的，但从不悔过的十年"><a href="#怀疑的，自责的，但从不悔过的十年" class="headerlink" title="怀疑的，自责的，但从不悔过的十年"></a>怀疑的，自责的，但从不悔过的十年</h2><img src="https://img.tanknee.cn/blogpicbed/2019/12/201912309f083b3bc1495.png!normal"/><p>相信自己是病态的和坚定自己是正常人一样，无可苛责。到了今天，写到这里的时候，才真正的感觉到，这些年留下的到底是什么：</p><blockquote><p>人们从历史中得到的唯一教训，就是得不到任何教训</p><p>——黑格尔</p></blockquote><p>本来只想写2019年发生的事情，刚写完开头，就发现已经偏得离谱，索性就直接往下写了。</p><h2 id="说说今年吧"><a href="#说说今年吧" class="headerlink" title="说说今年吧"></a>说说今年吧</h2><p>大学的第一个暑假</p><p>没有学完车</p><p>没有做任何有意义的事情。</p><p>去了一趟并不那么痛快的苏州</p><p>第一次这么急着离开家来到学校，在外面呆了差不多半年，甚至直到现在也没有特别想回去的感觉，除了午夜饿肚子的时候，还有早上对着韵酒硬如纸板的手抓饼难以下咽时，会难以遏制地想起乐清的糯米饭，年糕，炒粉。</p><img src="https://img.tanknee.cn/blogpicbed/2019/12/201912300632eaa53739d.png/webp"/><p>种了一年的树，很多时候都难以相信自己可以这么长时间不碰手机，不过大多时候不是在玩平板就是跟软件拼手速，甚至还有睡觉种树的诡异操作。不过我相信，<strong>今年的华科树王肯定还是我</strong>！！</p><p>买的东西越来越昂贵，很多时候都超出了自己的承受范围，不过好的产品，确实可以有效提升效率。今年最满意的应该是上个月刚买的AirPods Pro，无他，省事。第二位就是过年的时候的iPad2018，虽然很多次都想要换成Air3或者Pro2018，不过着实承受不起了。</p><p>最让我受益匪浅的一件事情，是七月末，开始折腾以前认为繁琐不堪的服务器，自那之后一发不可收拾，如果没有那段时间的闲着蛋疼，应该后来就不会去参加前端项目，应该也就不会这么忙…Anyway，我认为这是有益的。</p><p>年初立的Flag不知道被我丢哪里去了，所以现在也没有办法知道自己到底有没有做到。反正暑假立下的什么学车，看书，看电影统统没有完成。这件事情告诉我们，不要乱搞什么Flag…</p> <img src="https://img.tanknee.cn/blogpicbed/2019/12/20191231e2f72c17f9091.jpg"/><h2 id="最后说说今天吧"><a href="#最后说说今天吧" class="headerlink" title="最后说说今天吧"></a>最后说说今天吧</h2><p>anyway，我想做的想说的基本都说了做了，今年也算是不留遗憾了。</p><img src="https://img.tanknee.cn/blogpicbed/2019/12/201912319191d0a6bf091.jpg"/><p>害</p><p>大伙儿都过得开心点，明年一定是个好年</p><p>一定是</p><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191230207f065ccc612.png!normal"/>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 服务器 </tag>
-            
-            <tag> 日记 </tag>
-            
-            <tag> server </tag>
-            
-            <tag> meting </tag>
-            
-            <tag> netease </tag>
-            
-            <tag> type </tag>
-            
-            <tag> 操作 </tag>
-            
-            <tag> 时候 </tag>
-            
-            <tag> flag </tag>
-            
-            <tag> anyway </tag>
-            
-            <tag> 记忆 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>冬至愉悦</title>
-      <link href="/2019/12/22/%E5%86%AC%E8%87%B3%E6%84%89%E6%82%A6/"/>
-      <url>/2019/12/22/%E5%86%AC%E8%87%B3%E6%84%89%E6%82%A6/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="美好冬至的清晨，是在九点半醒来的"><a href="#美好冬至的清晨，是在九点半醒来的" class="headerlink" title="美好冬至的清晨，是在九点半醒来的"></a>美好冬至的清晨，是在九点半醒来的</h2><img src="https://img.tanknee.cn/blogpicbed/2019/12/2019122225bc9c42c94a1.jpg/webp"/><p>我总是觉得冬至不是已经过了吗，后来想想那个好像是立冬？但是为什么过了立冬才是冬至？？这两个难道不是同一个意思吗？？？<strong>今日疑惑</strong></p><h2 id="惭愧，我拿着汤圆钱去吃了饺子"><a href="#惭愧，我拿着汤圆钱去吃了饺子" class="headerlink" title="惭愧，我拿着汤圆钱去吃了饺子"></a>惭愧，我拿着汤圆钱去吃了饺子</h2><p>我是南方人的叛徒，我认罪。</p><p>这是2019年的倒数第九天，也是我来学校的<strong>第一百二十六天</strong>，二十一世纪10年代的最后一年还有不到百分之三的余额，大家也都别冲值了，<strong>不会变强的</strong>,只会变<strong>秃</strong>。</p><img src="https://img.tanknee.cn/blogpicbed/2019/12/2019122250775b904e8ec.jpg/webp"/><h2 id="前几天在网上遇见一个自称患了抑郁的网友"><a href="#前几天在网上遇见一个自称患了抑郁的网友" class="headerlink" title="前几天在网上遇见一个自称患了抑郁的网友"></a>前几天在网上遇见一个自称患了抑郁的网友</h2><p>我希望他是假的，但我也希望他能好起来，不管是哪种情况。</p><img src="https://img.tanknee.cn/blogpicbed/2019/12/201912226c646cba1c6f0.png"/><p>害，说到出去看看，我都多久没有出学校大门了。</p><h2 id="最近受某位脸大的朋友影响，开始点评吃过的饭菜？"><a href="#最近受某位脸大的朋友影响，开始点评吃过的饭菜？" class="headerlink" title="最近受某位脸大的朋友影响，开始点评吃过的饭菜？"></a>最近受某位脸大的朋友影响，开始点评吃过的饭菜？</h2><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191222be7fc949d8158.jpg/webp"/><p>冬至，年近，归程不远</p><p>大家冬至快乐</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 冬至 </tag>
-            
-            <tag> 立冬 </tag>
-            
-            <tag> 归程 </tag>
-            
-            <tag> 惭愧 </tag>
-            
-            <tag> 叛徒 </tag>
             
         </tags>
       
@@ -1039,17 +708,17 @@
             
             <tag> 算法 </tag>
             
-            <tag> 操作 </tag>
-            
             <tag> 字符 </tag>
             
-            <tag> 变量 </tag>
+            <tag> 操作 </tag>
             
             <tag> int </tag>
             
             <tag> temp </tag>
             
             <tag> length </tag>
+            
+            <tag> 变量 </tag>
             
             <tag> node </tag>
             
@@ -1088,11 +757,11 @@
             
             <tag> 域名 </tag>
             
-            <tag> ssl </tag>
+            <tag> 宝塔 </tag>
             
             <tag> server </tag>
             
-            <tag> 宝塔 </tag>
+            <tag> ssl </tag>
             
             <tag> 地址 </tag>
             
@@ -1103,35 +772,6 @@
             <tag> git </tag>
             
             <tag> 安装 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>十一月November</title>
-      <link href="/2019/12/01/%E5%8D%81%E4%B8%80%E6%9C%88Nov/"/>
-      <url>/2019/12/01/%E5%8D%81%E4%B8%80%E6%9C%88Nov/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-FiVGoJeE" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="18299006" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><p>[scode type=”red”]这是十一月的倒数第二天（21点13分），还有不到二十八个小时，2019年的十一月就要结束了。[/scode]</p><p>这个让我<strong>期待的，恐惧的，令人头大</strong>的十一月。</p><p>经历了三场结课考试，三次寒风中的早起物理实验，关于物理实验，我一直不是很明白为什么我的物理实验课总是在一年中最寒冷的几个月。</p><p><img src="https://img.tanknee.cn/blogpicbed/2019/11/2019112950c9f0d183a5e.jpeg/webp" alt="凌晨七点的绝望坡"></p><p>[scode type=”blue”]原本包含期许的公选课，也在这个忙碌的十三周完结了。虽然我至今仍然对那一次没有去成中操观星耿耿于怀。[/scode]</p><p><img src="https://img.tanknee.cn/blogpicbed/2019/11/20191129d5d6f659a6f00.jpeg" alt="我是真的真的很想去了"></p><p>[scode type=”blue”]陪伴了我七个多月的airpods Ⅱ也在前几天出给了文华学院的一个女生，甚至还第一次被陌生人加了微信？[/scode]</p><p><img src="https://img.tanknee.cn/blogpicbed/2019/11/20191129e0bceaf3064a4.jpeg/webp" alt="受宠若惊/大雾"></p><p>[scode type=”blue”]二十四号去参加了上大学以来第三次五公里跑[/scode]</p><p>但是这一次却没有等来第三块奖牌，本以为本科四年能凑齐八块奖牌召唤神龙的，可惜了，要在华科读研才能拿到第八块了（大雾。<img src="https://img.tanknee.cn/blogpicbed/2019/11/201911297bc15632cd234.jpeg" alt="我恨"></p><p>期待了很久很久的airpods pro终于在上个月的月末发布了，然后我又纠结了很久很久，辗转apple官网和拼多多，最后还是剁手收入囊中了，害，我真是一个败家的人。</p><p>我买的真的不是<strong>mac</strong></p><p><img src="https://img.tanknee.cn/blogpicbed/2019/11/20191129e4f53adcd50eb.png/webp" alt="最后还是推掉了"></p><p>追了整整一个多月的LOL S9也是在面向对象考试的前一天完结了，平心而论，少了几分激动，多了几分理所当然哈哈哈，本来在群里早就说好了夺冠就去下单airpods结果还是因为没有抢到而不了了之</p><img src="https://img.tanknee.cn/blogpicbed/2019/11/20191129b4720608a4e07.jpg/webp"/><blockquote><p>不过最后还是败了，去pdd买了哈哈哈哈哈哈。</p></blockquote><p><img src="https://img.tanknee.cn/blogpicbed/2019/11/2019112935d637183c3b5.gif" alt=""></p><blockquote><p>写到这里的时候突然想起在中旬的时候在家里的爷爷碰上了交通事故，所幸并不严重（应该不是很严重，不过还是住了很多天医院，而且做了一个小手术，而我本准备在出事的那天打电话给爷爷却由于一直忙于复习，忘了这件事，真的是很惭愧很惭愧。</p></blockquote><p>wisco那边的项目也开始推进了，虽然直到现在我对前端依旧是一窍不通，甚至还有点畏惧花里胡哨的CSS语法，我真的是对平面设计没有任何天赋的人。</p><p>这个月没有认识更多的人，而是感觉，自己开始去认识那些一直在身边的人，虽然有时候有那么一点点的尴尬，无奈，但是都还挺好，毕竟我知道:</p><p>[scode type=”green”]<strong>没有任何一场相逢是恰到好处。</strong>[/scode]</p><p><img src="https://img.tanknee.cn/blogpicbed/2019/11/20191129e82220820cd47.jpeg/webp" alt="华科的天"></p><img src="https://img.tanknee.cn/blogpicbed/2019/11/20191129cd2285d4657c2.jpeg/webp"><p>[scode type=”green”]<strong>华科的天也太好看了吧</strong>[/scode]</p><hr><p>[scode type=”blue”]下面是前几个月的总结[/scode]<br>[post cid=”525” /]<br>[post cid=”519” /]</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 每月纪 </tag>
-            
-            <tag> 随想 </tag>
-            
-            <tag> 生活 </tag>
             
         </tags>
       
@@ -1166,11 +806,9 @@
             
             <tag> 查找 </tag>
             
-            <tag> 操作 </tag>
-            
             <tag> 字符 </tag>
             
-            <tag> 变量 </tag>
+            <tag> 操作 </tag>
             
             <tag> 类型 </tag>
             
@@ -1178,13 +816,15 @@
             
             <tag> int </tag>
             
-            <tag> arr </tag>
-            
             <tag> temp </tag>
             
             <tag> length </tag>
             
+            <tag> 变量 </tag>
+            
             <tag> node </tag>
+            
+            <tag> arr </tag>
             
         </tags>
       
@@ -1209,13 +849,13 @@
       
         <tags>
             
-            <tag> type </tag>
-            
             <tag> 创建 </tag>
             
             <tag> scode </tag>
             
             <tag> Java </tag>
+            
+            <tag> type </tag>
             
             <tag> 类型 </tag>
             
@@ -1256,21 +896,21 @@
             
             <tag> mov </tag>
             
+            <tag> 字符 </tag>
+            
             <tag> 操作 </tag>
             
             <tag> 偏移 </tag>
             
-            <tag> 字符 </tag>
+            <tag> 类型 </tag>
+            
+            <tag> 地址 </tag>
             
             <tag> 变量 </tag>
             
             <tag> 标号 </tag>
             
             <tag> 算符 </tag>
-            
-            <tag> 类型 </tag>
-            
-            <tag> 地址 </tag>
             
         </tags>
       
@@ -1312,45 +952,6 @@
             <tag> 字节 </tag>
             
             <tag> 偏移 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>FuckTheRegulation</title>
-      <link href="/2019/11/15/FuckTheRegulation/"/>
-      <url>/2019/11/15/FuckTheRegulation/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>[Meting]<br>[Music server=”netease” id=”1338149101” type=”song”/]<br>[/Meting]</p><p>真的是期待了很久的<strong>海上钢琴师</strong>,今天首映,也不管不顾下个星期要考我一无所知的汇编,下午就直接跑去看了.</p><p>看的途中一直在想,如果我要写一篇影评,我到底会怎么写?我真的能把一部电影,一个人物,一句台词,真真切切的表达出来吗?</p><p><strong>对不起,我觉得我不能</strong>,抱歉,我总是喜欢说对不起<img src="https://img.tanknee.cn/img/20191115210539.png/webp"/></p><p>小柠檬第一次弹完钢琴之后对船长说的第一句话就是:<strong>Fuck The Regulation!</strong>,莫名其妙,我对影片的前半段留有的最深的印象就是这句话,以至于最后1900走下悬梯,站在悬梯的中央,望着纽约的林立高楼时,我都在期待着他再次说出<strong>Fuck The Regulation!</strong>.</p><h4 id="可惜他没有"><a href="#可惜他没有" class="headerlink" title="可惜他没有"></a>可惜他没有</h4><p>纽约是上帝的钢琴,完美到找不出一个狭缝塞进一只薄薄唱片.</p><p>完美到大海上最好的钢琴师都不敢奢望坐上那条钢琴凳</p><p>扔掉帽子走回了弗吉尼亚号.</p><p>其实也挺好.这世界有很多抉择,但没有一个抉择是非黑即白的.</p><p>脑袋里太乱了,最近事情真的很多很多,虽然我一直不想做,不想耗费全部精力在某件特定的事情上,除非这件事已经迫在眉睫.</p><p>我已经分不太清楚这种畏手畏脚的感觉是<strong>谨慎</strong>还是<strong>懦弱</strong>了.</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> netease </tag>
-            
-            <tag> type </tag>
-            
-            <tag> 汇编 </tag>
-            
-            <tag> 钢琴师 </tag>
-            
-            <tag> 悬梯 </tag>
-            
-            <tag> regulation </tag>
-            
-            <tag> 钢琴 </tag>
-            
-            <tag> fuck </tag>
             
         </tags>
       
@@ -1421,33 +1022,6 @@
     
     
     <entry>
-      <title>十月October</title>
-      <link href="/2019/10/31/%E5%8D%81%E6%9C%88October/"/>
-      <url>/2019/10/31/%E5%8D%81%E6%9C%88October/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-KIIzrPmD" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="1365393542" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><p>​    今天下午从实验室里上完课出来，和一个同学一起去靠的近的东教工食堂吃饭，路上的时候他突然问我为什么会一个人去商场里吃饭，他说虽然他也会有时候一个人去看电影但是还是难以接受一个人去吃饭？</p><h3 id="突然，也就是那么一瞬间吧，觉得自己真的已经是习惯了一个人"><a href="#突然，也就是那么一瞬间吧，觉得自己真的已经是习惯了一个人" class="headerlink" title="突然，也就是那么一瞬间吧，觉得自己真的已经是习惯了一个人"></a>突然，也就是那么一瞬间吧，觉得自己真的已经是习惯了一个人</h3><p>​    已经不太记得第一次一个人去看电影时看的是什么了，大概是一部普通的片子吧，不过还是能记得我是在一八年的头几个月去看的，那个冬天挺冷的。再往后就慢慢地看的越来越多，可能也是觉得想看就看，没必要一定要有人陪着一起是吧？倘若电影太烂太作那就是浪费了两个人的时间，确实不值得。</p><img src="https://img.tanknee.cn/img/preview.jpg"/><h3 id="总觉得这个十月是如此的漫长而丰腴。"><a href="#总觉得这个十月是如此的漫长而丰腴。" class="headerlink" title="总觉得这个十月是如此的漫长而丰腴。"></a>总觉得这个十月是如此的漫长而丰腴。</h3><p>月初的国庆假期，接待了来汉的几个同学，看到了武汉的第一缕阳光。</p><blockquote><p>世间美景大多相似，那一日的相遇甚至不及凌波门桥上破碎的湛蓝水泥板。</p></blockquote><p>中旬时，在前往东九的路上，收到了备案局的备案成功的短信，担惊受怕了半个多月终于是看到了尽头。</p><p>而后便是漫长的S9赛程，占据了我十月中旬大半时间，有奇迹突围，亦有英雄落幕，也有差强人意堪堪出线。不过倒是进入下旬后，各家队伍表现得都挺喜人，换我一个好梦。</p><img src="https://img.tanknee.cn/img/77b913212c547eb622dfd9f917eb01f.jpg/webp"/><h3 id="不堪展望的十一月"><a href="#不堪展望的十一月" class="headerlink" title="不堪展望的十一月"></a>不堪展望的十一月</h3><p>大多时候还是很难承认，大二的前两个月已经过去了，学期已经过半。下个月几乎是每隔三四天就有一门课结课或是考试，而下下个月十二月倒是悠闲不少。可能是有点质疑自己的能力，对一个大作业也是少不了畏惧。</p><p><strong>抱怨真的不是一件好事。</strong></p><p>但愿我接下来能转型到<strong>结果导向</strong>而不是<strong>过程导向</strong>。</p><hr><p>[scode type=”blue”]下面是前几个月的总结[/scode]</p><p>[post cid=”519” /]<br>[post cid=”179” /]</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 每月纪 </tag>
-            
-            <tag> 生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数据结构--树（BST）</title>
       <link href="/2019/10/21/524/"/>
       <url>/2019/10/21/524/</url>
@@ -1501,13 +1075,13 @@
             
             <tag> mov </tag>
             
-            <tag> 字符 </tag>
-            
             <tag> cmp </tag>
             
             <tag> inc </tag>
             
             <tag> jmp </tag>
+            
+            <tag> 字符 </tag>
             
         </tags>
       
@@ -1551,166 +1125,6 @@
     
     
     <entry>
-      <title>这几天</title>
-      <link href="/2019/10/17/%E8%BF%99%E5%87%A0%E5%A4%A9/"/>
-      <url>/2019/10/17/%E8%BF%99%E5%87%A0%E5%A4%A9/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>这几天，怎么说呢，过的也还好吧</p><p>快到深夜的时候总会很难受，<strong>害，我以为我都已经忘了。</strong></p><p>今天终于记得去取军运会的门票了，说实话，还是有一点去看热闹的感觉，如果明年的S10也在武汉就好了，不知道那是有没有钱去看，我真的好想去现场看一次比赛！</p><img src="https://img.tanknee.cn/img/20191017172817.png"/><p>不过女篮好像也挺好的，正好碰上中国VS加拿大。</p><p>我不知道是不是chevereto这个软件的问题，反正我自己的图床网站已经崩溃了，一直打不开，我很烦，然后又去寻找了很多办法，最后决定买了阿里云的OSS。虽然我知道还有很多免费的图床，不至于要去买阿里的云存储，但是我有点想探索一下，所以思考再三还是买了。</p><p>我真的好能花钱一人。</p><img src="https://img.tanknee.cn/img/20191017172827.png"/><p>呼，我好像已经好久好久没有出学校吃饭了，最近事情比较多，前有JAVA课程设计，后有汇编课程设计，我真的是吐了，最近如果能做完的话我会发到<a href="https://github.com/TankNee?tab=repositories">github</a>上的,hhh，我尽量写的完整一点</p><p>图床崩了之后我也去找了替代的方法，不过之前的域名在我反复胡乱解析之后终于是出现了大问题，我也不知道什么情况，反正就是一直用不了，所以我现在用的图床域名是<a href="https://img.tanknee,cn">img</a>别的不说，有自己的域名真的很爽哈哈哈</p><p>好久好久之前的马歇尔的白嫖活动终于给我寄过来了，不过我不是很需要这件衣服，我真的有很多衣服了，有点想把这个捐掉，要是能送我个耳机就好了（每天做梦..）</p><img src="https://img.tanknee.cn/img/20191017172814.png"/><blockquote><p>好像没有了，那么生活愉快吧。</p><p>脱水APP好像还挺好玩的！</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 杂记 </tag>
-            
-            <tag> 生活 </tag>
-            
-            <tag> 随笔 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>观看中华人民共和国七十周年阅兵仪式有感</title>
-      <link href="/2019/10/10/%E8%A7%82%E7%9C%8B%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E4%B8%83%E5%8D%81%E5%91%A8%E5%B9%B4%E9%98%85%E5%85%B5%E4%BB%AA%E5%BC%8F%E6%9C%89%E6%84%9F/"/>
-      <url>/2019/10/10/%E8%A7%82%E7%9C%8B%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E4%B8%83%E5%8D%81%E5%91%A8%E5%B9%B4%E9%98%85%E5%85%B5%E4%BB%AA%E5%BC%8F%E6%9C%89%E6%84%9F/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>还有印象的阅兵就是前几年的抗战胜利七十周年的阅兵大典了，再往前就是六十周年的十一阅兵，诚然，阅兵一年比一年壮观，气势也是越来越宏伟壮阔，东风系列的导弹也从只是耳闻到大众亮相，我们国家的硬实力确实是越来越强了，天安门前，十里长街，茫茫军绿色，是我们的国防的守卫色，每次见到，都会心生崇敬与自豪之情。</p><p>  近几日国际争锋也是丝毫没有停歇，肖华莫雷的言论也是令人心生不悦，网上有句话说的挺好：</p><blockquote><p>“我喜欢看NBA，但我更清楚我是凭什么有资格有机会躺在沙发上舒舒服服地看球赛”</p></blockquote><p> 致敬每一位捍卫我国国防安全的同胞。</p><img src="https://img.tanknee.cn/img/image.png"/>]]></content>
-      
-      
-      <categories>
-          
-          <category> Code </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>九月September</title>
-      <link href="/2019/10/07/%E4%B9%9D%E6%9C%88September/"/>
-      <url>/2019/10/07/%E4%B9%9D%E6%9C%88September/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-eyesmBmH" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="470759757" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><h2 id="有点恍惚，突然就十月份了"><a href="#有点恍惚，突然就十月份了" class="headerlink" title="有点恍惚，突然就十月份了"></a>有点恍惚，突然就十月份了</h2><hr><h3 id="九月就这么过去了"><a href="#九月就这么过去了" class="headerlink" title="九月就这么过去了"></a>九月就这么过去了</h3><p>lpl的三只去S9的队伍也出来了，虽说今年确实没什么希望，但我还是觉得会有一个好成绩，没什么可说的，今年的电子竞技基本全线爆炸，能赢就好。</p><h3 id="九月相比八月也多做了很多事情！"><a href="#九月相比八月也多做了很多事情！" class="headerlink" title="九月相比八月也多做了很多事情！"></a>九月相比八月也多做了很多事情！</h3><p>开了新的三个站：可道云盘，cheveretor图床，微擎，虽然最后一个还没有投入使用，但是小程序也是我接下来的一个目标吧！域名这件事情有一点点拖沓，管理局到现在还没有审核出来，不知道能不能通过，毕竟接下来我都要上课，估计很难接到电话。</p><p>开学的新鲜感在这一个月的时间里也逐渐消磨光了，我也慢慢的失去了学车的热情，国庆没有去过驾校一次，感觉接下来也不太可能回去学车了，不过我还是要尽量去看看。钱都用了，总要拿点什么回来！</p><p>还有就是呢通过了笔试，接下来估计要去参加他们的面试了，我自己估量了一下，是有点菜，什么都没有学会，flappy bird也做的稀烂，readme还有一大堆没有完成，我真的好慢啊，有点扰心。</p><p>不过呢，还是保留一分努力的念头，毕竟国庆玩的还是挺开心的。</p><p>最近有点疯狂种草相机，想要拥有一台自己的微单，看好Sony α6000，不过二手都要2500+有点承受不住，最近已经尽量在省钱了，希望在寒假出去玩之前拥有hhh，虽然我知道不太可能。</p><h3 id="还想说什么来着。"><a href="#还想说什么来着。" class="headerlink" title="还想说什么来着。"></a>还想说什么来着。</h3><p>看了《我和我的祖国》，真的有点想泪涌，有几个片段确实很感人，最喜欢升旗还有夺冠，白昼流星拍得有点智障，和其他的有比较大的差距，有点反感。</p><h4 id="还有几个目标，直接写在这里："><a href="#还有几个目标，直接写在这里：" class="headerlink" title="还有几个目标，直接写在这里："></a>还有几个目标，直接写在这里：</h4><ul><li>完成flappy bird</li><li>全站https</li><li>了解css，给导航栏写一个下划线动画</li><li>通过dian的熬测，或者是为熬测做一些准备。</li></ul><h4 id="先这些吧。万事安好"><a href="#先这些吧。万事安好" class="headerlink" title="先这些吧。万事安好"></a>先这些吧。万事安好</h4><p><img src="https://img.tanknee.cn/old/1501570460224_.pic_hd.jpg" alt="1501570460224_.pic_hd.jpg/webp" border="0"></a></p><hr><p>[scode type=”blue”]下面是前几个月的总结[/scode]<br>[post cid=”179” /]</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 每月纪 </tag>
-            
-            <tag> 随想 </tag>
-            
-            <tag> 生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>凌波日出</title>
-      <link href="/2019/10/05/%E5%87%8C%E6%B3%A2%E6%97%A5%E5%87%BA/"/>
-      <url>/2019/10/05/%E5%87%8C%E6%B3%A2%E6%97%A5%E5%87%BA/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>[Meting]<br>[Music server=”netease” id=”23705316” type=”song”/]<br>[/Meting]</p><h3 id="三天时间又重新认识了一边武汉，也发现了很多之前一直没有察觉到的风景。"><a href="#三天时间又重新认识了一边武汉，也发现了很多之前一直没有察觉到的风景。" class="headerlink" title="三天时间又重新认识了一边武汉，也发现了很多之前一直没有察觉到的风景。"></a>三天时间又重新认识了一边武汉，也发现了很多之前一直没有察觉到的风景。</h3><p>[scode type=”blue”]武大东湖旁的日出真的是太美了，那天早上六点钟到了凌波门的桥上，坐在桥沿真有一种坐在画里的错觉，右前方是几对男男女女，在浅浅的东湖里上上下下。[/scode]</p><img src="https://img.tanknee.cn/old/1DF06824-D703-4CC4-B386-662A75A0B492.jpg" alt="1DF06824-D703-4CC4-B386-662A75A0B492.jpg" border="0"><h4 id="确实，很多时候需要有对照才能真切的感受到时间的流淌，我们几个坐在桥沿等待初阳从远岸层云中跃出，未见时，等待焦灼，初见时，深感惊艳，如梦如幻。"><a href="#确实，很多时候需要有对照才能真切的感受到时间的流淌，我们几个坐在桥沿等待初阳从远岸层云中跃出，未见时，等待焦灼，初见时，深感惊艳，如梦如幻。" class="headerlink" title="确实，很多时候需要有对照才能真切的感受到时间的流淌，我们几个坐在桥沿等待初阳从远岸层云中跃出，未见时，等待焦灼，初见时，深感惊艳，如梦如幻。"></a>确实，很多时候需要有对照才能真切的感受到时间的流淌，我们几个坐在桥沿等待初阳从远岸层云中跃出，未见时，等待焦灼，初见时，深感惊艳，如梦如幻。</h4><h3 id="还有这张，虽然有点可惜，没能把我们几个都拍入照。"><a href="#还有这张，虽然有点可惜，没能把我们几个都拍入照。" class="headerlink" title="还有这张，虽然有点可惜，没能把我们几个都拍入照。"></a>还有这张，虽然有点可惜，没能把我们几个都拍入照。</h3><h4 id="但这剪影真的是太棒了！！！"><a href="#但这剪影真的是太棒了！！！" class="headerlink" title="但这剪影真的是太棒了！！！"></a>但这剪影真的是太棒了！！！</h4><img src="https://img.tanknee.cn/old/IMG_0408.jpg" alt="IMG_0408.jpg" border="0"><p>要是那次去稻城的时候也能拍一张这样的照片就好了，可惜，没有重来的机会了。</p><h3 id="后来我们又坐到了七点钟，太阳也完全跃出了碎云。"><a href="#后来我们又坐到了七点钟，太阳也完全跃出了碎云。" class="headerlink" title="后来我们又坐到了七点钟，太阳也完全跃出了碎云。"></a>后来我们又坐到了七点钟，太阳也完全跃出了碎云。</h3><p>旁边游泳的人也都走了，钓鱼的大叔的一天也才刚刚开始。</p><img src="https://img.tanknee.cn/old/8316E57C-1712-4379-B3DD-3649C2E11F21.jpg" alt="8316E57C-1712-4379-B3DD-3649C2E11F21.jpg" border="0"><h3 id="后来，我们又去了武汉的昙华林，我之前一直想着要去昙华林看看，结果到了门外的商业中心，没有进到里面去。"><a href="#后来，我们又去了武汉的昙华林，我之前一直想着要去昙华林看看，结果到了门外的商业中心，没有进到里面去。" class="headerlink" title="后来，我们又去了武汉的昙华林，我之前一直想着要去昙华林看看，结果到了门外的商业中心，没有进到里面去。"></a>后来，我们又去了武汉的昙华林，我之前一直想着要去昙华林看看，结果到了门外的商业中心，没有进到里面去。</h3><img src="https://img.tanknee.cn/old/IMG_0223.jpg" alt="IMG_0223.jpg" border="0"><p>[scode type=”red”]好像在各位的衬托下没有那么黑了hhh[/scode]</p><img src="https://img.tanknee.cn/old/IMG_0224.jpg" alt="IMG_0224.jpg" border="0"><blockquote><p>生活尚可，保持快乐。</p></blockquote><p>[scode type=”green”]再来一份TIME-LAPSE吧！！[/scode]</p><p><jw><a href="https://tanknee.cn/usr/uploads/2019/10/3502797405.mp4">https://tanknee.cn/usr/uploads/2019/10/3502797405.mp4</a></jw></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 杂记 </tag>
-            
-            <tag> 生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>宇宙的每一秒都是这宇宙概率最小的事情</title>
-      <link href="/2019/09/28/%E5%AE%87%E5%AE%99%E7%9A%84%E6%AF%8F%E4%B8%80%E7%A7%92%E9%83%BD%E6%98%AF%E8%BF%99%E5%AE%87%E5%AE%99%E6%A6%82%E7%8E%87%E6%9C%80%E5%B0%8F%E7%9A%84%E4%BA%8B%E6%83%85/"/>
-      <url>/2019/09/28/%E5%AE%87%E5%AE%99%E7%9A%84%E6%AF%8F%E4%B8%80%E7%A7%92%E9%83%BD%E6%98%AF%E8%BF%99%E5%AE%87%E5%AE%99%E6%A6%82%E7%8E%87%E6%9C%80%E5%B0%8F%E7%9A%84%E4%BA%8B%E6%83%85/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="今天早上吃完早饭时突然想起了这句话。"><a href="#今天早上吃完早饭时突然想起了这句话。" class="headerlink" title="今天早上吃完早饭时突然想起了这句话。"></a>今天早上吃完早饭时突然想起了这句话。</h2><p>这世界，这宇宙，有无数的要素在影响着当下，或许，几分钟之后，就会有光粒到达太阳，世界崩塌毁灭；或许是二向箔也说不定。</p><h2 id="连上帝都只能掷骰子！"><a href="#连上帝都只能掷骰子！" class="headerlink" title="连上帝都只能掷骰子！"></a>连上帝都只能掷骰子！</h2><p>在这宇宙往后的几百亿年里，再次复现当下（18:32:30）的概率几乎是0，这概率小到哪怕宇宙轮回几百亿次也不会再次出现。<br>所以，我们的生命时独一无二的，就算把尺度放到宇宙的层次，也是绝无仅有，独一无二的。</p><p>感慨于生活之宽广，也沉醉于自然之神奇。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 随想 </tag>
-            
-            <tag> 杂记 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>20190926</title>
-      <link href="/2019/09/26/20190926/"/>
-      <url>/2019/09/26/20190926/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="20190926"><a href="#20190926" class="headerlink" title="20190926"></a>20190926</h2><!-- [Meting] --><!-- [Music server="netease" id="31545205" type="song"/] --><!-- [/Meting] --><blockquote><p>每日一曲哈哈哈哈</p></blockquote><p>今天没什么课，但是做了很多事情。</p><h2 id="1-我又又又报名了三大团队，我真的是头铁。"><a href="#1-我又又又报名了三大团队，我真的是头铁。" class="headerlink" title="1. 我又又又报名了三大团队，我真的是头铁。"></a>1. 我又又又报名了三大团队，我真的是头铁。</h2><p>但也算是想要挑战一下自己吧，我真的好废物，一事无成，想做点有意思的事情，所以这次报的是web。</p><h2 id="2-博客改了很多东西"><a href="#2-博客改了很多东西" class="headerlink" title="2. 博客改了很多东西"></a>2. 博客改了很多东西</h2><ul><li>全局的随机图片我都改成了bing的封面图，虽然bing只有几张图片可以调用，不过也还算不错了，感谢网上各位大神的api。虽然加载速度有一点点受影响，不过也还算事可以接受。后面应该会上CDN什么的吧，相对而言可以加速。</li><li>博客底部的信息栏添加了很多东西。点击总次数，博客运行时间，当前访问的系统，客户端，IP地址等等内容都可以在最下面展示，还不错，再过几天可以继续优化，学一学CSS3，php，js，html等等，还有很多可以拓展，现在的代码框架还是有一点问题，后期可以稍微调整一下。</li><li>还有就是缩略图的，原作者不想加缩略图，但我还是加了，我比较喜欢不同文章订制的感觉</li><li>前几天就上了的邮件插件终于可以用了，现在用的是腾讯企业邮箱的smtp服务器，发件人也比较好看美观了，有点快乐哈哈哈哈。</li></ul><p>好久没有用VPN了，算了，我不需要，毕竟还要备案的。</p><p>今后的话美化博客算是一个重要的兴趣动力了吧，其他的就随缘吧，Android随缘写，后台服务器可以慢慢来，淡定。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 网站 </tag>
-            
-            <tag> 杂记 </tag>
-            
-            <tag> 生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>在index主页显示文章缩略图</title>
       <link href="/2019/09/26/%E5%9C%A8index%E4%B8%BB%E9%A1%B5%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E7%BC%A9%E7%95%A5%E5%9B%BE/"/>
       <url>/2019/09/26/%E5%9C%A8index%E4%B8%BB%E9%A1%B5%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E7%BC%A9%E7%95%A5%E5%9B%BE/</url>
@@ -1746,54 +1160,6 @@
     
     
     <entry>
-      <title>我是杂乱碎片的收集者</title>
-      <link href="/2019/09/21/%E6%88%91%E6%98%AF%E6%9D%82%E4%B9%B1%E7%A2%8E%E7%89%87%E7%9A%84%E6%94%B6%E9%9B%86%E8%80%85/"/>
-      <url>/2019/09/21/%E6%88%91%E6%98%AF%E6%9D%82%E4%B9%B1%E7%A2%8E%E7%89%87%E7%9A%84%E6%94%B6%E9%9B%86%E8%80%85/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>大二了竟然还能不时收到学校里各大工作室的宣传单。<br>我用大一上的三个月时间证明了自己并不适合高强度的开发学习并重。<br>归根结底我还是一个自由散漫，懒散堕落的人。<br>不过我也会把我对崭新的，未从尝试的工具的探索热情一一贯彻下去<br>综述，我希望我今后最大的进步是把压力驱动转移到兴趣驱动上来，并且获得相应的一些成就。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 杂记 </tag>
-            
-            <tag> 生活 </tag>
-            
-            <tag> 碎碎念 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>九月二十一日纪实</title>
-      <link href="/2019/09/21/%E4%B9%9D%E6%9C%88%E4%BA%8C%E5%8D%81%E4%B8%80%E6%97%A5%E7%BA%AA%E5%AE%9E/"/>
-      <url>/2019/09/21/%E4%B9%9D%E6%9C%88%E4%BA%8C%E5%8D%81%E4%B8%80%E6%97%A5%E7%BA%AA%E5%AE%9E/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="让我康康我今天都做了什么事情"><a href="#让我康康我今天都做了什么事情" class="headerlink" title="让我康康我今天都做了什么事情"></a>让我康康我今天都做了什么事情</h2><p>今天确实还是做了很多事情的hhhh</p><ul><li>早上搭建了图库</li></ul><img src="https://img.tanknee.cn/old/image541b4da5b84067f2.png" alt="image541b4da5b84067f2.png" border="0">-  然后配置了一下iterm2终端，oh my zsh的主题还不错<p><a href="https://pic.tanknee.cn/image/OYt"><img src="https://img.tanknee.cn/old/image.png" alt="image.png" border="0"></a></p><p>不过我还是感觉图床的响应速度没有那么快，加载比较慢<br><a href="https://pic.tanknee.cn/image/b4J"><img src="https://img.tanknee.cn/old/v2-e1adfc89e8ee22df349d3e606388baa5_r.jpg" alt="v2-e1adfc89e8ee22df349d3e606388baa5_r.jpg" border="0"></a></p><ul><li>还有就是mac风格代码块的插件添加，我真的好喜欢这个风格的代码块，虽然做不到原作者那么完美哈哈哈<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span> <span class="string">&#x27;hello jrotty!&#x27;</span>; <span class="meta">?&gt;</span></span><br><span class="line">高亮测试</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello World&quot;</span>);</span><br></pre></td></tr></table></figure>没想到换了域名之后访问的人这么少，真的有点难过，我以为总会有几个的。算了，等过几天域名备案之后应该就会有所改善吧哈哈哈</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> Code </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>从wordpress转移到typecho</title>
       <link href="/2019/09/19/%E4%BB%8Ewordpress%E8%BD%AC%E7%A7%BB%E5%88%B0typecho/"/>
       <url>/2019/09/19/%E4%BB%8Ewordpress%E8%BD%AC%E7%A7%BB%E5%88%B0typecho/</url>
@@ -1812,137 +1178,17 @@
             
             <tag> 服务器 </tag>
             
-            <tag> wordpress </tag>
-            
-            <tag> 数据库 </tag>
-            
             <tag> 宝塔 </tag>
             
             <tag> typecho </tag>
             
+            <tag> wordpress </tag>
+            
+            <tag> 数据库 </tag>
+            
             <tag> 查询 </tag>
             
             <tag> phpadmin </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>中秋快活噢</title>
-      <link href="/2019/09/13/%E4%B8%AD%E7%A7%8B%E5%BF%AB%E6%B4%BB%E5%99%A2/"/>
-      <url>/2019/09/13/%E4%B8%AD%E7%A7%8B%E5%BF%AB%E6%B4%BB%E5%99%A2/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:paragraph --><p><strong>不管生活怎么样</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>一定要快乐啊，哈哈哈哈哈哈</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>好久没有来这里写了，最近一直在上课，虽然课表不是很满，但是确实是没有精力来照顾博客了。本来昨天是要写周报的日子，但是我忘记了哈哈哈哈哈，算了，不打紧。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>我永远爱加冰的红茶拿铁</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>南京大牌档的梅香排骨真的是太好吃了！！</strong></p><!-- /wp:paragraph --><!-- wp:paragraph {"align":"left"} --><p style="text-align:left"><strong>生活可期！</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>中秋快乐哈哈哈哈哈！！</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>但是这个怎么不显示了，我好气？？？？</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":505} --><figure class="wp-block-image"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/09/1151568385195_.pic_.jpg" alt="" class="wp-image-505"/></figure><!-- /wp:image --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 杂记 </tag>
-            
-            <tag> 生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>规则星空，无尽下坠</title>
-      <link href="/2019/09/07/%E8%A7%84%E5%88%99%E6%98%9F%E7%A9%BA-%E6%97%A0%E5%B0%BD%E4%B8%8B%E5%9D%A0/"/>
-      <url>/2019/09/07/%E8%A7%84%E5%88%99%E6%98%9F%E7%A9%BA-%E6%97%A0%E5%B0%BD%E4%B8%8B%E5%9D%A0/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:audio {"id":497} -->    <div id="aplayer-CAZKuvNy" class="aplayer aplayer-tag-marker meting-tag-marker"         data-id="1351520305" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"    ></div><!-- /wp:audio --><!-- wp:quote --><blockquote class="wp-block-quote"><p>我活在0-10秒</p></blockquote><!-- /wp:quote --><!-- wp:quote --><blockquote class="wp-block-quote"><p>死在30-34秒</p></blockquote><!-- /wp:quote --><!-- wp:paragraph --><p><strong>这一次，让我落下去。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>就像所有结局期许的开头一样</strong></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> server </tag>
-            
-            <tag> 10秒 </tag>
-            
-            <tag> meting </tag>
-            
-            <tag> netease </tag>
-            
-            <tag> type </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>能够占有生活的只能是生活</title>
-      <link href="/2019/09/05/%E8%83%BD%E5%A4%9F%E5%8D%A0%E6%9C%89%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%AA%E8%83%BD%E6%98%AF%E7%94%9F%E6%B4%BB/"/>
-      <url>/2019/09/05/%E8%83%BD%E5%A4%9F%E5%8D%A0%E6%9C%89%E7%94%9F%E6%B4%BB%E7%9A%84%E5%8F%AA%E8%83%BD%E6%98%AF%E7%94%9F%E6%B4%BB/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:paragraph --><p>生活总是稀疏而繁忙的，不可能每时每刻都有要紧的事情需要去做，也不是永远都无所事事。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>所谓的无所事事，不过是<strong>过分地期待而不得罢了</strong>。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>我想不会有那么一件单一的事情永远的占用我的日子，我想这也是应该的，而不应该像以前那样由于某些事情的失败或者挫折，而整日长久地沉沦与自责。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>生活需要进步。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>只要我还活着，那么人生就不会无意义。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 随想 </tag>
-            
-            <tag> 杂记 </tag>
-            
-            <tag> 碎碎念 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>01、03杂记</title>
-      <link href="/2019/09/03/01-03%E6%9D%82%E8%AE%B0/"/>
-      <url>/2019/09/03/01-03%E6%9D%82%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:heading --><h2 id="20190901">20190901</h2><!-- /wp:heading --><!-- wp:paragraph --><p><strong>九月的第一天。明天就要正式上课了，大物马原，这学期我要好好学习大雾，我可以我能行，搞定大物冲冲冲！！</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>不过今天没有去学车，有点可惜，不知道接下来还有多少时间可以去把车学完，要不国庆不回去直接留下来学车好了？应该也行吧，我还有机会hhh。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>rng赢了tes，虽然今年的skt很强，但是莫名地对rng很放心，不是因为强，而仅仅是心安，哈哈哈哈，挺有意思的事情。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>开学了，少熬夜，多读书，多跑步。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>冲冲冲！！！</strong></p><!-- /wp:paragraph --><!-- wp:separator --><hr class="wp-block-separator"/><!-- /wp:separator --><!-- wp:heading --><h2 id="20190903">20190903</h2><!-- /wp:heading --><!-- wp:paragraph --><p><strong>好卑微，开学的日子也没有那么开心。感觉自己有点找不到方向。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>别人都似乎有目标，都在坚定地走着，而我只是平平无奇地在大学里划水。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>突然感觉在打字的时候的思想活跃状况和在洗澡，亦或是睡前的状态是完全不一样的。打字的时候似乎只剩下了潜意识，而原本的构思大多被打乱了，往往是想到什么写什么。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>真的有点想去重庆玩吧。虽然不知道到底有什么这么吸引我。但是就是不想回家，也不想留下来学车。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>这个学期没有英语课了，所以突然解放了一部分的自我。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>害，手打字打的好疼。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>辣鸡天蚕土豆，更新更的这么慢，呀屎了啊？？</strong></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 垃圾生活 </tag>
-            
-            <tag> 随想 </tag>
-            
-            <tag> 杂记 </tag>
-            
-            <tag> 生活 </tag>
             
         </tags>
       
@@ -1971,9 +1217,9 @@
             
             <tag> 文件 </tag>
             
-            <tag> mysql </tag>
-            
             <tag> server </tag>
+            
+            <tag> mysql </tag>
             
             <tag> 重启 </tag>
             
@@ -2023,226 +1269,6 @@
             <tag> select </tag>
             
             <tag> ssl </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>江滩秘境</title>
-      <link href="/2019/08/29/%E6%B1%9F%E6%BB%A9%E7%A7%98%E5%A2%83/"/>
-      <url>/2019/08/29/%E6%B1%9F%E6%BB%A9%E7%A7%98%E5%A2%83/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:paragraph --><p>哈，暑假终于是要结束了。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>明天室友就要回来了，在这里一个人住了这么多天，除了电费有点糟心，以及睡觉的时候要自己关灯，其他都还不错，畅想了一下日后的独居生活？</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>前两天去探索了武汉第三个（？）江滩，汉阳江滩？应该叫这个名字吧。晴川阁不用收门票，但是人还是很少，或许是因为人太少了所以不用收门票吧。</p><!-- /wp:paragraph --><!-- wp:quote --><blockquote class="wp-block-quote"><p>晴川历历汉阳树，芳草萋萋鹦鹉洲</p><cite>崔颢</cite></blockquote><!-- /wp:quote --><!-- wp:image {"id":479,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/UNADJUSTEDNONRAW_thumb_13e0-1024x768.jpg" alt="" class="wp-image-479"/><figcaption>禹王庙</figcaption></figure></div><!-- /wp:image --><!-- wp:image {"id":480,"align":"center","width":518,"height":389} --><div class="wp-block-image"><figure class="aligncenter is-resized"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/UNADJUSTEDNONRAW_mini_13eb.jpg" alt="" class="wp-image-480" width="518" height="389"/><figcaption>江滩景色</figcaption></figure></div><!-- /wp:image --><!-- wp:paragraph --><p>然后沿着龟山旁边的一条小路走到了汉阳造，路上皆是墙绘涂鸦，像是古板的武汉江城背上的一笔纹身。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p></p><!-- /wp:paragraph --><!-- wp:image {"id":481,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/pyWyXTdBRtGuIckPselurw_mini_13f9.jpg" alt="" class="wp-image-481"/><figcaption>Poker</figcaption></figure></div><!-- /wp:image --><!-- wp:image {"id":482,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/UNADJUSTEDNONRAW_mini_13dd.jpg" alt="" class="wp-image-482"/><figcaption>海绵宝宝</figcaption></figure></div><!-- /wp:image --><!-- wp:paragraph --><p>暑假很多事情都只完成了一半。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>书没怎么看，课程也没有去预习，学车也没有学完，墙纸也没贴好，摄影也没认真搞明白。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>害，真的没那么简单。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>夏天也快过去了。</p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 每月纪 </tag>
-            
-            <tag> 随想 </tag>
-            
-            <tag> 生活 </tag>
-            
-            <tag> 杂技 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>山高水远，路遥马亡</title>
-      <link href="/2019/08/25/%E5%B1%B1%E9%AB%98%E6%B0%B4%E8%BF%9C-%E8%B7%AF%E9%81%A5%E9%A9%AC%E4%BA%A1/"/>
-      <url>/2019/08/25/%E5%B1%B1%E9%AB%98%E6%B0%B4%E8%BF%9C-%E8%B7%AF%E9%81%A5%E9%A9%AC%E4%BA%A1/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:image {"id":470} --><p><img src="https://img.tanknee.cn/blogpicbed/2020/06/20200602925e5acf5f705.jpg" alt=""></p><!-- /wp:image --><!-- wp:paragraph --><p><strong>高考前三个月吧，把七堇年的《灯下尘》看了很多遍。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>着实很喜欢她的随笔，虽然说实话并不能给予我什么精神上的力量？更像是一种补给，在需要的时候出现了。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>我曾一直以为七堇年才二十来岁？到了签售会再去查了一下百度百科，发现原来都已经三十多了，害，其实也没差，旅行的小姑娘都看着挺年轻的，不过现在感觉看着更像是长辈姑姑阿姨了。</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":471,"align":"center","width":384,"height":512} --><p><img src="https://img.tanknee.cn/blogpicbed/2020/06/20200602aadebc29f6e51.jpg" alt=""></p><!-- /wp:image --><!-- wp:paragraph --><p><strong>第一次参加签售会，不知道其他的作家是什么样子，七堇年在签完字之后都会抬起头来对读者说了句谢谢，并报以微笑，确实让人心生好感。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>在排队的那几个小时里突然意识到了两件事情：</strong></p><!-- /wp:paragraph --><!-- wp:list {"ordered":true} --><ol><li><strong>我好像挺喜欢与别人对视的</strong></li><li><strong>我好像很脸盲</strong></li></ol><!-- /wp:list --><!-- wp:paragraph --><p><strong>也算是了了一个心愿吧，过得也算是完美，后会有期啦。</strong></p><!-- /wp:paragraph --><!-- wp:video {"id":472,"align":"center"} --><figure class="wp-block-video aligncenter"><figcaption>神奇的武汉一号线</figcaption></figure><!-- /wp:video --><!-- wp:quote --><blockquote class="wp-block-quote"><p>不熟悉与陌生才是相识相知的基石，不是吗？</p></blockquote><!-- /wp:quote -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 杂记 </tag>
-            
-            <tag> 生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>漫长的告别</title>
-      <link href="/2019/08/23/%E6%BC%AB%E9%95%BF%E7%9A%84%E5%91%8A%E5%88%AB/"/>
-      <url>/2019/08/23/%E6%BC%AB%E9%95%BF%E7%9A%84%E5%91%8A%E5%88%AB/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:quote --><blockquote class="wp-block-quote"><p>A guy like me has one big moment in his life , one perfect swing on the high trapeze.Then he spends the rest of his time trying not to fall off the sidewalk into the gutter.</p></blockquote><!-- /wp:quote --><!-- wp:paragraph --><p>今天是8月24号，距离我开博客已经有一个月的时间了。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>期间我写了十七篇，有发泄的，有想着口嗨的，也有认真总结写影评的。不知道有多少人在看，或许来来回回只有我一个人吧。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>害，多大点事呢。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>现在的生活从某种状态来讲还挺好的，虽然不知道好在哪里，未来难期。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>总是害怕说出自己期待的东西，担心还没触碰就堪堪消失。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>买了三四本书，这么多天了，一本都没有看完，倒是最便宜的那本不要钱的《漫长的告别》看的最快，挺喜欢马洛这个角色，不卑不亢，冷静沉着。总之，在潮湿的破败别墅里，外面的天是阴霾的，落魄的英国绅士倚在发旧的沙发上思索案件的走向，对我有种神秘的吸引力，难道侦探小说不就应该这样吗？</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>好了，明天也没什么行程，祝安。</p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 每月纪 </tag>
-            
-            <tag> 杂记 </tag>
-            
-            <tag> 生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>你好，武汉</title>
-      <link href="/2019/08/20/%E4%BD%A0%E5%A5%BD-%E6%AD%A6%E6%B1%89/"/>
-      <url>/2019/08/20/%E4%BD%A0%E5%A5%BD-%E6%AD%A6%E6%B1%89/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:paragraph --><p><strong>认识武汉的第354天</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":456,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/811566312594_.pic_hd-896x1024.jpg" alt="" class="wp-image-456"/><figcaption>Countdown！</figcaption></figure></div><!-- /wp:image --><!-- wp:paragraph --><p><strong>来了江城这么多天，终于记起来可以去江滩看看！</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":457,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/821566312695_.pic_.png" alt="" class="wp-image-457"/><figcaption>江滩✅</figcaption></figure></div><!-- /wp:image --><!-- wp:paragraph --><p><strong>在没有风的江岸走才能真实的感受到武汉这个大农村的闷热，西岸的高楼很多，最高的那座甚至还在施工，确实也挺符合武汉大工地的社会定位。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>和傻蝉玩气枪打气球，打了十枪才中了两个？还是三个，被老板娘嘲讽 的无地自容，气死我了！！？？</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>江景还是挺漂亮的，七点过半，西岸的楼市全都亮起灯来，有点像农村的社会哥亮出自己的金板牙。</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":460,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/831566313004_.pic_hd-1-1024x445.jpg" alt="" class="wp-image-460"/><figcaption>7：00的江滩</figcaption></figure></div><!-- /wp:image --><!-- wp:image {"id":459,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/841566313005_.pic_hd-1024x768.jpg" alt="" class="wp-image-459"/><figcaption>7：30的江滩</figcaption></figure></div><!-- /wp:image --><!-- wp:paragraph --><p><strong>还有彻夜轰鸣的长江大桥，桥下日夜不息的笙歌（实际上是大妈的广场舞）。</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":461,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/851566313342_.pic_hd-1024x768.jpg" alt="" class="wp-image-461"/></figure></div><!-- /wp:image --><!-- wp:paragraph --><p><strong>甚至复兴路的地铁站也挺有意思</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":462} --><figure class="wp-block-image"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/861566313345_.pic_hd-1024x768.jpg" alt="" class="wp-image-462"/></figure><!-- /wp:image --><!-- wp:image {"id":463,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/871566313348_.pic_hd-1024x768.jpg" alt="" class="wp-image-463"/></figure></div><!-- /wp:image --><!-- wp:paragraph --><p><strong>fine，今天除了气枪和那碗一般般的冰粉都挺完美的。</strong></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 杂记 </tag>
-            
-            <tag> 生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>墙中语</title>
-      <link href="/2019/08/19/%E5%A2%99%E4%B8%AD%E8%AF%AD/"/>
-      <url>/2019/08/19/%E5%A2%99%E4%B8%AD%E8%AF%AD/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:paragraph --><p><strong>偶然去外网看了一圈</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>真的是令人作呕</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>看得我晚饭加饮料都要吐出来了，真的是令人恶心</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>果然国家建立网络长城还是有很好的的作用的</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>至少国内的网络监管有力，环境也要文明得多</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>我吐辣，口区！</strong></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 垃圾生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>少年秉性</title>
-      <link href="/2019/08/17/%E5%B0%91%E5%B9%B4%E7%A7%89%E6%80%A7/"/>
-      <url>/2019/08/17/%E5%B0%91%E5%B9%B4%E7%A7%89%E6%80%A7/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:heading {"level":4} --><h4>终于是又回到了武汉</h4><!-- /wp:heading --><!-- wp:paragraph --><p><strong>今天也算是经历了很多。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>中午在WenZhou站丢了外婆给的一百块，伤心了好一阵子，真的好难过，但是在得知有人也丢了钱而且也是外婆给的钱之后就有点庆幸？不对，反正就是没那么不开心了</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":404,"align":"center","width":554,"height":738} --><div class="wp-block-image"><figure class="aligncenter is-resized"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/661566054205_.pic_hd-768x1024.jpg" alt="" class="wp-image-404" width="554" height="738"/><figcaption><strong>人来人往的WhuHan站</strong></figcaption></figure></div><!-- /wp:image --><!-- wp:paragraph --><p><strong>路上的景也见过好几回了，没有那么感兴趣了：浙江段的山山水水，也算有点了然于心。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>其实早就做好了一个人住十几天的准备，但是当我推开寝室的门，闻见略有霉味的空气，还是有一瞬间好想落泪。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>而后便是整理了下行李，收拾了一会儿，特地带来武汉的一鸣手撕面包也有点无味，本想好的很多整理宿舍的设想全都被我的懒惰打败了，真的是太难了。</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":405} --><figure class="wp-block-image"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/681566054208_.pic_hd-768x1024.jpg" alt="" class="wp-image-405"/><figcaption>韵苑楼下</figcaption></figure><!-- /wp:image --><!-- wp:paragraph --><p><strong>真的好难受。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>虽然我知道我的难受来源于何处。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>说点开心的吧，下午买的几样东西全部都发货了。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>二十四号估计是能去西西弗看七堇年的。</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":406,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/image.png" alt="" class="wp-image-406"/><figcaption>早早定好的todo</figcaption></figure></div><!-- /wp:image --><!-- wp:paragraph --><p><strong>本来想好的一句结尾一直没能想起来是什么。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>算了，遇事皆有期，凡事不强求。</strong></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 垃圾生活 </tag>
-            
-            <tag> 杂记 </tag>
-            
-            <tag> 生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>暑假倒计时-48Hours</title>
-      <link href="/2019/08/15/%E6%9A%91%E5%81%87%E5%80%92%E8%AE%A1%E6%97%B6-48hours/"/>
-      <url>/2019/08/15/%E6%9A%91%E5%81%87%E5%80%92%E8%AE%A1%E6%97%B6-48hours/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:heading {"level":4} --><h4>马上就要回去了。</h4><!-- /wp:heading --><!-- wp:paragraph --><p><strong>本来还要去帮我妈把钱存了，但是外面下雨了，不是很想要出门，夏天的温州有点湿热，但也并不难受，如果硬要和武汉的夏天相比较的话。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>欸，其实立秋都过了好久。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>武汉的夏天至少还有一个月的余额，而我的暑假时长却早早告急了。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>谷歌的实习岗位好酷炫，但是翻了一下他们的招聘目标，好像并没有对大二的弱鸡男大学生开放....</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>希望明年这个时候能有机会去大公司找点实习吧...虽然现在还是一条咸鱼，没有什么一技之长。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>这两天临近开学，莫名其妙的沉迷购置用具，艹，又想买台灯了，米家Pro真尼玛好看，那个充电的也是...回武汉后还准备把武汉的几个没去过的景点都去一遍，顺便给博客加一个画册页面好了，不知道服务器这么点大的内存够不够使...</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>好好学车</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>好好睡觉</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>好好“钓鱼”</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>新学期冲冲冲！！！</strong></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 生活 </tag>
-            
-            <tag> 日记 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>人心中的成见是一座大山</title>
-      <link href="/2019/08/13/%E4%BA%BA%E5%BF%83%E4%B8%AD%E7%9A%84%E6%88%90%E8%A7%81%E6%98%AF%E4%B8%80%E5%BA%A7%E5%A4%A7%E5%B1%B1/"/>
-      <url>/2019/08/13/%E4%BA%BA%E5%BF%83%E4%B8%AD%E7%9A%84%E6%88%90%E8%A7%81%E6%98%AF%E4%B8%80%E5%BA%A7%E5%A4%A7%E5%B1%B1/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:quote --><blockquote class="wp-block-quote"><p>很抱歉引用了哪吒里的一句流行台词，但却是时下没有比这句话更好的表达方式了。</p></blockquote><!-- /wp:quote --><!-- wp:paragraph --><p><strong>可能是带节奏的言论看多了的原因，经常看到某些文章就冒火，但是很多时候骂也不是，不骂也不是，心里堵得慌，这世上的傻逼还是很多的，微博，自媒体占一大半，妈的，一群垃圾，毁坏我的资讯内容质量，真他妈是社会的毒瘤。</strong></p><!-- /wp:paragraph --><!-- wp:heading {"level":4} --><h4>下面是我觉得这两天看到的比较多的几点：</h4><!-- /wp:heading --><!-- wp:list {"ordered":true} --><ol><li>华为与其他各个厂商的对立</li><li>男女两性的对立</li><li>国外媒体言论的愚蠢</li></ol><!-- /wp:list --><!-- wp:heading {"level":4} --><h4>诚然，我认为最主要的原因只有一个：信息不对称！</h4><!-- /wp:heading --><!-- wp:paragraph --><p><strong>fine，以今天上了知乎热榜的那个关于穿衣自由的文章来说吧。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>公众号的读者与公众号的作者的地位是绝对不平等的。公众号只会给你他想要展示的那部分思想，真正的有力度的反驳的言论他根本不会放出来，不过这也很好理解，毕竟作为情感类公众号（？）还是需要一个良好的社会人设的。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>其实我也很奇怪，好好的影评不写为什么要去掺一脚穿衣不自由这个很容易引发社会讨论的话题。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>可能是为了流量吧。不过也必然是为了流量。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>当进入她的公众号时，我就已经失去了所谓的言论自由，我的语言表达能力不好，难以描述那种如鲠在喉的难受。如果问我还有什么类似的感受的话我觉得就是微博粉丝控评吧，硬生生把正常的宣传变成垃圾流量明星的垃圾作品宣展会，草，一群铁憨批。不过至少微博还有正常人能转发再评论，让我等低贱路人有机会看上一眼正常人的想法。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>而公众号就不一样了，他是100%控评，他甚至还可以专门挑出几个被带上了预定节奏的憨憨拉出来批斗一下以表自己的委屈？！！！！</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>呵呵，本来不想对其中的内容做什么评价，但是在知乎看到了编者来主动回答这个问题，真的是忍不住来骂人了，妈的垃圾。</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":281,"align":"center","width":381,"height":512} --><div class="wp-block-image"><figure class="aligncenter is-resized"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/08/511565693780_.pic_hd-761x1024.jpg" alt="" class="wp-image-281" width="381" height="512"/></figure></div><!-- /wp:image --><!-- wp:quote --><blockquote class="wp-block-quote"><p>第一点</p><cite>你提了国外，他们就会觉得你崇洋媚外</cite></blockquote><!-- /wp:quote --><!-- wp:paragraph --><p>在？您是憨批吗？</p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>用几天短暂的旅游来定义国外开放自由的穿衣习惯 ？</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>用国外懒得鸟你的相对更孤僻的社会人格来证明外国人的眼光更加的开放？</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>用中东地区，韩国，比利时没有自由的例子来举证中国女性应该接着去争取获得自由？</strong></p><!-- /wp:paragraph --><!-- wp:quote --><blockquote class="wp-block-quote"><p>第二点</p><cite>你说人言可畏，大家要尊重，他直接告诉你国家没有不让，中国很自由，你写个屁。<br>所以到底为什么那天我帮男性发生的时候风平浪静，大部分女生在留言区都表示反思，到了女性这里就成了这样。<br>你们真是最魔幻的一群中国互联网冲浪手没搞清楚黑白就颐指气使的样子，真他妈丑。</cite></blockquote><!-- /wp:quote --><!-- wp:paragraph --><p><strong>我只想说，看你气急败坏没办法控制舆论的样子，真他妈爽。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>这他妈这么简单的一个道理你个做互联网自媒体的会想不清楚吗？</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>你让男性看美女你他妈还不允许别人评价，顺便给别人扣上了大帽子说你这是阻碍女性的穿衣自由？</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>我可透你个嘴，代码都写不过来谁他妈有兴趣看美女。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>而且，大多数男生who tm care 你管不管我穿什么？</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>我觉得男性真的很懒，不过你如果指责我，我一定要找你茬。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>我为什么没有对前面的话作解释，因为我觉得他说的对，知乎上大多数的高赞也不过是照着格式重新写了一遍，但是这并不是指责的理由。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>就允许你们发流量不允许大家伙蹭流量吗？</strong></p><!-- /wp:paragraph --><!-- wp:heading {"level":4} --><h4>Fine 我今天也是一个被节奏带走的人呢</h4><!-- /wp:heading --><!-- wp:paragraph --><p><strong>冷静下来想想这究竟是为什么。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>是闲的太慌了没事情？</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>是九年义务教育没学好智商低？</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>或许都是。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>不过最近只要看到说什么要为女性争取这个权利争取那个权利的言论就很反感，因为这些言论里有一半是没有正视男女的个体生理差异，还有另外一半是对这个社会的高度不信任与敏感。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>恕我直言，在我的认知里女性的生存环境已经比别的性别要好得多的多了。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p><strong>或许这就是我心中的成见，我跟前的大山。</strong></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 垃圾文章 </tag>
             
         </tags>
       
@@ -2325,135 +1351,6 @@
     
     
     <entry>
-      <title>09杂记</title>
-      <link href="/2019/08/09/09%E6%9D%82%E8%AE%B0/"/>
-      <url>/2019/08/09/09%E6%9D%82%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:heading {"level":3,"align":"center"} --><h3 style="text-align:center">20190809</h3><!-- /wp:heading --><!-- wp:paragraph {"customFontSize":17} --><p style="font-size:17px">早上溜去医院划了波水，确实没什么动力，台风要来了。雨打着窗户。已经响了一整天了。</p><!-- /wp:paragraph --><!-- wp:paragraph {"customFontSize":17} --><p style="font-size:17px">莫名的喜欢台风，也不能说是喜欢吧，应该说是昏暗的暴雨环境给予人深度思考的空间。</p><!-- /wp:paragraph --><!-- wp:paragraph {"customFontSize":17} --><p style="font-size:17px">跟风黑了鹿晗和他的上海堡垒，但还是耐不住好奇，去把书找出来看了一遍。江南老贼写的东西，但又越看越不像是老贼写的，29岁的江南的笔力竟然也是如此的稚嫩，根本不像是龙族里那般的老练沉稳。</p><!-- /wp:paragraph --><!-- wp:paragraph {"customFontSize":17} --><p style="font-size:17px">或许是鹿晗代入的原因，看的时候江洋的脸总是被替换成鹿晗的脸，但又会被鹿晗奇奇怪怪的演技劝退，我总觉得的江洋更适合的是隐形守护者的男主。</p><!-- /wp:paragraph --><!-- wp:paragraph {"customFontSize":17} --><p style="font-size:17px">书里很少有过渡环节的描述，总是在和外星人拼斗的时候还会有柔情片段的上演，让人搞不清这究竟是爱情小说还是一部科幻/玄幻小说，老贼没搞明白，我也没有弄明白。</p><!-- /wp:paragraph --><!-- wp:separator --><hr class="wp-block-separator"/><!-- /wp:separator --><!-- wp:paragraph {"customFontSize":17} --><p style="font-size:17px">早上的时候，在二医的大堂里，人很少，零散的病人都有很明确的方向，不需要我这个二愣子志愿者给他们什么错误的帮助。</p><!-- /wp:paragraph --><!-- wp:paragraph {"customFontSize":17} --><p style="font-size:17px">也是，很多事情发生的时候根本不会寻求我的同意，它发生了，与我无干。</p><!-- /wp:paragraph --><!-- wp:paragraph {"customFontSize":17} --><p style="font-size:17px">以前，这一个多月来，很舍不得把联系方式删掉，最后一次的正常对话也停留在“生日快乐”，就像是林澜发给江洋的最后一句话是“晚安”。谁都没有在等什么东西，只是今天恰好台风来了，恰好我翻了一下微博，而后又去翻了翻朋友圈。</p><!-- /wp:paragraph --><!-- wp:heading {"level":3,"align":"center"} --><h3 style="text-align:center">“不要再来偷偷看我啦”</h3><!-- /wp:heading --><!-- wp:heading {"level":3,"align":"center"} --><h3 style="text-align:center">我也不会再去偷偷看你啦</h3><!-- /wp:heading --><!-- wp:quote --><blockquote class="wp-block-quote"><p>很难形容那一段时间的情感，有点像东拼西凑，对自己也不会再抱有很高的期待以及很高的忠诚。</p><p>放得下是她的事情，放不下是我的事情</p><p>不拿她的标准来限制我的行为才应该是我的方式</p><p>这段日子挺难熬的，我不知道走不走的下去</p><p>但我已经至少想明白了一件事情</p><p>她将会是我人生中如林澜，诺诺亦或是其他般的一位</p><p>她将永远的十八岁</p><p>而我不会，我只会向前走</p><p>像生成于太平洋的风</p><p>终要刮过江南的丘陵</p><p>踏山遍水，有所依恋，也终将老去<br></p></blockquote><!-- /wp:quote --><!-- wp:separator --><hr class="wp-block-separator"/><!-- /wp:separator --><!-- wp:html --><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=86 src="//music.163.com/outchain/player?type=2&id=29848804&auto=0&height=66"></iframe><!-- /wp:html --><!-- wp:paragraph {"align":"center","fontSize":"medium"} --><p style="text-align:center" class="has-medium-font-size">今天还看了芒果冰的一期视频，听到无用歌时被惊艳到了：</p><!-- /wp:paragraph --><!-- wp:quote {"align":"center","className":"is-style-large"} --><blockquote style="text-align:center" class="wp-block-quote is-style-large"><p>天下无用</p><cite>天地何用?<br>不能席被,<br>风月何用?<br>不能饮食.<br>纤尘何用?<br>万物其中,<br>变化何用?<br>道法自成,<br>面壁何用?<br>不见滔滔,<br>棒喝何用?<br>一头大包.<br>生我何用?<br>不能欢笑,<br>灭我何用？<br>不减狂骄<br>踏歌而行八荒路,<br>物我两忘九逍遥。<br>芒鞋斗笠千年走,<br>万古长空一朝游.</cite></blockquote><!-- /wp:quote --><!-- wp:paragraph {"align":"center","fontSize":"medium"} --><p style="text-align:center" class="has-medium-font-size"><strong>生我何用 不能欢笑<br>灭我何用 不减狂骄</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 杂记 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>20190808</title>
-      <link href="/2019/08/08/20190808/"/>
-      <url>/2019/08/08/20190808/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:paragraph --><p>早上没来得及吃药，也没来得及起床，早上过的有点累，中午摸鱼，又喝了酸奶，这几天好像真的不太行，要节制一点防止复发。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>算法的书拿来了，确实比较通俗易懂，但有时候会想想是不是有点过于简单了，hh，还是要好好学吧。</p><!-- /wp:paragraph --><!-- wp:list --><ul><li>去买点书看吧，晚风枕酒。确实在很多的瞬间都会怀疑自己做事情的动机，是因为真的喜欢，还是因为习惯。</li><li>尝试一下iOS13，反正也没几个月了，尝尝鲜也没有什么问题。</li><li>布置一下寝室吧</li><li>买一个好一点的椅子</li><li>买一个桌上小桌，买墙纸，把原来的撕掉。</li></ul><!-- /wp:list --><!-- wp:paragraph --><p>趁着还有点钱，买点能提升生活质量的东西，而不是把钱浪费在不重要的地方，不过有时候趟雷也是一件很有意义的事情，。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>也不要忘记了多写字，感觉现在比以前要好的多了，表达的能力也有所长进</p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 垃圾生活 </tag>
-            
-            <tag> 随想 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>七月July</title>
-      <link href="/2019/08/06/179/"/>
-      <url>/2019/08/06/179/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 style="text-align:center">深夜，暴雨和雷霆</h3><!-- wp:image {"id":180} --><figure class="wp-block-image"><img src="https://img.tanknee.cn/blogpicbed/2019/12/201912194a8b701858b53.png"/></figure><!-- /wp:image --><!-- wp:paragraph --><p><strong>写总结这件事情其实已经在我的待办事项里面躺了很久了，每周写周报好像已经不太现实了，太懒了，没得救了。</strong></p><!-- /wp:paragraph --><!-- wp:heading {"level":3,"align":"center"} --><h3 style="text-align:center">七月有三十一天</h3><!-- /wp:heading --><!-- wp:list --><ul><li><strong>前十天庸庸碌碌，磨蹭着写了五六天的C++，最后写出来一个半死不活的记账本，好像确实除了一些搬砖的内容之外就没学到什么东西了。</strong></li></ul><!-- /wp:list --><!-- wp:list --><ul><li><strong>然后在寝室躺了两天，期间和来武汉的zzl畅谈了好几个晚上，确实也挺开心的吧。不能总把新老朋友拿来比较，不同的人都有不同的特点</strong></li></ul><!-- /wp:list --><!-- wp:image {"id":189} --><figure class="wp-block-image"><img src="https://img.tanknee.cn/blogpicbed/2019/12/2019121934fc2b47a4f5c.png"/></figure><!-- /wp:image --><!-- wp:list --><ul><li><strong>而后十二号便去了南京。南京真是一个从名字开始就让我很喜欢的城市，没有北京给人的那种霸道，也没有扬州给以我的小家气魄。要不是考不上南大，我肯定去南京（假装马后炮）。//大牌档太好吃了，我永远爱南京大牌档</strong></li></ul><!-- /wp:list --><!-- wp:image {"id":186} --><figure class="wp-block-image"><img src="https://img.tanknee.cn/blogpicbed/2019/12/2019121939ce893d7e40f.png"/></figure><!-- /wp:image --><!-- wp:list --><ul><li><strong>再后来又去了镇江，去了扬州，不知在这三四个火车站里来来回回上上下下了多少遍。有感叹过江苏城市的破旧和朴素，也会感慨江南小镇的秀丽和精致，有对京杭运河的无言，亦有对运河边声浪滔滔的广场舞的欲言又止。真像是活在过去的人，却又挂着今人的衣裳。</strong></li></ul><!-- /wp:list --><!-- wp:image {"id":192} --><figure class="wp-block-image"><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191219b596fc71b7bcd.png"/></figure><!-- /wp:image --><!-- wp:list --><ul><li><strong>在青松客栈的老爷爷家里躺到17号后，就坐着老爷爷的小电瓶，离开了。也顺便见识了一下扬州站火车汽车一家亲的神奇建筑规划。</strong></li></ul><!-- /wp:list --><!-- wp:image {"id":195} --><figure class="wp-block-image"><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191219010db17ab4f09.png"/></figure><!-- /wp:image --><!-- wp:heading {"level":3,"align":"center"} --><h3 style="text-align:center">暑假是从第十七天开始的</h3><!-- /wp:heading --><!-- wp:paragraph --><p><strong>先是被拉去活活当了四五天的苦工，整天扒拉这块的废料，或者打包纸箱，或者打打表格，然后就又是瘫了四五天，整天鼓捣服务器，网站，本事没学到什么，倒是命令行越打越能耐了，也慢慢的喜欢上了OS X，苹果家的玩意儿真是好看，没有话说。（MacBook Pro Yes！！！）等我有钱了一定去买一台真的MacBook Pro。</strong></p><!-- /wp:paragraph --><!-- wp:image {"id":201} --><figure class="wp-block-image"><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191219eab547aab8f15.png/webp"/></figure><!-- /wp:image --><!-- wp:paragraph --><p><strong>确实慢慢看淡放轻松了很多，也不再死磕一个死胡同了。明白了差别，也就不会接着跟自己赌气了。没意义。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p>再多的思考也抵不过晚间趴在桌子上时模糊而撕裂的痛苦。<strong>就像是从家里出门等公交，却突然发现家里的钥匙没带，而且门还没关，这时你往前走也好，死命往回跑也好，都阻止不了你将会晒到双倍的太阳的事实</strong>。</p><!-- /wp:paragraph --><!-- wp:paragraph {"align":"center"} --><p style="text-align:center"><strong>诶，有时候下雨还挺美好的</strong></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 每月纪 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2001 太空漫游</title>
-      <link href="/2019/08/02/2001-%E5%A4%AA%E7%A9%BA%E6%BC%AB%E6%B8%B8/"/>
-      <url>/2019/08/02/2001-%E5%A4%AA%E7%A9%BA%E6%BC%AB%E6%B8%B8/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:paragraph {"fontSize":"medium"} --><p class="has-medium-font-size">花了三天左右把2001太空漫游看了一遍，这本书躺在我的kindle里已经很久了，最初在动车上翻出来看，确实是看的我索然无味。nmd，wsm，为什么要在好好的科幻小说前写一段人猿奇幻历险？我这么庸俗的人根本看不进去好吗？</p><!-- /wp:paragraph --><!-- wp:paragraph {"align":"center","fontSize":"medium"} --><p style="text-align:center" class="has-medium-font-size"><strong>当然，除了那块黑石。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph {"align":"center","fontSize":"medium"} --><p style="text-align:center" class="has-medium-font-size"><strong>寂静光滑</strong></p><!-- /wp:paragraph --><!-- wp:paragraph {"fontSize":"medium"} --><p class="has-medium-font-size">顿时就想起了丁仪和那个同样光滑的让人觉得无从击破的水滴。</p><!-- /wp:paragraph --><!-- wp:paragraph {"fontSize":"medium"} --><p class="has-medium-font-size">大刘说过，他的作品多是对阿瑟的2001太空漫游的拙劣模仿，这部分应该是算作致敬吧。同样的未知文明，同样的无懈可击，同样的神秘绝望。看着太空漫游影片里的黑石场景，简直是喘不过气来，<strong>压抑，密不透风</strong>。弗洛伊德博士伸出手，谨慎的触碰无暇的黑石，像极了百万年前的人猿，好奇而恐惧。</p><!-- /wp:paragraph --><!-- wp:paragraph {"fontSize":"medium"} --><p class="has-medium-font-size">文明起源曾有一个推测：外星人点化人类，而后，人类才有了文明。阿瑟的黑石，就与点化不谋而合。在恰当的时机，恰当的地点出现，就好像，有一双眼睛，在观察着人类，或者说是，监视着人类。</p><!-- /wp:paragraph --><!-- wp:paragraph {"fontSize":"medium"} --><p class="has-medium-font-size"><strong>第一块黑石让人猿走向人类，第二块促使人类走向土星，走向深空。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph {"fontSize":"medium"} --><p class="has-medium-font-size">说是促使，而实际上极为平淡，不管是书还是影片，对白极少，连过激的动作也很少见，没有传统科幻表现形式里的反抗，对立，战争，爱情。唯一剩下的只有探索。</p><!-- /wp:paragraph --><!-- wp:image {"id":168,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://img.tanknee.cn/blogpicbed/2019/12/201912192250b7595024c.png"/></figure></div><!-- /wp:image --><!-- wp:list --><ul><li><strong>对人工智能的探索</strong></li></ul><!-- /wp:list --><!-- wp:image {"id":173,"align":"center","width":583,"height":292} --><div class="wp-block-image"><figure class="aligncenter is-resized"><img src="https://img.tanknee.cn/blogpicbed/2019/12/201912194bfc54973e11c.png"/></figure></div><!-- /wp:image --><!-- wp:list --><ul><li><strong>对未知深空的探索</strong></li></ul><!-- /wp:list --><!-- wp:image {"id":170,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191219df93c3d1b2dfd.png"/></figure></div><!-- /wp:image --><!-- wp:list --><ul><li><strong>对古今寰宇的探索</strong></li></ul><!-- /wp:list --><!-- wp:image {"id":172,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191219796a5a112274b.png"/></figure></div><!-- /wp:image --><!-- wp:paragraph {"fontSize":"medium"} --><p class="has-medium-font-size">着实很惊艳，没有冲动，没有暴力，只剩如一潭静水般的宁静，一如影片里HAL的声音，就算Bowman在拆着他的逻辑芯片，他也不过是说了一句，“<strong>我害怕</strong>”。</p><!-- /wp:paragraph --><!-- wp:image {"id":171,"align":"center","width":579,"height":255} --><div class="wp-block-image"><figure class="aligncenter is-resized"><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191219e30fea92c163f.png"/></figure></div><!-- /wp:image --><!-- wp:paragraph {"fontSize":"medium"} --><p class="has-medium-font-size">很难想象这是写于半个世纪之前的科幻作品，那时，第一台计算机才出现了二十余年，而阿瑟-克拉克就已经开始讨论人工智能的可行性以及对人工智能的深层探讨，而其中的许多设定也极为的超前，至少，在现在看来，并没有十分的落伍。</p><!-- /wp:paragraph --><!-- wp:image {"id":169,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191219677b35b0016b9.png/webp"/></figure></div><!-- /wp:image --><!-- wp:paragraph {"fontSize":"medium"} --><p class="has-medium-font-size">故事的最后，Bowman穿过星之门，变成了星童。他注视着自己的蔚蓝色的家园，“令人惊讶的注意力”，他凝视着家园的过去，现在和未来，他是神，但他也是虚无。</p><!-- /wp:paragraph --><!-- wp:paragraph {"fontSize":"medium"} --><p class="has-medium-font-size">不管是电影还是书，都有一种无法言说的老旧感。就好像崭新的白衬衫，用上了一层黄旧的滤镜，准确的说，就好像是高中化学书的人都活了过来。再配合少之又少的对白，恢弘磅礴的交响乐配乐，我一次次质疑自己是不是在看老派的话剧表演，而不是一部超越时代的科幻巨作，太空人们那机械鬼畜的步态走姿，<strong>昏暗地面，冷酷月光</strong>，像极了非洲大地上的邪教祭典，人们对着“神”顶礼膜拜，诚惶诚恐，不知所措为何。</p><!-- /wp:paragraph --><!-- wp:paragraph {"fontSize":"medium"} --><p class="has-medium-font-size">想写影评好久了，本是想先写哪吒的影评，结果一直搁着没有写，只写了个标题，剩的有点脑袋发空，总感觉写着写着就变成观后感了，写了这么多年作文，会写的好像也就是中学作文了。</p><!-- /wp:paragraph --><!-- wp:heading {"level":3} --><h3>七月再见，八月你好</h3><!-- /wp:heading -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 影评 </tag>
-            
-            <tag> 科幻 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>无话可说</title>
-      <link href="/2019/07/29/%E6%97%A0%E8%AF%9D%E5%8F%AF%E8%AF%B4/"/>
-      <url>/2019/07/29/%E6%97%A0%E8%AF%9D%E5%8F%AF%E8%AF%B4/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:paragraph {"align":"center"} --><p style="text-align:center">好像每天都被我爸我妈催着去干着干那，迟一两分钟便会得到暴躁臭骂一顿。</p><!-- /wp:paragraph --><!-- wp:paragraph {"align":"center"} --><p style="text-align:center">不活啦，我要回学校</p><!-- /wp:paragraph --><!-- wp:paragraph {"align":"center"} --><p style="text-align:center">算了算了，活命要紧，毕竟<strong>无钱</strong>。</p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 垃圾生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Android6.0及更高版本动态获取权限</title>
       <link href="/2019/07/28/android6-0%E5%8F%8A%E6%9B%B4%E9%AB%98%E7%89%88%E6%9C%AC%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96%E6%9D%83%E9%99%90/"/>
       <url>/2019/07/28/android6-0%E5%8F%8A%E6%9B%B4%E9%AB%98%E7%89%88%E6%9C%AC%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96%E6%9D%83%E9%99%90/</url>
@@ -2471,110 +1368,6 @@
         <tags>
             
             <tag> Android </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>骂得开心，活得尽兴</title>
-      <link href="/2019/07/27/%E9%AA%82%E5%BE%97%E5%BC%80%E5%BF%83-%E6%B4%BB%E5%BE%97%E5%B0%BD%E5%85%B4/"/>
-      <url>/2019/07/27/%E9%AA%82%E5%BE%97%E5%BC%80%E5%BF%83-%E6%B4%BB%E5%BE%97%E5%B0%BD%E5%85%B4/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:paragraph --><p>  长时间远离微博的我也是真的越来越<strong>不暴躁</strong>了，虽然看到逼乎上各种带着有色眼镜的回答时还是会有一些受感染，不过我也确实是这样的人。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>  越来越不在意手机的电量了，以前每每到二十以下就已经慌得不行不行的了，现在呢，随他去吧，反正也<strong>无人要紧地找我聊天。</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p>  这两天也总是被我爸/我爷爷/我妈从睡梦中叫醒，谁能想到我现在天天八点半就醒来了呢？？？？我一点都不想啊。早上的日子大多是在肮脏的车间帮忙里度过的，其实呢，也并没有特别的忙碌，就是热了点，其他的也不是不能忍受，日子还是在正常的过着嘛。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>  爷爷老是来问我什么时候回学校，这才有些明了竟然还有二十天，我才回来了十天？？但我还是没有吃到糯米饭，因为无人值得我早期跑到hq/yq去吃一顿早点，毕竟太热了是吧...</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>  昨夜又梦见了她，真的很烦噢。在一起的时候梦到的次数都没有这段时间多，每次醒来的失落感真的是令人沮丧，我有点烦躁。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>  其实我还是挺在意lqy这个逼的关系的？不过该骂还是要骂，该口嗨的时候不能打住。不过这个逼不欢迎老子去昆明真的有点烦哦，管他呢，吃饭要紧。</p><!-- /wp:paragraph --><!-- wp:image {"id":148,"align":"center"} --><div class="wp-block-image"><figure class="aligncenter"><img src="https://wordpress.tanknee.cn/wp-content/uploads/2019/07/1564222068.png" alt="" class="wp-image-148"/><figcaption>开开心心骂人</figcaption></figure></div><!-- /wp:image --><!-- wp:paragraph --><p>  <strong>冷静想想，绝大多数事情你自己不说出口压根没有人会想到你这个逼竟然是这么想的，说多惹人烦是矫情做作，不说憋得慌是自作自受，自我摧残，还不如该口嗨口嗨，该骂人骂人，活得尽兴不比窝窝囊囊过日子舒服?</strong></p><!-- /wp:paragraph --><!-- wp:paragraph --><p>  <em>老子再也不跟这个杂那个杂对线了，骂又骂不过还惹得老子自己心慌</em>，nmd，还是敲代码有意思，还不用跟这个傻逼那个傻逼沟通，自己智障了也不会有人跳出来跟个猴子一样嘲讽。</p><!-- /wp:paragraph --><!-- wp:paragraph {"align":"center"} --><p style="text-align:center"><strong>  骂的真爽//昨天球打了身上可真他娘的疼。</strong></p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 垃圾生活 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我感受到了深深的恶意</title>
-      <link href="/2019/07/27/%E6%88%91%E6%84%9F%E5%8F%97%E5%88%B0%E4%BA%86%E6%B7%B1%E6%B7%B1%E7%9A%84%E6%81%B6%E6%84%8F/"/>
-      <url>/2019/07/27/%E6%88%91%E6%84%9F%E5%8F%97%E5%88%B0%E4%BA%86%E6%B7%B1%E6%B7%B1%E7%9A%84%E6%81%B6%E6%84%8F/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:paragraph --><p>只想骂人</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>为什么固定链接搞得我这么痛苦，已经折磨了我三天了，网上的方法几乎都试了个遍，但还是没有解决。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>气得我又去阿里云买了一个WordPress镜像的学生服务器，但为什么这个新买来的也是一堆大坑？？？？？？</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>我真的是气的黑人问号。</p><!-- /wp:paragraph --><!-- wp:image {"id":142} --><figure class="wp-block-image"><img src="http://47.102.45.176:8787/wp-content/uploads/2019/07/WeChat680d5e808ffa5c13a451dd00f0a9f0b8.png" alt="" class="wp-image-142"/><figcaption>mmp</figcaption></figure><!-- /wp:image --><!-- wp:paragraph --><p>老子给你关联了域名，浏览器竟然还会指向前一个博客，里面登录过程也是一个赛一个混乱，老子现在可以退款吗？？？？</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>我这两天真的是暴风贫穷，一想到过两天就下个月了就要给奶茶老公还钱我就感到了一分害怕。</p><!-- /wp:paragraph --><!-- wp:image {"id":138} --><figure class="wp-block-image"><img src="http://47.102.45.176:8787/wp-content/uploads/2019/07/WeChat7b4d8f24394faf8b7652646595343cfd.png" alt="" class="wp-image-138"/><figcaption>nmd，wsm</figcaption></figure><!-- /wp:image --><!-- wp:paragraph --><p>看到这个标志我又有点火大，买了才想起来国内服务器绑定域名还要去备案mmp，一想到备案就想起来那个神奇的拍照环节，竟然还要搞个特定的背景，站在背景前拍摄才行，mmmmmmp。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>真的是气哦，又浪费了一笔钱。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>ftp也是，搞了一个下午都没有搞起来，我觉得我这几天是不是有问题，什么坑都没解决还往一个又一个的大坑里面跳。</p><!-- /wp:paragraph --><!-- wp:heading {"level":3,"align":"center"} --><h3 style="text-align:center">我死了，没救了</h3><!-- /wp:heading -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 垃圾生活 </tag>
-            
-            <tag> 谁来救救我 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>风越过山丘与我相会</title>
-      <link href="/2019/07/25/%E9%A3%8E%E8%B6%8A%E8%BF%87%E5%B1%B1%E4%B8%98%E4%B8%8E%E6%88%91%E7%9B%B8%E4%BC%9A/"/>
-      <url>/2019/07/25/%E9%A3%8E%E8%B6%8A%E8%BF%87%E5%B1%B1%E4%B8%98%E4%B8%8E%E6%88%91%E7%9B%B8%E4%BC%9A/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:heading {"level":4,"align":"center"} --><h4 style="text-align:center">七月总是跌宕</h4><!-- /wp:heading --><!-- wp:paragraph --><p>  还记得去年七月，初了是在六月末的动车上，惊奇也好，无感也好，都敌不过不能吹着风的失望。窗外迤逦的风景，与我毫不相干。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>  说来也是有趣，在车上接到邀约，邀我一起去川地旅游，诚然，我在那时确实很喜欢那位女孩子，喜欢到哪怕是过后找了女友也会偶尔想起，但自这场川蜀游结束后却让我明白朋友才是最终的归途吧。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>  毫不害臊的说，七月令我印象深刻的原因往往是我的生日，因而我对这个月份灌注极多的期待，过去这几年有快活的，也有不快活的，有失望落空，自怨自艾，也有心满意足的，总归一句话：花钱。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>  今年，七月初便经历了一场分别，她说祝我有一个崭新的七月，我对情感的思考从未像今年一般，有那么的深刻。我究竟在为什么生活，又究竟是为了什么而去寻觅一段与人亲密的关系，我又究竟在渴求什么。</p><!-- /wp:paragraph --><!-- wp:heading {"level":4,"align":"center"} --><h4 style="text-align:center">结束后的反思</h4><!-- /wp:heading --><!-- wp:paragraph --><p>  现在结束了，但远远没有想明白，而且，这答案也不是永远一成不变的，虽然很多时候我会认为我的观点自相矛盾，但是这并不影响我有一个我自己都未正确认知的固有人格。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>  做很多事情的时候还是会带有之前与人相处而得来的习惯，我很少影响到别人的习惯，我总是那个被影响的，这些潜意识的习惯里，藏着每一分眷恋吧。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>  下笔前总是认为自己能写很多，但是实际上并没有那么多思绪给我抒发，原因大概是这个博客一般而言只有我一个人在写在看。</p><!-- /wp:paragraph --><!-- wp:heading {"level":4,"align":"center"} --><h4 style="text-align:center"> 顺其自然就像是懦夫对无奈生活的叹息</h4><!-- /wp:heading --><!-- wp:verse --><pre class="wp-block-verse">但有些事情终归是<br> 意难平<br> 我有一壶酒，独酌无相亲<br> 祝所有人安好 </pre><!-- /wp:verse -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Caprice </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 每月纪 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>建站纪</title>
-      <link href="/2019/07/25/%E5%BB%BA%E7%AB%99%E7%BA%AA/"/>
-      <url>/2019/07/25/%E5%BB%BA%E7%AB%99%E7%BA%AA/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- wp:heading {"level":4} --><h4>成本： </h4><!-- /wp:heading --><!-- wp:paragraph --><p>阿里云的服务器+两个顶级域名合计60+，预计一年的维护费用在300+。</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>说实话还是不便宜的，但是收获的是一台境外服务器，一个博客，后续还可以加上其他的模块，例如下载等，但是看阿里云的1m小水管还是算了吧，划不来划不来，家里没矿玩不起hhh。</p><!-- /wp:paragraph --><!-- wp:heading {"level":4} --><h4>流程：</h4><!-- /wp:heading --><!-- wp:list --><ul><li>购置域名：在阿里那边购置的万网域名，top比cn的域名要便宜一点，但是好像微信有时候会对top的域名进行屏蔽警告，而且在用终端ping这两个域名的时候响应速度cn要比top快得多，具体我也不知道是什么原因，因为我把两个域名都绑定在相同的服务器上了，真的是奇了怪了....</li><li>购置云服务器：阿里云的轻量级应用服务器，没什么好说的，选个喜欢的就好，系统我选用的是centos，不过我看到阿里在购买时有提供WordPress镜像的选择，具体我也不是很清楚，可能可以直接安装那个来实现搭建吧，不过我还是用的centos因为ss的需要具体可以看<a href="http://47.102.45.176:8787/?p=17">另一篇</a>。</li><li>配置服务器：我这里搭建的是LAMP的博客，是基于centOS搭建的。</li><li>安装Apache，mariadb，安装php</li><li>最后打开你的服务器的网址即可</li></ul><!-- /wp:list --><!-- wp:heading {"level":4} --><h4>注意事项：</h4><!-- /wp:heading --><!-- wp:paragraph --><p>这里的php要尽量安装高版本的，centos自带的PHP版本一般为5.2，而最新的WordPress所需的版本一般在5.6左右所以最好直接安装php7方便后续的更新以及维护</p><!-- /wp:paragraph -->]]></content>
-      
-      
-      <categories>
-          
-          <category> Code </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 网站 </tag>
-            
-            <tag> 前端 </tag>
             
         </tags>
       
@@ -2602,35 +1395,6 @@
             <tag> 服务器 </tag>
             
             <tag> SS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>工程实训纪</title>
-      <link href="/2019/07/24/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%AE%AD-%E8%AE%B0%E8%B4%A6%E8%BD%AF%E4%BB%B6/"/>
-      <url>/2019/07/24/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%AE%AD-%E8%AE%B0%E8%B4%A6%E8%BD%AF%E4%BB%B6/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>选题：PC端记账本软件<br>语言：C++<br>开发工具：Qt库、Qt Creator<br>其实组里的人都比较懒，做完了之后觉得应该做个游戏什么的比较考验自己的能力，不过做实用的软件也确实比较有意思，为此还买了个机械键盘，感觉有点浪费hhh，下面开始正题了。<br>软件要实现的几个主要功能</p><ol><li><p>记录每日支出</p></li><li><p>实现简单的本地登录功能-&gt;即实现数据库的写入与读取<br>我在这里用的是Qt自带的一个比较简单的QSQLite，有需求的可以上远程服务器，不过我这里还是遇到了一些问题就是在打包之后无法使用数据库，可能是依赖没有添加的原因，由于已经蒙混过关了所以就没有深究这一块的问题。</p></li><li><p>实现支出数据的图表化</p></li></ol><p>总体看下来个人认为比较繁琐的是数据库的部分，巧的是我之前做的一个项目里有比较接近的模块，所以这部分是我自己来负责的，零零总总还都比较简单，由于队友都不太行hhhh，我也就没想着做拓展功能，谁能想到五个人的团队实际上只有两个人在写代码呢？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="title function_">OpenDateBase</span><span class="params">()</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    OpenDateBase();</span><br><span class="line">    QApplication <span class="title function_">a</span><span class="params">(argc, argv)</span>;</span><br><span class="line">    MainWindow w;</span><br><span class="line">    w.show();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> a.exec();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>可以看到main部分的代码还是比较简单的，大概是实现这么一个逻辑：打开数据库，生成窗口实例，展示窗口最后再让窗口一直显示</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> <span class="title function_">OpenDateBase</span><span class="params">()</span>&#123;</span><br><span class="line">    QSqlDatabase mydb=QSqlDatabase::addDatabase(<span class="string">&quot;QSQLITE&quot;</span>);</span><br><span class="line">    mydb.setDatabaseName(<span class="string">&quot;cashitem.db&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(mydb.open())</span><br><span class="line">    &#123;</span><br><span class="line">        qDebug()&lt;&lt;<span class="string">&quot;open success&quot;</span>;</span><br><span class="line">        QSqlQuery query;</span><br><span class="line">            <span class="comment">//新建item表，id设置为主键，一个金额，一个类型，一个内容,一个时间</span></span><br><span class="line">            query.exec(<span class="string">&quot;create table item(id INTEGER PRIMARY KEY AUTOINCREMENT,money int,type varchar,content varchar,addtime time,useraccount varchar)&quot;</span>);<span class="comment">//条目，即输入的支出数据</span></span><br><span class="line">            query.exec(<span class="string">&quot;create table user(id INTEGER PRIMARY KEY AUTOINCREMENT,useraccount varchar,userpassword varchar,useremail varchar)&quot;</span>);<span class="comment">//用户信息</span></span><br><span class="line">            query.exec(<span class="string">&quot;create table user_budget_setting(id INTEGER PRIMARY KEY AUTOINCREMENT,useraccount varchar,dayBudget int,monthBudget int,yearBudget int)&quot;</span>);<span class="comment">//用户的支出与预算表</span></span><br><span class="line">         <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//给出debug提示，便于定位错误的地点</span></span><br><span class="line">        qDebug()&lt;&lt;<span class="string">&quot;open failed&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>必须在Qt给出的.pro文件中添加sql，见下文的最后一行</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#-------------------------------------------------</span><br><span class="line">#</span><br><span class="line"># Project created by QtCreator <span class="number">2019</span><span class="number">-07</span><span class="number">-03</span>T10:<span class="number">40</span>:<span class="number">19</span></span><br><span class="line">#</span><br><span class="line">#-------------------------------------------------</span><br><span class="line"></span><br><span class="line">QT       += core gui sql charts</span><br></pre></td></tr></table></figure><p>这一部分的代码我是根据网上的一篇博客改的，在这里我先创建了一个数据库，若数据库存在那么就会直接调用，这里的数据库使用还是比较轻松的，以前我用服务器的数据库真的是一波三折哈哈哈，而后创建了三张数据表，含义在我给的注释里。<br>这个主键我也是纠结了很久，我以为给他传一个NULL就好了，后来我发现还不能加‘’单引号确实比较坑爹，详细可以看我后面给出的代码。<br>接下来是主窗口的代码mainwindow：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br></pre></td><td class="code"><pre><span class="line">MainWindow::MainWindow(QWidget *parent) :</span><br><span class="line">    QMainWindow(parent),</span><br><span class="line">    ui(new Ui::MainWindow)</span><br><span class="line">&#123;</span><br><span class="line">    ui-&gt;setupUi(this);</span><br><span class="line">    tagWidgetLayout.setParent(ui-&gt;dailyBoardContent);</span><br><span class="line">    connect(&amp;user_login,&amp;userLoginWindow::loginSuccess,this,&amp;MainWindow::user_login_sucess);</span><br><span class="line">    connect(&amp;itemMark,&amp;itemMark::conveyData,this,&amp;MainWindow::addNewItemLabel);</span><br><span class="line">    ui-&gt;edit_pushButton-&gt;hide();</span><br><span class="line">    ui-&gt;delet_pushButton_2-&gt;hide();</span><br><span class="line">    ui-&gt;statusBar-&gt;hide();</span><br><span class="line">    ui-&gt;menuBar-&gt;hide();</span><br><span class="line">    ui-&gt;mainToolBar-&gt;hide();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MainWindow::~MainWindow()<span class="comment">//主窗口的销毁函数</span></span><br><span class="line">&#123;</span><br><span class="line">    QSqlQuery query;<span class="comment">//建立一个数据库的query</span></span><br><span class="line">    QString sql1;</span><br><span class="line">    sql1=<span class="string">&quot;insert into user_login(id,useraccount)values(NULL,&#x27;&#x27;) &quot;</span>;</span><br><span class="line">    query.exec(sql1);</span><br><span class="line">    query.exec(<span class="string">&quot;select  id,useraccount from user_login where id &gt;= 0&quot;</span>);</span><br><span class="line">    <span class="keyword">while</span> (query.next()) &#123;</span><br><span class="line">        QString id = query.value(<span class="number">0</span>).toString();</span><br><span class="line">        useraccount = query.value(<span class="number">1</span>).toString();</span><br><span class="line">        qDebug()&lt;&lt;<span class="string">&quot;mainwindow:&quot;</span>&lt;tabWidget-&gt;hide();</span><br><span class="line">    itemMark.show();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::addNewItemLabel</span><span class="params">(<span class="type">int</span> money ,QString type,QString content)</span>&#123;</span><br><span class="line">    newWidget = new itemWidget(money,type,content,ui-&gt;itemListWidget);</span><br><span class="line">    QSqlQuery query1;</span><br><span class="line">    query1.exec(<span class="string">&quot;select  id,useraccount from user_login where id &gt;= 0&quot;</span>);</span><br><span class="line">    <span class="keyword">while</span> (query1.next()) &#123;</span><br><span class="line">        QString id = query1.value(<span class="number">0</span>).toString();</span><br><span class="line">        useraccount = query1.value(<span class="number">1</span>).toString();</span><br><span class="line">        qDebug()&lt;itemListWidget,<span class="number">0</span>);</span><br><span class="line">        listwidgetitem-&gt;setSizeHint(QSize(<span class="number">50</span>,<span class="number">50</span>));</span><br><span class="line">        ui-&gt;itemListWidget-&gt;setItemWidget(listwidgetitem,newWidget);</span><br><span class="line">        ui-&gt;itemListWidget-&gt;show();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::deletItem</span><span class="params">()</span>&#123;</span><br><span class="line">    QListWidgetItem *listwidgetitem= ui-&gt;itemListWidget-&gt;currentItem();</span><br><span class="line">    listwidgetitem-&gt;setHidden(<span class="literal">true</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::on_userAvatarPic_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    user_login.show();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::on_dailyBoardButton_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    ui-&gt;stackedWidget-&gt;setCurrentIndex(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::on_chartAnalysisButton_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i = ui-&gt;monthSelector-&gt;currentIndex();</span><br><span class="line">    chartsMaking(i+<span class="number">1</span>);</span><br><span class="line">    ui-&gt;stackedWidget-&gt;setCurrentIndex(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::on_bugetSettingButton_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    QSqlQuery query_user;</span><br><span class="line">    query_user.exec(<span class="string">&quot;select  id,useraccount from user_login where id &gt;= 0&quot;</span>);</span><br><span class="line">    <span class="keyword">while</span>(query_user.next())&#123;</span><br><span class="line">        useraccount = query_user.value(<span class="number">1</span>).toString();</span><br><span class="line">    <span class="comment">//    qDebug()&lt;stackedWidget-&gt;setCurrentIndex(2);</span></span><br><span class="line"></span><br><span class="line">    QSqlQuery query;</span><br><span class="line">    QDateTime dtm;</span><br><span class="line">    QString timeNow=dtm.currentDateTime().toString(<span class="string">&quot;yyyyMMdd&quot;</span>);</span><br><span class="line">    <span class="type">int</span> year = timeNow.toInt();</span><br><span class="line"> <span class="comment">//   int day = year % 100;</span></span><br><span class="line">    year/=<span class="number">100</span>;</span><br><span class="line"> <span class="comment">//   int month = year % 100;</span></span><br><span class="line">    year/=<span class="number">100</span>;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">thisMonthCost</span><span class="params">(<span class="number">0</span>)</span>,<span class="title function_">thisDayCost</span><span class="params">(<span class="number">0</span>)</span>,<span class="title function_">thisYearCost</span><span class="params">(<span class="number">0</span>)</span>;</span><br><span class="line">    QString monthNow = timeNow.remove(<span class="number">6</span>,<span class="number">7</span>);</span><br><span class="line">    timeNow=dtm.currentDateTime().toString(<span class="string">&quot;yyyyMMdd&quot;</span>);</span><br><span class="line">    QString sql =QString(<span class="string">&quot;select  money,addtime,useraccount from item where addtime between &#x27;%1%2%3&#x27;and &#x27;%4%5%6&#x27;&quot;</span>).arg(year).arg(<span class="string">&quot;01&quot;</span>).arg(<span class="string">&quot;01&quot;</span>).arg(year+<span class="number">1</span>).arg(<span class="string">&quot;01&quot;</span>).arg(<span class="string">&quot;00&quot;</span>);</span><br><span class="line">    query.exec(sql);</span><br><span class="line">    <span class="keyword">while</span>(query.next())&#123;</span><br><span class="line">        <span class="keyword">if</span> (query.value(<span class="number">2</span>).toString() == useraccount) &#123;</span><br><span class="line">        thisYearCost+=query.value(<span class="number">0</span>).toInt();</span><br><span class="line">        <span class="keyword">if</span> (query.value(<span class="number">1</span>).toString().contains(monthNow,Qt::CaseInsensitive))  thisMonthCost+=query.value(<span class="number">0</span>).toInt();</span><br><span class="line">        <span class="keyword">if</span> (query.value(<span class="number">1</span>).toString() == timeNow ) thisDayCost+=query.value(<span class="number">0</span>).toInt();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//qDebug()&lt;dayBudget)//TODO 增加弹窗提示</span></span><br><span class="line">    &#123;</span><br><span class="line">        ui-&gt;dayprogressBar-&gt;setMaximum(thisDayCost);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> ui-&gt;dayprogressBar-&gt;setMaximum(dayBudget);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (thisMonthCost&gt;monthBudget)<span class="comment">//TODO 增加弹窗提示</span></span><br><span class="line">    &#123;</span><br><span class="line">        ui-&gt;monthprogressBar-&gt;setMaximum(thisMonthCost);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> ui-&gt;monthprogressBar-&gt;setMaximum(monthBudget);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (thisYearCost&gt;yearBudget)<span class="comment">//TODO 增加弹窗提示</span></span><br><span class="line">    &#123;</span><br><span class="line">        ui-&gt;yearprogressBar-&gt;setMaximum(thisYearCost);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> ui-&gt;yearprogressBar-&gt;setMaximum(yearBudget);</span><br><span class="line"></span><br><span class="line">    ui-&gt;dayprogressBar-&gt;setValue(thisDayCost);</span><br><span class="line">    ui-&gt;monthprogressBar-&gt;setValue(thisMonthCost);</span><br><span class="line">    ui-&gt;yearprogressBar-&gt;setValue(thisYearCost);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    QString daylabel = QString(<span class="string">&quot;每日预算：%1/%2&quot;</span>).arg(thisDayCost).arg(dayBudget);</span><br><span class="line">    QString monthlabel = QString(<span class="string">&quot;每月预算：%1/%2&quot;</span>).arg(thisMonthCost).arg(monthBudget);</span><br><span class="line">    QString yearlabel = QString(<span class="string">&quot;每年预算：%1/%2&quot;</span>).arg(thisYearCost).arg(yearBudget);</span><br><span class="line">    ui-&gt;dayBudgetSetlabel-&gt;setText(daylabel);</span><br><span class="line">    ui-&gt;monthBudgetSetlabel-&gt;setText(monthlabel);</span><br><span class="line">    ui-&gt;yearBudgetSetlabel-&gt;setText(yearlabel);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::on_dayBudgetSetButton_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="comment">//接收新的预算</span></span><br><span class="line">   <span class="type">int</span> dayBudget;</span><br><span class="line">   dayBudget = QInputDialog::getInt(this,<span class="string">&quot;设置&quot;</span>,<span class="string">&quot;每日预算：&quot;</span>,<span class="number">0</span>);</span><br><span class="line">    QSqlQuery query;</span><br><span class="line">    QSqlQueryModel *model_2 = new QSqlQueryModel;</span><br><span class="line">    QString sql = QString(<span class="string">&quot;select count (*) from user_budget_setting where useraccount = &#x27;%1&#x27;&quot;</span>).arg(useraccount);</span><br><span class="line">    model_2-&gt;setQuery(sql);</span><br><span class="line">    QModelIndex index1 = model_2-&gt;index(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (index1.data()==<span class="number">0</span>)&#123;<span class="comment">//插入一条新记录</span></span><br><span class="line">        sql = QString(<span class="string">&quot;insert into user_budget_setting(id,dayBudget,monthBudget,yearBudget,useraccount) values(NULL,&#x27;%1&#x27;,&#x27;%2&#x27;,&#x27;%3&#x27;,&#x27;%4&#x27;)&quot;</span>).arg(dayBudget).arg(<span class="number">0</span>).arg(<span class="number">0</span>).arg(useraccount);</span><br><span class="line">        qDebug()&lt;dayprogressBar-&gt;value()).arg(dayBudget);</span><br><span class="line">   ui-&gt;dayBudgetSetlabel-&gt;setText(daylabel);</span><br><span class="line">   <span class="keyword">if</span> (ui-&gt;dayprogressBar-&gt;value()&gt;dayBudget)<span class="comment">//TODO 增加弹窗提示</span></span><br><span class="line">   &#123;</span><br><span class="line">       ui-&gt;dayprogressBar-&gt;setMaximum(ui-&gt;dayprogressBar-&gt;value());</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span> ui-&gt;dayprogressBar-&gt;setMaximum(dayBudget);</span><br><span class="line">   ui-&gt;dayBudgetSetlabel-&gt;show();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::on_monthBudgetSetButton_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//接收新的预算</span></span><br><span class="line">    <span class="type">int</span> monthBudget;</span><br><span class="line">    monthBudget = QInputDialog::getInt(this,<span class="string">&quot;设置&quot;</span>,<span class="string">&quot;每月预算：&quot;</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="comment">//TODO添加数据库操作</span></span><br><span class="line">    QSqlQuery query;</span><br><span class="line">    QSqlQueryModel *model_2 = new QSqlQueryModel;</span><br><span class="line">    QString sql = QString(<span class="string">&quot;select count (*) from user_budget_setting where useraccount = &#x27;%1&#x27;&quot;</span>).arg(useraccount);</span><br><span class="line">    model_2-&gt;setQuery(sql);</span><br><span class="line">    QModelIndex index1 = model_2-&gt;index(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (index1.data()==<span class="number">0</span>)&#123;<span class="comment">//插入一条新记录</span></span><br><span class="line">        sql = QString(<span class="string">&quot;insert into user_budget_setting(id,dayBudget,monthBudget,yearBudget,useraccount) values(NULL,&#x27;%1&#x27;,&#x27;%2&#x27;,&#x27;%3&#x27;,&#x27;%4&#x27;)&quot;</span>).arg(<span class="number">0</span>).arg(monthBudget).arg(<span class="number">0</span>).arg(useraccount);</span><br><span class="line">        qDebug()&lt;monthprogressBar-&gt;value()).arg(monthBudget);</span><br><span class="line">    ui-&gt;monthBudgetSetlabel-&gt;setText(monthlabel);</span><br><span class="line">    <span class="keyword">if</span> (ui-&gt;monthprogressBar-&gt;value()&gt;monthBudget)<span class="comment">//TODO 增加弹窗提示</span></span><br><span class="line">    &#123;</span><br><span class="line">        ui-&gt;monthprogressBar-&gt;setMaximum(ui-&gt;monthprogressBar-&gt;value());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> ui-&gt;monthprogressBar-&gt;setMaximum(monthBudget);</span><br><span class="line"></span><br><span class="line">    ui-&gt;monthBudgetSetlabel-&gt;show();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::on_yearBudgetSetButton_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//接收新的预算</span></span><br><span class="line">    <span class="type">int</span> yearBudget;</span><br><span class="line">    yearBudget = QInputDialog::getInt(this,<span class="string">&quot;设置&quot;</span>,<span class="string">&quot;每年预算：&quot;</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="comment">//TODO添加数据库操作</span></span><br><span class="line">    QSqlQuery query;</span><br><span class="line">    QSqlQueryModel *model_2 = new QSqlQueryModel;</span><br><span class="line">    QString sql = QString(<span class="string">&quot;select count (*) from user_budget_setting where useraccount = &#x27;%1&#x27;&quot;</span>).arg(useraccount);</span><br><span class="line">    model_2-&gt;setQuery(sql);</span><br><span class="line">    QModelIndex index1 = model_2-&gt;index(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (index1.data()==<span class="number">0</span>)&#123;<span class="comment">//插入一条新记录</span></span><br><span class="line">        sql = QString(<span class="string">&quot;insert into user_budget_setting(id,dayBudget,monthBudget,yearBudget,useraccount) values(NULL,&#x27;%1&#x27;,&#x27;%2&#x27;,&#x27;%3&#x27;,&#x27;%4&#x27;)&quot;</span>).arg(<span class="number">0</span>).arg(<span class="number">0</span>).arg(yearBudget).arg(useraccount);</span><br><span class="line">        qDebug()&lt;yearprogressBar-&gt;value()).arg(yearBudget);</span><br><span class="line">    ui-&gt;yearBudgetSetlabel-&gt;setText(yearlabel);</span><br><span class="line">    <span class="keyword">if</span> (ui-&gt;yearprogressBar-&gt;value()&gt;yearBudget)<span class="comment">//TODO 增加弹窗提示</span></span><br><span class="line">    &#123;</span><br><span class="line">        ui-&gt;yearprogressBar-&gt;setMaximum(ui-&gt;yearprogressBar-&gt;value());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> ui-&gt;yearprogressBar-&gt;setMaximum(yearBudget);</span><br><span class="line">    ui-&gt;yearBudgetSetlabel-&gt;show();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::on_monthSelector_activated</span><span class="params">(<span class="type">int</span> index)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> x = index;</span><br><span class="line">    x++;</span><br><span class="line">    chartsMaking(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//饼状图生成函数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::chartsMaking</span><span class="params">(<span class="type">int</span> month)</span></span><br><span class="line">&#123;</span><br><span class="line">    QSqlQuery query1;</span><br><span class="line">    query1.exec(<span class="string">&quot;select  id,useraccount from user_login where id &gt;= 0&quot;</span>);</span><br><span class="line">    <span class="keyword">while</span> (query1.next()) &#123;</span><br><span class="line">        QString id = query1.value(<span class="number">0</span>).toString();</span><br><span class="line">        useraccount = query1.value(<span class="number">1</span>).toString();</span><br><span class="line">        qDebug()&lt;&lt;<span class="string">&quot;BarMaking:&quot;</span>&lt;append(<span class="string">&quot;饮食&quot;</span>,eatMoney);</span><br><span class="line">    series-&gt;append(<span class="string">&quot;娱乐&quot;</span>,entertainmentMoney);</span><br><span class="line">    series-&gt;append(<span class="string">&quot;教育&quot;</span>,eduMoney);</span><br><span class="line">    series-&gt;setLabelsVisible();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*QPieSlice *slice_red = series-&gt;slices().at(0);</span></span><br><span class="line"><span class="comment">    QPieSlice *slice_green = series-&gt;slices().at(1);</span></span><br><span class="line"><span class="comment">    QPieSlice *slice_blue = series-&gt;slices().at(2);</span></span><br><span class="line"><span class="comment">    slice_red-&gt;setColor(QColor(255,0,0,255));</span></span><br><span class="line"><span class="comment">    slice_green-&gt;setColor(QColor(0,255,0,255));</span></span><br><span class="line"><span class="comment">    slice_blue-&gt;setColor(QColor(0,0,255,255));*/</span></span><br><span class="line"></span><br><span class="line">    QChart *chart = new QChart();</span><br><span class="line">    chart-&gt;addSeries(series);</span><br><span class="line">    QString title = QString(<span class="string">&quot;您的%1月的账单统计图&quot;</span>).arg(month);</span><br><span class="line">    chart-&gt;setTitle(title);</span><br><span class="line">    chart-&gt;legend()-&gt;hide();</span><br><span class="line">    ui-&gt;chartViewer-&gt;setChart(chart);</span><br><span class="line">    <span class="comment">//QChartView *chartview = new QChartView(chart);</span></span><br><span class="line">    <span class="comment">//chartview-&gt;setRenderHint(QPainter::Antialiasing);</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//chartview-&gt;resize(400,400);</span></span><br><span class="line">    <span class="comment">//chartview-&gt;show();</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//ui-&gt;graphicsView-&gt;setChart(chart);</span></span><br><span class="line">    <span class="comment">//ui-&gt;graphicsView-&gt;setRenderHint(QPainter::Antialiasing);</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//柱状图生成函数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::barChartsMaking</span><span class="params">(<span class="type">int</span> month)</span>&#123;</span><br><span class="line">    QSqlQuery query1;</span><br><span class="line">    query1.exec(<span class="string">&quot;select  id,useraccount from user_login where id &gt;= 0&quot;</span>);</span><br><span class="line">    <span class="keyword">while</span> (query1.next()) &#123;</span><br><span class="line">        QString id = query1.value(<span class="number">0</span>).toString();</span><br><span class="line">        useraccount = query1.value(<span class="number">1</span>).toString();</span><br><span class="line">        qDebug()&lt;&lt;<span class="string">&quot;BarMaking:&quot;</span>&lt;append(<span class="built_in">set</span>);</span><br><span class="line">    <span class="comment">//series-&gt;append(setEntertainment);</span></span><br><span class="line">    <span class="comment">//series-&gt;append(setEdu);</span></span><br><span class="line">    QChart *chart = new QChart();</span><br><span class="line">    QString title = QString(<span class="string">&quot;您的%1月的账单统计图&quot;</span>).arg(month);</span><br><span class="line">    chart-&gt;setTitle(title);</span><br><span class="line"></span><br><span class="line">    QBarCategoryAxis *axis = new QBarCategoryAxis();</span><br><span class="line">    axis-&gt;append(category);</span><br><span class="line">    chart-&gt;createDefaultAxes();</span><br><span class="line"></span><br><span class="line">    chart-&gt;addSeries(series);</span><br><span class="line">    chart-&gt;setAxisX(axis,series);</span><br><span class="line">    ui-&gt;chartViewer-&gt;setChart(chart);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::on_delet_pushButton_2_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    QListWidgetItem *listwidgetitem= ui-&gt;itemListWidget-&gt;currentItem();</span><br><span class="line">    listwidgetitem-&gt;setHidden(<span class="literal">true</span>);</span><br><span class="line">    QSqlQuery query;</span><br><span class="line">    <span class="type">int</span> curRow = ui-&gt;itemListWidget-&gt;currentIndex().row();     <span class="comment">//鼠标选择删除第几行</span></span><br><span class="line">        QModelIndex index = ui-&gt;itemListWidget-&gt;currentIndex();</span><br><span class="line">        <span class="type">int</span> id=index.sibling(curRow,<span class="number">0</span>).data().toInt();</span><br><span class="line">        QString str =QString(<span class="string">&quot;delete from item where id = &#x27;%1&#x27;&quot;</span>).arg(curRow) ;</span><br><span class="line">        query.exec(str);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//编辑按钮</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::on_edit_pushButton_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    QSqlQuery query;</span><br><span class="line">    query.exec(<span class="string">&quot;select id,money,type,content,addtime from item where id &gt;= 1&quot;</span>);</span><br><span class="line">    QString str;</span><br><span class="line">    QString str1;</span><br><span class="line">    QString str2;</span><br><span class="line">    QString str3;</span><br><span class="line">    QString str4;</span><br><span class="line">    QString str5;</span><br><span class="line">    QDateTime dtm;</span><br><span class="line">    <span class="type">int</span> dtm0;</span><br><span class="line">    <span class="keyword">while</span>(query.next())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//query.value(0)是id的值，将其转换为int型</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//QString str0 = dtm.toString(&quot;yyyy-mm-dd hh:mm:ss&quot;);</span></span><br><span class="line">        str1 = query.value(<span class="number">0</span>).toString();</span><br><span class="line">        str2 = query.value(<span class="number">1</span>).toString();</span><br><span class="line">        str3 = query.value(<span class="number">2</span>).toString();</span><br><span class="line">        str4 = query.value(<span class="number">3</span>).toString();</span><br><span class="line">        str5 = query.value(<span class="number">4</span>).toString();</span><br><span class="line">        <span class="comment">//输出两个值</span></span><br><span class="line">        qDebug() &lt;&lt; str1&lt;&lt; str2&lt;&lt; str3&lt;&lt; str4&lt;itemListWidget-&gt;clear();</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::user_login_sucess</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">    QSqlQuery query1;</span><br><span class="line">    query1.exec(<span class="string">&quot;select  id,useraccount from user_login where id &gt;= 0&quot;</span>);</span><br><span class="line">    <span class="keyword">while</span> (query1.next()) &#123;</span><br><span class="line">        QString id = query1.value(<span class="number">0</span>).toString();</span><br><span class="line">        useraccount = query1.value(<span class="number">1</span>).toString();</span><br><span class="line">        qDebug()&lt;&lt;<span class="string">&quot;mainwindow:&quot;</span>&lt;itemListWidget-&gt;clear();</span><br><span class="line">    <span class="keyword">while</span> (query1.next()) &#123;</span><br><span class="line">        QString id = query1.value(<span class="number">0</span>).toString();</span><br><span class="line">        <span class="type">int</span> money = query1.value(<span class="number">1</span>).toInt();</span><br><span class="line">        QString type = query1.value(<span class="number">2</span>).toString();</span><br><span class="line">        QString content = query1.value(<span class="number">3</span>).toString();</span><br><span class="line">        useraccount = query1.value(<span class="number">5</span>).toString();</span><br><span class="line">        newWidget = new itemWidget(money,type,content,ui-&gt;itemListWidget);</span><br><span class="line">        QListWidgetItem *listwidgetitem = new QListWidgetItem(ui-&gt;itemListWidget,<span class="number">0</span>);</span><br><span class="line">        listwidgetitem-&gt;setSizeHint(QSize(<span class="number">50</span>,<span class="number">50</span>));</span><br><span class="line">        ui-&gt;itemListWidget-&gt;setItemWidget(listwidgetitem,newWidget);</span><br><span class="line">        ui-&gt;itemListWidget-&gt;show();</span><br><span class="line">        qDebug()&lt;monthSelector-&gt;currentIndex();</span><br><span class="line">    chartsMaking(index+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">MainWindow::on_selectLinerChart_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> index;</span><br><span class="line">    index = ui-&gt;monthSelector-&gt;currentIndex();</span><br><span class="line">    barChartsMaking(index+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>接下来是用户登录的代码</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;userloginwindow.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;ui_userloginwindow.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span></span></span><br><span class="line"></span><br><span class="line">using namespace <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">userLoginWindow::userLoginWindow(QWidget *parent) :</span><br><span class="line">    QWidget(parent),</span><br><span class="line">    ui(new Ui::userLoginWindow)</span><br><span class="line">&#123;</span><br><span class="line">    ui-&gt;setupUi(this); this-&gt;setWindowTitle(<span class="string">&quot; &quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//注册页面</span></span><br><span class="line">    ui-&gt;userID_reg-&gt;setPlaceholderText(<span class="string">&quot;请输入用户名&quot;</span>);</span><br><span class="line"></span><br><span class="line">    ui-&gt;userPassword_reg-&gt;setPlaceholderText(<span class="string">&quot;密码&quot;</span>);</span><br><span class="line">    ui-&gt;userPassword_reg_2-&gt;setPlaceholderText(<span class="string">&quot;确认密码&quot;</span>);</span><br><span class="line">    ui-&gt;userPassword_reg-&gt;setEchoMode(QLineEdit::Password);</span><br><span class="line">    ui-&gt;userPassword_reg_2-&gt;setEchoMode(QLineEdit::Password);</span><br><span class="line"></span><br><span class="line">    ui-&gt;userMail-&gt;setPlaceholderText(<span class="string">&quot;xxx@xxx.xxx&quot;</span>);</span><br><span class="line">    <span class="comment">//注册操作</span></span><br><span class="line">    connect(ui-&gt;reg_button,&amp;QPushButton::clicked,this,&amp;userLoginWindow::sendToDateBase_regist);</span><br><span class="line">    <span class="comment">//登陆操作</span></span><br><span class="line">    connect(ui-&gt;loginButton,&amp;QPushButton::clicked,this,&amp;userLoginWindow::sendToDateBase_log);</span><br><span class="line">    <span class="comment">//登录界面</span></span><br><span class="line">    ui-&gt;username-&gt;setPlaceholderText(<span class="string">&quot;请输入用户名&quot;</span>);</span><br><span class="line">    ui-&gt;userPassword-&gt;setEchoMode(QLineEdit::Password);</span><br><span class="line">    ui-&gt;userPassword-&gt;setPlaceholderText(<span class="string">&quot;请输入密码&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">userLoginWindow::~userLoginWindow()</span><br><span class="line">&#123;</span><br><span class="line">    delete ui;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">userLoginWindow::on_registerButton_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    ui-&gt;<span class="built_in">log</span>-&gt;hide();</span><br><span class="line">    ui-&gt;reg-&gt;show();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">userLoginWindow::on_return_button_clicked</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    ui-&gt;<span class="built_in">log</span>-&gt;show();</span><br><span class="line">    ui-&gt;reg-&gt;hide();</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">userLoginWindow::sendToDateBase_regist</span><span class="params">()</span>&#123;</span><br><span class="line">    QSqlQuery query;</span><br><span class="line">    QString sql;</span><br><span class="line">    QString str1 ,str2, str3;</span><br><span class="line">    str1 = ui-&gt;userID_reg-&gt;text();</span><br><span class="line">    str2 = ui-&gt;userPassword_reg-&gt;text();</span><br><span class="line">    str3 = ui-&gt;userMail-&gt;text();</span><br><span class="line">    QSqlQueryModel *model1=new QSqlQueryModel;</span><br><span class="line">    sql = QString(<span class="string">&quot;select count (*)  from user where useraccount = &#x27;%1&#x27;&quot;</span>).arg(str1);</span><br><span class="line">    model1-&gt;setQuery(sql);</span><br><span class="line">    QModelIndex index1=model1-&gt;index(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="comment">//query.exec(sql);</span></span><br><span class="line">    <span class="keyword">if</span>(index1.data()==<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="comment">//如果这条数据不存在那么插入这条数据</span></span><br><span class="line">        sql = QString(<span class="string">&quot;insert into user(id, useraccount, userpassword,useremail) values(NULL,&#x27;%1&#x27;, &#x27;%2&#x27;, &#x27;%3&#x27;)&quot;</span>).arg(str1).arg(str2).arg(str3);</span><br><span class="line">        query.exec(sql);</span><br><span class="line">        <span class="comment">//debug测试</span></span><br><span class="line">        query.exec(<span class="string">&quot;select id,useraccount,userpassword,useremail from user where id &gt;= 1&quot;</span>);</span><br><span class="line">        <span class="keyword">while</span>(query.next())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//query.value(0)是id的值，将其转换为int型</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//QString str0 = dtm.toString(&quot;yyyy-mm-dd hh:mm:ss&quot;);</span></span><br><span class="line">            str1 = query.value(<span class="number">1</span>).toString();</span><br><span class="line">            str2 = query.value(<span class="number">2</span>).toString();</span><br><span class="line">            str3 = query.value(<span class="number">3</span>).toString();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//输出两个值</span></span><br><span class="line">            qDebug() &lt;&lt; str1&lt;&lt; str2&lt;&lt; str3 ;</span><br><span class="line">        &#125;</span><br><span class="line">        qDebug()&lt;&lt;<span class="string">&quot;注册成功&quot;</span>;</span><br><span class="line">        ui-&gt;userID_reg-&gt;clear();</span><br><span class="line">        ui-&gt;userPassword_reg-&gt;clear();</span><br><span class="line">        ui-&gt;userPassword_reg_2-&gt;clear();</span><br><span class="line">        ui-&gt;userMail-&gt;clear();</span><br><span class="line">        ui-&gt;reg-&gt;hide();</span><br><span class="line">        ui-&gt;<span class="built_in">log</span>-&gt;show();</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        qDebug()&lt;&lt;<span class="string">&quot;用户已存在&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">userLoginWindow::sendToDateBase_log</span><span class="params">()</span>&#123;</span><br><span class="line">    QSqlQuery query;</span><br><span class="line">    QString sql;</span><br><span class="line">    QString str1 ,str2, str3;</span><br><span class="line">    str1 = ui-&gt;username-&gt;text();<span class="comment">//用户输入的用户名</span></span><br><span class="line">    str2 = ui-&gt;userPassword-&gt;text();<span class="comment">//用户输入的密码</span></span><br><span class="line">    QSqlQueryModel *model1=new QSqlQueryModel;</span><br><span class="line">    QSqlQueryModel *model2=new QSqlQueryModel;</span><br><span class="line">    sql = QString(<span class="string">&quot;select count (*)  from user where useraccount = &#x27;%1&#x27;&quot;</span>).arg(str1);</span><br><span class="line">    model1-&gt;setQuery(sql);</span><br><span class="line">    QModelIndex index1=model1-&gt;index(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span>(index1.data()==<span class="number">0</span>)&#123;</span><br><span class="line">        qDebug()&lt;&lt;<span class="string">&quot;用户名不存在&quot;</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//获取该用户名下的密码进行对比</span></span><br><span class="line">        sql=QString(<span class="string">&quot;select userpassword  from user where useraccount = &#x27;%1&#x27;&quot;</span>).arg(str1);</span><br><span class="line">        model2-&gt;setQuery(sql);</span><br><span class="line">        QModelIndex index2=model2-&gt;index(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">if</span>(index2.data()==str2)&#123;</span><br><span class="line">            query.exec(<span class="string">&quot;create table user_login(id INTEGER PRIMARY KEY AUTOINCREMENT ,useraccount varchar)&quot;</span>);<span class="comment">//这张表是为了获取当前登录的用户，并以此来确定各个模块的显示</span></span><br><span class="line">            sql = QString(<span class="string">&quot;insert into user_login(id,useraccount) values(NULL,&#x27;%1&#x27;)&quot;</span>).arg(str1);</span><br><span class="line">            query.exec(sql);</span><br><span class="line">            qDebug()&lt;&lt;<span class="string">&quot;userlogwindow:&quot;</span>&lt;username-&gt;clear();</span><br><span class="line">            ui-&gt;userPassword-&gt;clear();</span><br><span class="line">            this-&gt;close();</span><br><span class="line">            qDebug()&lt;&lt;<span class="string">&quot;登陆成功&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            qDebug()&lt;&lt;<span class="string">&quot;密码错误&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">userLoginWindow::regUser</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">        <span class="type">int</span> user_num_int;</span><br><span class="line">        qint64 pos;</span><br><span class="line">        QFile <span class="title function_">file</span><span class="params">(<span class="string">&quot;userAccout.txt&quot;</span>)</span>;</span><br><span class="line">        <span class="type">bool</span> isOk = file.open(QIODevice::ReadWrite|QIODevice::Text);</span><br><span class="line">        <span class="keyword">if</span> (isOk == <span class="literal">true</span>)&#123;</span><br><span class="line">            pos=file.size();</span><br><span class="line">            QString user_num = file.readLine();</span><br><span class="line">            QTextStream <span class="title function_">txtout</span><span class="params">(&amp;file)</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;iuserID_reg-&gt;text()&lt;userPassword_reg-&gt;text()&lt;userMail-&gt;text()&lt;<span class="built_in">log</span>-&gt;show();</span><br><span class="line">         ui-&gt;reg-&gt;hide();</span><br><span class="line"></span><br><span class="line">         ui-&gt;userID_reg-&gt;clear();</span><br><span class="line">         ui-&gt;userPassword_reg-&gt;clear();</span><br><span class="line">         ui-&gt;userPassword_reg_2-&gt;clear();</span><br><span class="line">         ui-&gt;userMail-&gt;clear();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>最后做完了整个项目后反思了一下，有这么几个做的不太好：<br>用户登录之后没有更改登录的状态显示，导致直接可以登录第二个用户，后期偷懒没有把这个做成更加美观的解决方案<br>很多地方都重复的使用了相同的代码，下一次可以试着做成一个简单的调用函数，降低各个版块之间的耦合度。<br>在做用户支出条目的时候没有实现条目的增删查改，只完成了条目的输入和清空，原因是我发现删改在QListWidget里实现比较麻烦，在翻阅了他的官方文档后他提示我要使用QListView，但那时已经接近项目结束了所以就没有重写。<br>最后一点就是有时候我太放心别人写的东西了，要保持自己怀疑的心。<br>最后放上我的GitHub地址：<a href="https://github.com/TankNee/CashBook">TankNee’s Repo -CashBook</a><br>万分感谢各位合作的队友们</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Code </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Qt </tag>
-            
-            <tag> C++ </tag>
-            
-            <tag> 项目软件 </tag>
             
         </tags>
       
