@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>合并两个不相关的GIT仓库</title>
+      <link href="/2022/07/13/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E4%B8%8D%E7%9B%B8%E5%85%B3%E7%9A%84GIT%E4%BB%93%E5%BA%93/"/>
+      <url>/2022/07/13/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E4%B8%8D%E7%9B%B8%E5%85%B3%E7%9A%84GIT%E4%BB%93%E5%BA%93/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>由于国内的网络问题，我在把代码推送到 github 上的时候经常性会遇到一些问题，比如上传失败，这个问题与我家的网络没有本质的关联，主要还是网络提供商（电信）的问题。因此我为了提高自己写代码的体验，选择将代码直接推送到国内的托管上 coding 上，但是这次写的代码是为了开源之夏的项目，结项的时候必须看到代码的提交过程，且代码仓库必须是项目一开始的仓库，而我最开始的时候忘了这茬事，因此我就需要将两个不相关的 git 仓库合并，且保留原仓库中的提交记录！</p><p>操作也不是特别复杂，如下代码所示。</p><p>首先我们需要明确哪两个代码仓库进行合并：</p><ol><li>repo1</li><li>repo2</li></ol><blockquote><p>合并之前最好把两个仓库的修改都提交了，保持仓库的干净。</p><p>最好能新建一个文件夹，然后把两个代码仓库重新克隆到这个新文件夹中。</p></blockquote><p>然后我们将其中一个仓库（repo2）放入另一个仓库（repo1）中。</p><p>那么我们就得到了这样一个目录结构：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">repo1</span><br><span class="line">- repo2</span><br></pre></td></tr></table></figure><p>而后我们进入 repo1 中：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> repo1</span><br></pre></td></tr></table></figure><p>我们将 repo2 设置为 repo1 的一个源。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add <span class="built_in">test</span> ./repo1</span><br></pre></td></tr></table></figure><blockquote><p>我也是到这里才知道 git 仓库的源还可以是本地的一个文件夹。</p><p>我猜测这种合并两个仓库的原理是将一个仓库作为另一个仓库的子仓库，然后签出分支进行合并。</p></blockquote><p>然后我们抓取这个仓库，这个指令会将 repo2 的数据移动到 repo1 下（也就是跟原来的 repo2 平级）。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch repo2</span><br></pre></td></tr></table></figure><p>然后我们将 repo2 中需要的分支签出，变成 repo1 的一个分支。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b <span class="built_in">test</span> <span class="built_in">test</span>/master</span><br></pre></td></tr></table></figure><p>这样我们就得到了一条待合并的代码分支，接下来就是将这条分支和 repo1 的分支进行合并。所以我们先切回到主分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure><p>最后合并前文签出的子分支，这里要注意添加<code>--allow-unrelated-histories</code>，因为这两个仓库是毫不相关的，因此不能直接合并，如果没有这个参数就会出现冲突。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge <span class="built_in">test</span> --allow-unrelated-histories</span><br></pre></td></tr></table></figure><p>最后我们可以删除 repo1 下的 repo2 文件夹</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf ./repo2</span><br></pre></td></tr></table></figure><p>最后我们就得到了一个合并好的 repo1。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> github </tag>
+            
+            <tag> 开源之夏 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>来创造一个匿名提问箱吧</title>
       <link href="/2022/06/18/%E6%9D%A5%E5%88%9B%E9%80%A0%E4%B8%80%E4%B8%AA%E5%8C%BF%E5%90%8D%E6%8F%90%E9%97%AE%E7%AE%B1%E5%90%A7/"/>
       <url>/2022/06/18/%E6%9D%A5%E5%88%9B%E9%80%A0%E4%B8%80%E4%B8%AA%E5%8C%BF%E5%90%8D%E6%8F%90%E9%97%AE%E7%AE%B1%E5%90%A7/</url>
@@ -217,9 +240,9 @@
             
             <tag> 文件 </tag>
             
-            <tag> typecho </tag>
-            
             <tag> wordpress </tag>
+            
+            <tag> typecho </tag>
             
             <tag> 按钮 </tag>
             
@@ -272,21 +295,21 @@
             
             <tag> int </tag>
             
+            <tag> arr </tag>
+            
             <tag> length </tag>
             
             <tag> node </tag>
             
-            <tag> arr </tag>
-            
-            <tag> line </tag>
-            
             <tag> this </tag>
-            
-            <tag> return </tag>
             
             <tag> flag </tag>
             
+            <tag> line </tag>
+            
             <tag> o </tag>
+            
+            <tag> return </tag>
             
             <tag> public </tag>
             
@@ -376,11 +399,11 @@
             
             <tag> this </tag>
             
+            <tag> return </tag>
+            
             <tag> trix </tag>
             
             <tag> matrix </tag>
-            
-            <tag> return </tag>
             
             <tag> dots </tag>
             
@@ -413,11 +436,11 @@
             
             <tag> int </tag>
             
+            <tag> arr </tag>
+            
             <tag> temp </tag>
             
             <tag> length </tag>
-            
-            <tag> arr </tag>
             
             <tag> 排序 </tag>
             
@@ -450,9 +473,9 @@
             
             <tag> type </tag>
             
-            <tag> button </tag>
-            
             <tag> git </tag>
+            
+            <tag> button </tag>
             
             <tag> github </tag>
             
@@ -483,11 +506,11 @@
             
             <tag> 服务器 </tag>
             
-            <tag> 网站 </tag>
-            
             <tag> 对象 </tag>
             
             <tag> 算法 </tag>
+            
+            <tag> 网站 </tag>
             
             <tag> 字符 </tag>
             
@@ -532,6 +555,8 @@
             
             <tag> 参数 </tag>
             
+            <tag> line </tag>
+            
             <tag> linecount </tag>
             
             <tag> echo </tag>
@@ -539,8 +564,6 @@
             <tag> bin </tag>
             
             <tag> 行计数器 </tag>
-            
-            <tag> line </tag>
             
         </tags>
       
@@ -606,19 +629,19 @@
             
             <tag> 服务器 </tag>
             
-            <tag> 文件 </tag>
-            
             <tag> 对象 </tag>
             
             <tag> 列表 </tag>
             
-            <tag> 汇编 </tag>
+            <tag> 文件 </tag>
             
-            <tag> 操作 </tag>
+            <tag> 汇编 </tag>
             
             <tag> 类型 </tag>
             
             <tag> 按钮 </tag>
+            
+            <tag> 操作 </tag>
             
             <tag> length </tag>
             
@@ -702,11 +725,11 @@
       
         <tags>
             
-            <tag> 文件 </tag>
-            
             <tag> 节点 </tag>
             
             <tag> 算法 </tag>
+            
+            <tag> 文件 </tag>
             
             <tag> 字符 </tag>
             
@@ -755,13 +778,13 @@
             
             <tag> 文件 </tag>
             
-            <tag> 域名 </tag>
+            <tag> ssl </tag>
             
-            <tag> 宝塔 </tag>
+            <tag> 域名 </tag>
             
             <tag> server </tag>
             
-            <tag> ssl </tag>
+            <tag> 宝塔 </tag>
             
             <tag> 地址 </tag>
             
@@ -804,17 +827,19 @@
             
             <tag> 列表 </tag>
             
-            <tag> 查找 </tag>
-            
             <tag> 字符 </tag>
             
-            <tag> 操作 </tag>
+            <tag> 查找 </tag>
             
             <tag> 类型 </tag>
             
             <tag> 地址 </tag>
             
+            <tag> 操作 </tag>
+            
             <tag> int </tag>
+            
+            <tag> arr </tag>
             
             <tag> temp </tag>
             
@@ -823,8 +848,6 @@
             <tag> 变量 </tag>
             
             <tag> node </tag>
-            
-            <tag> arr </tag>
             
         </tags>
       
@@ -898,13 +921,13 @@
             
             <tag> 字符 </tag>
             
-            <tag> 操作 </tag>
-            
-            <tag> 偏移 </tag>
-            
             <tag> 类型 </tag>
             
             <tag> 地址 </tag>
+            
+            <tag> 操作 </tag>
+            
+            <tag> 偏移 </tag>
             
             <tag> 变量 </tag>
             
@@ -1141,9 +1164,9 @@
       
         <tags>
             
-            <tag> 文件 </tag>
-            
             <tag> 函数 </tag>
+            
+            <tag> 文件 </tag>
             
             <tag> img_src </tag>
             
@@ -1178,13 +1201,13 @@
             
             <tag> 服务器 </tag>
             
-            <tag> 宝塔 </tag>
-            
-            <tag> typecho </tag>
-            
             <tag> wordpress </tag>
             
             <tag> 数据库 </tag>
+            
+            <tag> 宝塔 </tag>
+            
+            <tag> typecho </tag>
             
             <tag> 查询 </tag>
             
@@ -1217,9 +1240,9 @@
             
             <tag> 文件 </tag>
             
-            <tag> server </tag>
-            
             <tag> mysql </tag>
+            
+            <tag> server </tag>
             
             <tag> 重启 </tag>
             

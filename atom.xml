@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.tanknee.cn/"/>
-  <updated>2022-06-18T02:35:54.547Z</updated>
+  <updated>2022-07-13T13:35:36.161Z</updated>
   <id>https://www.tanknee.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>合并两个不相关的GIT仓库</title>
+    <link href="https://www.tanknee.cn/2022/07/13/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E4%B8%8D%E7%9B%B8%E5%85%B3%E7%9A%84GIT%E4%BB%93%E5%BA%93/"/>
+    <id>https://www.tanknee.cn/2022/07/13/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E4%B8%8D%E7%9B%B8%E5%85%B3%E7%9A%84GIT%E4%BB%93%E5%BA%93/</id>
+    <published>2022-07-13T12:45:14.000Z</published>
+    <updated>2022-07-13T13:35:36.161Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>由于国内的网络问题，我在把代码推送到 github 上的时候经常性会遇到一些问题，比如上传失败，这个问题与我家的网络没有本质的关联，主要还是网络提供商（电信）的问题。因此我为了提高自己写代码的体验，选择将代码直接推送到国内的托管上 coding 上，但是这次写的代码是为了开源之夏的项目，结项的时候必须看到代码的提交过程，且代码仓库必须是项目一开始的仓库，而我最开始的时候忘了这茬事，因此我就需要将两个不相关的 git 仓库合并，且保留原仓库中的提交记录！</p><p>操作也不是特别复杂，如下代码所示。</p><p>首先我们需要明确哪两个代码仓库进行合并：</p><ol><li>repo1</li><li>repo2</li></ol><blockquote><p>合并之前最好把两个仓库的修改都提交了，保持仓库的干净。</p><p>最好能新建一个文件夹，然后把两个代码仓库重新克隆到这个新文件夹中。</p></blockquote><p>然后我们将其中一个仓库（repo2）放入另一个仓库（repo1）中。</p><p>那么我们就得到了这样一个目录结构：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">repo1</span><br><span class="line">- repo2</span><br></pre></td></tr></table></figure><p>而后我们进入 repo1 中：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> repo1</span><br></pre></td></tr></table></figure><p>我们将 repo2 设置为 repo1 的一个源。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add <span class="built_in">test</span> ./repo1</span><br></pre></td></tr></table></figure><blockquote><p>我也是到这里才知道 git 仓库的源还可以是本地的一个文件夹。</p><p>我猜测这种合并两个仓库的原理是将一个仓库作为另一个仓库的子仓库，然后签出分支进行合并。</p></blockquote><p>然后我们抓取这个仓库，这个指令会将 repo2 的数据移动到 repo1 下（也就是跟原来的 repo2 平级）。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch repo2</span><br></pre></td></tr></table></figure><p>然后我们将 repo2 中需要的分支签出，变成 repo1 的一个分支。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b <span class="built_in">test</span> <span class="built_in">test</span>/master</span><br></pre></td></tr></table></figure><p>这样我们就得到了一条待合并的代码分支，接下来就是将这条分支和 repo1 的分支进行合并。所以我们先切回到主分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure><p>最后合并前文签出的子分支，这里要注意添加<code>--allow-unrelated-histories</code>，因为这两个仓库是毫不相关的，因此不能直接合并，如果没有这个参数就会出现冲突。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge <span class="built_in">test</span> --allow-unrelated-histories</span><br></pre></td></tr></table></figure><p>最后我们可以删除 repo1 下的 repo2 文件夹</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf ./repo2</span><br></pre></td></tr></table></figure><p>最后我们就得到了一个合并好的 repo1。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;p&gt;由于国内的网络问题，我在把代码推送到 github 上的时候经常性会遇到一些问题，比如上传失败，这个问题与我家的网络没有本质的关联，主要还是网络提供商（电信）的问题。因此我为了提高自己写代码的体验，选择将代码直接推送到国内的托管上 coding 上，但是这次写的代码是为了开源之夏的项目，结项的时候必须看到代码的提交过程，且代码仓库必须是项目一开始的仓库，而我最开始的时候忘了这茬事，因此我就需要将两个不相关的 git 仓库合并，且保留原仓库中的提交记录！&lt;/p&gt;
+&lt;p&gt;操作也不是特别复杂，如下代码所示。&lt;/p&gt;
+&lt;p&gt;首先我们需要明确哪两个代码仓库进行合并：&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="git" scheme="https://www.tanknee.cn/tags/git/"/>
+    
+      <category term="github" scheme="https://www.tanknee.cn/tags/github/"/>
+    
+      <category term="开源之夏" scheme="https://www.tanknee.cn/tags/%E5%BC%80%E6%BA%90%E4%B9%8B%E5%A4%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>来创造一个匿名提问箱吧</title>
@@ -242,9 +269,9 @@
     
       <category term="文件" scheme="https://www.tanknee.cn/tags/%E6%96%87%E4%BB%B6/"/>
     
-      <category term="typecho" scheme="https://www.tanknee.cn/tags/typecho/"/>
-    
       <category term="wordpress" scheme="https://www.tanknee.cn/tags/wordpress/"/>
+    
+      <category term="typecho" scheme="https://www.tanknee.cn/tags/typecho/"/>
     
       <category term="按钮" scheme="https://www.tanknee.cn/tags/%E6%8C%89%E9%92%AE/"/>
     
@@ -303,21 +330,21 @@
     
       <category term="int" scheme="https://www.tanknee.cn/tags/int/"/>
     
+      <category term="arr" scheme="https://www.tanknee.cn/tags/arr/"/>
+    
       <category term="length" scheme="https://www.tanknee.cn/tags/length/"/>
     
       <category term="node" scheme="https://www.tanknee.cn/tags/node/"/>
     
-      <category term="arr" scheme="https://www.tanknee.cn/tags/arr/"/>
-    
-      <category term="line" scheme="https://www.tanknee.cn/tags/line/"/>
-    
       <category term="this" scheme="https://www.tanknee.cn/tags/this/"/>
-    
-      <category term="return" scheme="https://www.tanknee.cn/tags/return/"/>
     
       <category term="flag" scheme="https://www.tanknee.cn/tags/flag/"/>
     
+      <category term="line" scheme="https://www.tanknee.cn/tags/line/"/>
+    
       <category term="o" scheme="https://www.tanknee.cn/tags/o/"/>
+    
+      <category term="return" scheme="https://www.tanknee.cn/tags/return/"/>
     
       <category term="public" scheme="https://www.tanknee.cn/tags/public/"/>
     
@@ -405,11 +432,11 @@
     
       <category term="this" scheme="https://www.tanknee.cn/tags/this/"/>
     
+      <category term="return" scheme="https://www.tanknee.cn/tags/return/"/>
+    
       <category term="trix" scheme="https://www.tanknee.cn/tags/trix/"/>
     
       <category term="matrix" scheme="https://www.tanknee.cn/tags/matrix/"/>
-    
-      <category term="return" scheme="https://www.tanknee.cn/tags/return/"/>
     
       <category term="dots" scheme="https://www.tanknee.cn/tags/dots/"/>
     
@@ -440,11 +467,11 @@
     
       <category term="int" scheme="https://www.tanknee.cn/tags/int/"/>
     
+      <category term="arr" scheme="https://www.tanknee.cn/tags/arr/"/>
+    
       <category term="temp" scheme="https://www.tanknee.cn/tags/temp/"/>
     
       <category term="length" scheme="https://www.tanknee.cn/tags/length/"/>
-    
-      <category term="arr" scheme="https://www.tanknee.cn/tags/arr/"/>
     
       <category term="排序" scheme="https://www.tanknee.cn/tags/%E6%8E%92%E5%BA%8F/"/>
     
@@ -479,9 +506,9 @@
     
       <category term="type" scheme="https://www.tanknee.cn/tags/type/"/>
     
-      <category term="button" scheme="https://www.tanknee.cn/tags/button/"/>
-    
       <category term="git" scheme="https://www.tanknee.cn/tags/git/"/>
+    
+      <category term="button" scheme="https://www.tanknee.cn/tags/button/"/>
     
       <category term="github" scheme="https://www.tanknee.cn/tags/github/"/>
     
@@ -516,11 +543,11 @@
     
       <category term="服务器" scheme="https://www.tanknee.cn/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-      <category term="网站" scheme="https://www.tanknee.cn/tags/%E7%BD%91%E7%AB%99/"/>
-    
       <category term="对象" scheme="https://www.tanknee.cn/tags/%E5%AF%B9%E8%B1%A1/"/>
     
       <category term="算法" scheme="https://www.tanknee.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="网站" scheme="https://www.tanknee.cn/tags/%E7%BD%91%E7%AB%99/"/>
     
       <category term="字符" scheme="https://www.tanknee.cn/tags/%E5%AD%97%E7%AC%A6/"/>
     
@@ -564,6 +591,8 @@
     
       <category term="参数" scheme="https://www.tanknee.cn/tags/%E5%8F%82%E6%95%B0/"/>
     
+      <category term="line" scheme="https://www.tanknee.cn/tags/line/"/>
+    
       <category term="linecount" scheme="https://www.tanknee.cn/tags/linecount/"/>
     
       <category term="echo" scheme="https://www.tanknee.cn/tags/echo/"/>
@@ -571,8 +600,6 @@
       <category term="bin" scheme="https://www.tanknee.cn/tags/bin/"/>
     
       <category term="行计数器" scheme="https://www.tanknee.cn/tags/%E8%A1%8C%E8%AE%A1%E6%95%B0%E5%99%A8/"/>
-    
-      <category term="line" scheme="https://www.tanknee.cn/tags/line/"/>
     
   </entry>
   
@@ -642,19 +669,19 @@
     
       <category term="服务器" scheme="https://www.tanknee.cn/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-      <category term="文件" scheme="https://www.tanknee.cn/tags/%E6%96%87%E4%BB%B6/"/>
-    
       <category term="对象" scheme="https://www.tanknee.cn/tags/%E5%AF%B9%E8%B1%A1/"/>
     
       <category term="列表" scheme="https://www.tanknee.cn/tags/%E5%88%97%E8%A1%A8/"/>
     
-      <category term="汇编" scheme="https://www.tanknee.cn/tags/%E6%B1%87%E7%BC%96/"/>
+      <category term="文件" scheme="https://www.tanknee.cn/tags/%E6%96%87%E4%BB%B6/"/>
     
-      <category term="操作" scheme="https://www.tanknee.cn/tags/%E6%93%8D%E4%BD%9C/"/>
+      <category term="汇编" scheme="https://www.tanknee.cn/tags/%E6%B1%87%E7%BC%96/"/>
     
       <category term="类型" scheme="https://www.tanknee.cn/tags/%E7%B1%BB%E5%9E%8B/"/>
     
       <category term="按钮" scheme="https://www.tanknee.cn/tags/%E6%8C%89%E9%92%AE/"/>
+    
+      <category term="操作" scheme="https://www.tanknee.cn/tags/%E6%93%8D%E4%BD%9C/"/>
     
       <category term="length" scheme="https://www.tanknee.cn/tags/length/"/>
     
@@ -739,11 +766,11 @@
       <category term="Code" scheme="https://www.tanknee.cn/categories/Code/"/>
     
     
-      <category term="文件" scheme="https://www.tanknee.cn/tags/%E6%96%87%E4%BB%B6/"/>
-    
       <category term="节点" scheme="https://www.tanknee.cn/tags/%E8%8A%82%E7%82%B9/"/>
     
       <category term="算法" scheme="https://www.tanknee.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="文件" scheme="https://www.tanknee.cn/tags/%E6%96%87%E4%BB%B6/"/>
     
       <category term="字符" scheme="https://www.tanknee.cn/tags/%E5%AD%97%E7%AC%A6/"/>
     
@@ -762,51 +789,6 @@
       <category term="tree-" scheme="https://www.tanknee.cn/tags/tree/"/>
     
       <category term="leftchild" scheme="https://www.tanknee.cn/tags/leftchild/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gitea--Git with a cup of tea</title>
-    <link href="https://www.tanknee.cn/2019/12/11/gitea_introduct/"/>
-    <id>https://www.tanknee.cn/2019/12/11/gitea_introduct/</id>
-    <published>2019-12-11T15:55:00.000Z</published>
-    <updated>2022-06-18T01:56:44.421Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="Gitea–Git-with-a-cup-of-tea"><a href="#Gitea–Git-with-a-cup-of-tea" class="headerlink" title="Gitea–Git with a cup of tea"></a>Gitea–Git with a cup of tea</h1><h2 id="Gitea是一款开源的代码托管软件"><a href="#Gitea是一款开源的代码托管软件" class="headerlink" title="Gitea是一款开源的代码托管软件"></a>Gitea是一款开源的代码托管软件</h2><p>它来自于同样开源的gogs，是其一个分支，由于社区的开发贡献者与原gogs的开发者产生了意见上的分歧，社区开发者fork了gogs并不断迭代完善至今，其间还有很多有意思的事情，详情可以看这篇<a href="https://blog.wolfogre.com/posts/gogs-vs-gitea/#%E5%80%BC%E5%BE%97%E7%8E%A9%E5%91%B3%E7%9A%84%E7%82%B9">wolfogre</a>. </p><blockquote><h2 id="为什么会有-Gitea"><a href="#为什么会有-Gitea" class="headerlink" title="为什么会有 Gitea"></a>为什么会有 Gitea</h2><p>克隆一个现有的项目，然后改头换面、自立门户、重新发行，这在开源的世界上不算什么新鲜事。但这种情况的发生往往事出有因，比如原项目不维护了，原项目拒绝实现某些新特性，新项目针对特定用户群做了优化，等等等等。</p><p>但 Gogs 仍在维护，Gitea 也没有实现什么新功能，针对的用户群也是一模一样的，那为什么还会有 Gitea 呢？Gitea 的官方博客里给出了<a href="https://blog.wolfogre.com/redirect/v3/AzYDIqKRxBOSkNTeRNalmvESAwM8Cv46xcVaFgY7bjsveG6Qxf8EMjAxNsX_AjEyxZEWdWzMFMw7L3jFMRIDAzwK_jrFxVoWBjtuQQYW3Dsh_cU8Bk0KxTsGOwrMbQrMOy94xQ">解释</a>，翻译成中文如下：</p><hr><p>Gitea 是一个开源社区驱动的 Gogs 克隆，后者是一个备受欢迎的 Git 自托管服务。我们是一个日益增长的群体——之前是 Gogs 的用户和贡献者，但发现了 Gogs 令人沮丧的“单一维护者”管理模式，所以决定作出努力，建立一个更加开放、更加高效的管理模式。</p><p>在此之前，我们尝试说服 Unknown 给社区中更多的人“写权限”。他理所当然地认为 Gogs 是自己的生物，不希望它在自己掌控之外生长。所以为了有效地让代码走向自由，重新克隆一份是必须的。</p></blockquote><p>gogs是一个国人的产品，不得不说，确实是很优秀的个人作品，不过相对而言，我更喜欢gitea的UI风格和界面，具体的差异我暂时也还没有感受出来。</p><h3 id="我的Gitea站点"><a href="#我的Gitea站点" class="headerlink" title="我的Gitea站点"></a><a href="https://git.tanknee.cn/">我的Gitea站点</a></h3><p>下面是Gitea的安装与使用</p><h2 id="安装Gitea"><a href="#安装Gitea" class="headerlink" title="安装Gitea"></a>安装Gitea</h2><p>首先是要有一台可用的服务器。</p><p>这边我用的是宝塔面板，所以创建网站会比较轻松。用宝塔面板创建一个网站</p><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191211b793028b9360e.png"/><p>然后用Xshell或其他类似软件链接服务器，并<code>cd</code>定位到所要安装的文件夹。</p><p>这边我采用的是Binary Install，二进制安装。输入以下代码：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -O gitea https://dl.gitea.io/gitea/1.10.1/gitea-1.10.1-linux-amd64</span><br><span class="line"><span class="built_in">chmod</span> +x gitea</span><br></pre></td></tr></table></figure><p>很快就会完成安装包的下载。</p><p>然后可以启动服务，测试站点的使用情况。使用以下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./gitea web</span><br></pre></td></tr></table></figure><p>然后就可以启动了。当然，你也可以在自己本地的Linux机器上安装。</p><p>当你选择在云服务器安装时，记得在阿里云/腾讯云上打开防火墙的3000端口，还有宝塔面板的3000端口。</p><h2 id="Gitea域名配置"><a href="#Gitea域名配置" class="headerlink" title="Gitea域名配置"></a>Gitea域名配置</h2><p>当然你不会希望Gitea永远使用IP来访问，那么你就需要一个域名。解析过程不再赘述。直接修改ngnix的配置文件。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">server</span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    listen <span class="number">80</span>;</span><br><span class="line">    listen <span class="number">443</span> ssl http2;</span><br><span class="line">    server_name yourdomain.com;</span><br><span class="line">    </span><br><span class="line">    #SSL-START SSL相关配置，请勿删除或修改下一行带注释的<span class="number">404</span>规则</span><br><span class="line">    #error_page <span class="number">404</span>/<span class="number">404.</span>html;</span><br><span class="line">    </span><br><span class="line">    #如果你不需要https那么删除下面这一部分就可以了（删到SSL-END）</span><br><span class="line">    </span><br><span class="line">    #HTTP_TO_HTTPS_START</span><br><span class="line">    if ($server_port !~ <span class="number">443</span>)<span class="punctuation">&#123;</span></span><br><span class="line">        rewrite ^(/.*)$ https<span class="punctuation">:</span><span class="comment">//$host$1 permanent;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    #HTTP_TO_HTTPS_END</span><br><span class="line">    ssl_certificate ;#--这里填你的ssl证书地址</span><br><span class="line">    ssl_certificate_key ;</span><br><span class="line">    ssl_protocols TLSv1 TLSv1<span class="number">.1</span> TLSv1<span class="number">.2</span>;</span><br><span class="line">    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256<span class="punctuation">:</span>HIGH<span class="punctuation">:</span>!aNULL<span class="punctuation">:</span>!MD5<span class="punctuation">:</span>!RC4<span class="punctuation">:</span>!DHE;</span><br><span class="line">    ssl_prefer_server_ciphers on;</span><br><span class="line">    ssl_session_cache shared<span class="punctuation">:</span>SSL<span class="punctuation">:</span><span class="number">10</span>m;</span><br><span class="line">    ssl_session_timeout <span class="number">10</span>m;</span><br><span class="line">    error_page <span class="number">497</span>  https<span class="punctuation">:</span><span class="comment">//$host$request_uri;</span></span><br><span class="line"></span><br><span class="line">    #SSL-END</span><br><span class="line">    </span><br><span class="line">    #重定向到Gitea</span><br><span class="line">    client_max_body_size <span class="number">20</span>m;</span><br><span class="line">    location / <span class="punctuation">&#123;</span></span><br><span class="line">        #默认的端口是<span class="number">3000</span></span><br><span class="line">        proxy_pass http<span class="punctuation">:</span><span class="comment">//localhost:3000; </span></span><br><span class="line">    <span class="punctuation">&#125;</span>    </span><br><span class="line"></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>然后记得在gitea安装时配置好URL即可。</p><h2 id="Gitea的使用"><a href="#Gitea的使用" class="headerlink" title="Gitea的使用"></a>Gitea的使用</h2><h3 id="安装的时候还是有几个坑的"><a href="#安装的时候还是有几个坑的" class="headerlink" title="安装的时候还是有几个坑的"></a>安装的时候还是有几个坑的</h3><p>比如SSH地址如果你不更改那么就会默认为LocalHost，不太雅观，记得修改</p><p>还有就是如果你使用root用户启动的Gitea，那么ssh的默认前缀就会是root，例如这样：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@git.tanknee.cn:tanknee/Xxxxx.git</span><br></pre></td></tr></table></figure><p>十分的不友好，所以我建议新建一个git用户，然后再切换到git用户启动Gitea安装，就可以达到这种效果了：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@git.tanknee.cn:tanknee/Xxxxx.git</span><br></pre></td></tr></table></figure><h3 id="添加git用户"><a href="#添加git用户" class="headerlink" title="添加git用户"></a>添加git用户</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd git</span><br><span class="line">su -l git //切换用户</span><br></pre></td></tr></table></figure><h3 id="长期后台运行"><a href="#长期后台运行" class="headerlink" title="长期后台运行"></a>长期后台运行</h3><p>一种做法是将Gitea作为系统服务，开机自启动，另一种做法是用nohup，挂在后台。效果一致，但我觉得第一种相对会好一点。</p><h4 id="开机自启动"><a href="#开机自启动" class="headerlink" title="开机自启动"></a><a href="https://docs.gitea.io/en-us/linux-service/">开机自启动</a></h4><h4 id="nohup挂后台"><a href="#nohup挂后台" class="headerlink" title="nohup挂后台"></a>nohup挂后台</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">nohup</span> ./gitea web &amp;</span><br></pre></td></tr></table></figure><p>其中 &amp;代表一直挂在后台。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>从gitlab转投到gitea之后服务器的负载小了很多，效果明显。</p><p><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191209e567191ff5ea2.png" alt="gitlab"></p><h3 id="前后对比"><a href="#前后对比" class="headerlink" title="前后对比"></a>前后对比</h3><p><img src="https://img.tanknee.cn/blogpicbed/2019/12/20191209732606f328592.png" alt="gitea启用之后"></p><h3 id="负载对比"><a href="#负载对比" class="headerlink" title="负载对比"></a>负载对比</h3><p><img src="https://img.tanknee.cn/blogpicbed/2019/12/201912113f383d0a855d5.png" alt="负载"></p><p>还是很好的一款开源代码托管平台。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;script class=&quot;meting-secondary-script-marker&quot; src=&quot;/assets/js/Meting.min.js&quot;&gt;&lt;/script&gt;&lt;h1 id=&quot;Gitea–Git-with-a-cup-of-tea&quot;&gt;&lt;a href=&quot;#Gitea–Git-with-a-cup-of-tea&quot; class=&quot;headerlink&quot; title=&quot;Gitea–Git with a cup of tea&quot;&gt;&lt;/a&gt;Gitea–Git with a cup of tea&lt;/h1&gt;&lt;h2 id=&quot;Gitea是一款开源的代码托管软件&quot;&gt;&lt;a href=&quot;#Gitea是一款开源的代码托管软件&quot; class=&quot;headerlink&quot; title=&quot;Gitea是一款开源的代码托管软件&quot;&gt;&lt;/a&gt;Gitea是一款开源的代码托管软件&lt;/h2&gt;&lt;p&gt;它来自于同样开源的gogs，是其一个分支，由于社区的开发贡献者与原gogs的开发者产生了意见上的分歧，社区开发者fork了gogs并不断迭代完善至今，其间还有很多有意思的事情，详情可以看这篇&lt;a href=&quot;https://blog.wolfogre.com/posts/gogs-vs-gitea/#%E5%80%BC%E5%BE%97%E7%8E%A9%E5%91%B3%E7%9A%84%E7%82%B9&quot;&gt;wolfogre&lt;/a&gt;. &lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Code" scheme="https://www.tanknee.cn/categories/Code/"/>
-    
-    
-      <category term="服务器" scheme="https://www.tanknee.cn/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="网站" scheme="https://www.tanknee.cn/tags/%E7%BD%91%E7%AB%99/"/>
-    
-      <category term="文件" scheme="https://www.tanknee.cn/tags/%E6%96%87%E4%BB%B6/"/>
-    
-      <category term="域名" scheme="https://www.tanknee.cn/tags/%E5%9F%9F%E5%90%8D/"/>
-    
-      <category term="宝塔" scheme="https://www.tanknee.cn/tags/%E5%AE%9D%E5%A1%94/"/>
-    
-      <category term="server" scheme="https://www.tanknee.cn/tags/server/"/>
-    
-      <category term="ssl" scheme="https://www.tanknee.cn/tags/ssl/"/>
-    
-      <category term="地址" scheme="https://www.tanknee.cn/tags/%E5%9C%B0%E5%9D%80/"/>
-    
-      <category term="gitea" scheme="https://www.tanknee.cn/tags/gitea/"/>
-    
-      <category term="gogs" scheme="https://www.tanknee.cn/tags/gogs/"/>
-    
-      <category term="git" scheme="https://www.tanknee.cn/tags/git/"/>
-    
-      <category term="安装" scheme="https://www.tanknee.cn/tags/%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
