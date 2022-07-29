@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>Nodejs 网络请求库 HTTP 307 重定向问题</title>
+      <link href="/2022/07/29/Nodejs-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93-HTTP-307-%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/"/>
+      <url>/2022/07/29/Nodejs-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93-HTTP-307-%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>起因是我要做一个网站的登录操作模拟，之前尝试的时候都没啥问题，一个 POST 请求就全部搞定了，也没啥花里胡哨的东西，请求载荷里带上账号密码和时间戳，稳稳当当就能拿到登录 cookie，可惜好景不长，前几天的时候发现这个接口出了点小变化，即直接使用 POST 给接口发请求，收到的 Response 的状态码为 307，这可把我难住了，因为 3XX 的状态码理论上都是库、浏览器自动处理的，不应该作为错误抛出，除非重定向的次数太多，超出上限。</p><p>因此为了抹平这个接口的变化对整个程序的影响，我做了诸多尝试：</p><h2 id="懒人的办法：使用-Puppeteer-库模拟人工操作"><a href="#懒人的办法：使用-Puppeteer-库模拟人工操作" class="headerlink" title="懒人的办法：使用 Puppeteer 库模拟人工操作"></a>懒人的办法：使用 Puppeteer 库模拟人工操作</h2><p>好处是在网络条件良好的情况下成功率比较高，且完全模拟人类的操作，不需要考虑访问的接口变化。</p><p>坏处是在大量账号登录的场景下稳定性不足，经常会出现网页加载不出来的状况，且速度较慢，网页的迭代速度由于营销活动的变化会比接口迭代的速度要快，因此后续很可能会有新的问题出现。</p><h2 id="换网络请求库：从-Request-到-Axios"><a href="#换网络请求库：从-Request-到-Axios" class="headerlink" title="换网络请求库：从 Request 到 Axios"></a>换网络请求库：从 Request 到 Axios</h2><p>nodejs 上流行的网络请求库都试了一遍，我的程序原本用的网络请求库是 SuperAgent，但是它在遇到 307 重定向的时候会直接抛出错误，然后我尝试了 Request，Axios 还有 node-fetch，最后的结论是在不添加任何配置的情况下，以上几个网络请求库都处理不了这个问题，而且直到现在我也不知道如何配置。</p><h2 id="柳暗花明又一村：Postman"><a href="#柳暗花明又一村：Postman" class="headerlink" title="柳暗花明又一村：Postman"></a>柳暗花明又一村：Postman</h2><p>说来简单，我为了对比 307 和 307 之后第二个 200 请求的差别，我把两个请求导入 Postman，再一个一个发送，神奇的事情发生了，原本 307 的请求，在 Postman 中竟然直接成功了？？我查了半天，最后在 Postman 的设置页面找到了一个选项：</p><p><img src="https://img.tanknee.cn/blogpicbed/2022/07/29/22072962e3d2faf05a8.png/webp" alt=""></p><p>当我打开 follow redirects 的时候，网络请求就是正常的，如果我关掉这个选项，那么 Postman 就会抛出同样的 307 错误。</p><p>那么有没有办法让 nodejs 程序通过 Postman 发送请求呢？</p><p>这种行为虽然看上去有点脱裤子放屁，但是，结果论而言，只要实现了比什么都强，所以我打算找一找有没有 cli 版本的 Postman，没想到，Postman 官方竟然真的有一个 npm 库 newman，这个库的主要功能是进行网络测试，即传入一组网络请求的配置（collection），然后得到一个测试结果，其中的网络请求的效果与 Postman 中直接用 gui 执行是一样。</p><p>因此，我就在想，能不能用这个变通的工具，来实现 Postman 代理网络请求？</p><p>因此我就将之前导入到 Postman 的请求以 newman 需要的格式导出成文件，然后把里面的关键信息替换成每次请求的信息，这样 newman 以为自己在做测试，其实是在帮我发送网络请求。</p><p>那么 newman 要怎样获取每次执行之后的结果呢？</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    newman</span><br><span class="line">        .<span class="title function_">run</span>(&#123;</span><br><span class="line">            <span class="attr">collection</span>: collection,</span><br><span class="line">            <span class="attr">reporters</span>: <span class="string">&quot;progress&quot;</span>,</span><br><span class="line">        &#125;)</span><br><span class="line">        .<span class="title function_">on</span>(<span class="string">&quot;start&quot;</span>, <span class="keyword">function</span> (<span class="params">err, args</span>) &#123;</span><br><span class="line">            <span class="comment">// on start of run, log to console</span></span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;running a collection...&quot;</span>);</span><br><span class="line">        &#125;)</span><br><span class="line">        .<span class="title function_">on</span>(<span class="string">&quot;done&quot;</span>, <span class="keyword">function</span> (<span class="params">err, summary</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                <span class="title function_">reject</span>(err);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">const</span> r = summary.<span class="property">run</span>.<span class="property">executions</span>[<span class="number">0</span>].<span class="property">response</span>.<span class="title function_">json</span>();</span><br><span class="line">                <span class="title function_">resolve</span>(r);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>如上所示，在事件 “done” 中可以获取 summary，summary 中有 response 对象，调用其 json 方法，就可以获得最终结果！</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我还是懒得去找为什么另外几个库失败了，而 newman 可以成功，我怀疑跟其中处理重定向的逻辑有关，而 newman 的代码是开源的，有兴趣的朋友可以去看看 newman 的源代码。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> http </tag>
+            
+            <tag> Nodejs </tag>
+            
+            <tag> 项目 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>合并两个不相关的GIT仓库</title>
       <link href="/2022/07/13/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E4%B8%8D%E7%9B%B8%E5%85%B3%E7%9A%84GIT%E4%BB%93%E5%BA%93/"/>
       <url>/2022/07/13/%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E4%B8%8D%E7%9B%B8%E5%85%B3%E7%9A%84GIT%E4%BB%93%E5%BA%93/</url>
@@ -56,7 +79,7 @@
       <link href="/2020/07/08/Hexo%E8%B1%86%E7%93%A3%E6%96%87%E7%AB%A0%E6%8F%92%E4%BB%B6/"/>
       <url>/2020/07/08/Hexo%E8%B1%86%E7%93%A3%E6%96%87%E7%AB%A0%E6%8F%92%E4%BB%B6/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="Github项目地址"><a href="#Github项目地址" class="headerlink" title="Github项目地址"></a>Github项目地址</h2><p>github地址: <a href="https://github.com/TankNee/hexo-douban-card">https://github.com/TankNee/hexo-douban-card</a></p><blockquote><p>如果可以的话,希望你能给我一个star⭐</p></blockquote><p>npm地址: <a href="https://www.npmjs.com/package/hexo-douban-card">https://www.npmjs.com/package/hexo-douban-card</a></p><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><div class="douban-card-block">    <a class="douban-card" href="https://movie.douban.com/subject/1329562">        <div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2171302998.jpg');"></div>        <div class="douban-card-left">            <div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2171302998.jpg');"></div>            <div class="douban-card-status">灯影绰约</div>        </div>        <div class="douban-card-right">            <div class="douban-card-item"><span>电影名: </span><strong>头文字D頭文字D(2005)</strong></div>            <div class="douban-card-item"><span>导演: </span><span>刘伟强/麦兆辉</span></div>            <div class="douban-card-item"><span>主演: </span><span>周杰伦/陈冠希</span></div>            <div class="douban-card-item"><span>上映时间: </span><span>2005-06-23(中国大陆/中国香港)</span></div>            <div class="douban-card-item"><span>评分: </span><span>7.7</span></div>        </div>    </a></div><style>    .douban-card-block {    display: flex;    justify-content: center;    align-items: center;    width: 100%;    max-height: 400px;}.douban-card {    display: flex;    margin: 30px 10px;    padding: 15px;    border-radius: 15px;    position: relative;    justify-content: center;    align-items: center;    overflow: hidden;    color: antiquewhite;    text-decoration: none;}.douban-card:hover {    text-decoration: none;}.douban-card-bgimg {    position: absolute;    width: 115%;    height: 115%;    filter: blur(15px) brightness(0.6);    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-img {    position: relative;    height: 130px;    width: 80px;    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-left:hover .douban-card-img {    filter: blur(5px) brightness(0.6);    transform: perspective(800px) rotateX(180deg);}.douban-card-left .douban-card-img {    transition: all 500ms ease;}.douban-card-left {    position: relative;    display: flex;    flex-direction: column;    align-items: center;}.douban-card-left .douban-card-status {    height: 130px;    width: 80px;    text-align: center;    font-weight: bold;    position: absolute;    left: 0;    top: 30%;    transform: rotateX(180deg);    backface-visibility: hidden;    transition: all 500ms ease;}.douban-card-left:hover .douban-card-status {    transform: perspective(800px) rotateX(0deg);}.douban-card-right {    position: relative;    display: flex;    flex-direction: column;    margin-left: 12px;    font-size: 16px;    font-family: "Courier New", Courier, monospace;    line-height: 1.3;    color: antiquewhite;}.douban-card-item {    margin-top: 4px;}</style><div class="douban-card-block">    <a class="douban-card" href="https://book.douban.com/subject/33457122">        <div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/s/public/s33309978.jpg');">        </div>        <div class="douban-card-left">            <div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/s/public/s33309978.jpg');">            </div>            <div class="douban-card-status">见字如晤</div>        </div>        <div class="douban-card-right" style="line-height: 1.7;">            <div class="douban-card-item"><span>书名: </span><strong>人生海海</strong></div>            <div class="douban-card-item"><span>作者: </span><span>麥家</span></div>            <div class="douban-card-item"><span>出版年份: </span><span>2019-7-1</span></div>            <div class="douban-card-item"><span>评分: </span><span>8.5</span></div>        </div>    </a></div><style>    .douban-card-block {    display: flex;    justify-content: center;    align-items: center;    width: 100%;    max-height: 400px;}.douban-card {    display: flex;    margin: 30px 10px;    padding: 15px;    border-radius: 15px;    position: relative;    justify-content: center;    align-items: center;    overflow: hidden;    color: antiquewhite;    text-decoration: none;}.douban-card:hover {    text-decoration: none;}.douban-card-bgimg {    position: absolute;    width: 115%;    height: 115%;    filter: blur(15px) brightness(0.6);    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-img {    position: relative;    height: 130px;    width: 80px;    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-left:hover .douban-card-img {    filter: blur(5px) brightness(0.6);    transform: perspective(800px) rotateX(180deg);}.douban-card-left .douban-card-img {    transition: all 500ms ease;}.douban-card-left {    position: relative;    display: flex;    flex-direction: column;    align-items: center;}.douban-card-left .douban-card-status {    height: 130px;    width: 80px;    text-align: center;    font-weight: bold;    position: absolute;    left: 0;    top: 30%;    transform: rotateX(180deg);    backface-visibility: hidden;    transition: all 500ms ease;}.douban-card-left:hover .douban-card-status {    transform: perspective(800px) rotateX(0deg);}.douban-card-right {    position: relative;    display: flex;    flex-direction: column;    margin-left: 12px;    font-size: 16px;    font-family: "Courier New", Courier, monospace;    line-height: 1.3;    color: antiquewhite;}.douban-card-item {    margin-top: 4px;}</style><div class="douban-card-block"><a class="douban-card" href="https://music.douban.com/subject/6120125"><div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/m/public/s7056097.jpg');"></div><div class="douban-card-left"><div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/m/public/s7056097.jpg');"></div>            <div class="douban-card-status">余音绕梁</div>        </div><div class="douban-card-right"><div class="douban-card-item"><span>音乐名: </span><strong>我怀念的</strong></div><div class="douban-card-item"><span>表演者: </span><span>孙燕姿</span></div><div class="douban-card-item"><span>发行时间: </span><span>2007-03-09</span></div><div class="douban-card-item"><span>评分: </span><span>9.3</span></div></div></a></div><style>    .douban-card-block {    display: flex;    justify-content: center;    align-items: center;    width: 100%;    max-height: 400px;}.douban-card {    display: flex;    margin: 30px 10px;    padding: 15px;    border-radius: 15px;    position: relative;    justify-content: center;    align-items: center;    overflow: hidden;    color: antiquewhite;    text-decoration: none;}.douban-card:hover {    text-decoration: none;}.douban-card-bgimg {    position: absolute;    width: 115%;    height: 115%;    filter: blur(15px) brightness(0.6);    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-img {    position: relative;    height: 130px;    width: 80px;    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-left:hover .douban-card-img {    filter: blur(5px) brightness(0.6);    transform: perspective(800px) rotateX(180deg);}.douban-card-left .douban-card-img {    transition: all 500ms ease;}.douban-card-left {    position: relative;    display: flex;    flex-direction: column;    align-items: center;}.douban-card-left .douban-card-status {    height: 130px;    width: 80px;    text-align: center;    font-weight: bold;    position: absolute;    left: 0;    top: 30%;    transform: rotateX(180deg);    backface-visibility: hidden;    transition: all 500ms ease;}.douban-card-left:hover .douban-card-status {    transform: perspective(800px) rotateX(0deg);}.douban-card-right {    position: relative;    display: flex;    flex-direction: column;    margin-left: 12px;    font-size: 16px;    font-family: "Courier New", Courier, monospace;    line-height: 1.3;    color: antiquewhite;}.douban-card-item {    margin-top: 4px;}</style><h3 id="参数阐述"><a href="#参数阐述" class="headerlink" title="参数阐述"></a>参数阐述</h3><ul><li><p>第一项<code>douban</code> 代表插件名</p></li><li><p>第二项可选:<code>movie</code>,<code>book</code>,<code>music</code></p></li><li><p>第三项请填入对应的<code>id</code>例如:</p></li></ul><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/2020070821522816eaefa.png" alt=""></p><p>填写subject后面的那串数字就好</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="Github项目地址"><a href="#Github项目地址" class="headerlink" title="Github项目地址"></a>Github项目地址</h2><p>github地址: <a href="https://github.com/TankNee/hexo-douban-card">https://github.com/TankNee/hexo-douban-card</a></p><blockquote><p>如果可以的话,希望你能给我一个star⭐</p></blockquote><p>npm地址: <a href="https://www.npmjs.com/package/hexo-douban-card">https://www.npmjs.com/package/hexo-douban-card</a></p><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><div class="douban-card-block">    <a class="douban-card" href="https://movie.douban.com/subject/1329562">        <div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2171302998.jpg');"></div>        <div class="douban-card-left">            <div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2171302998.jpg');"></div>            <div class="douban-card-status">灯影绰约</div>        </div>        <div class="douban-card-right">            <div class="douban-card-item"><span>电影名: </span><strong>头文字D頭文字D(2005)</strong></div>            <div class="douban-card-item"><span>导演: </span><span>刘伟强/麦兆辉</span></div>            <div class="douban-card-item"><span>主演: </span><span>周杰伦/陈冠希</span></div>            <div class="douban-card-item"><span>上映时间: </span><span>2005-06-23(中国大陆/中国香港)</span></div>            <div class="douban-card-item"><span>评分: </span><span>7.7</span></div>        </div>    </a></div><style>    .douban-card-block {    display: flex;    justify-content: center;    align-items: center;    width: 100%;    max-height: 400px;}.douban-card {    display: flex;    margin: 30px 10px;    padding: 15px;    border-radius: 15px;    position: relative;    justify-content: center;    align-items: center;    overflow: hidden;    color: antiquewhite;    text-decoration: none;}.douban-card:hover {    text-decoration: none;}.douban-card-bgimg {    position: absolute;    width: 115%;    height: 115%;    filter: blur(15px) brightness(0.6);    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-img {    position: relative;    height: 130px;    width: 80px;    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-left:hover .douban-card-img {    filter: blur(5px) brightness(0.6);    transform: perspective(800px) rotateX(180deg);}.douban-card-left .douban-card-img {    transition: all 500ms ease;}.douban-card-left {    position: relative;    display: flex;    flex-direction: column;    align-items: center;}.douban-card-left .douban-card-status {    height: 130px;    width: 80px;    text-align: center;    font-weight: bold;    position: absolute;    left: 0;    top: 30%;    transform: rotateX(180deg);    backface-visibility: hidden;    transition: all 500ms ease;}.douban-card-left:hover .douban-card-status {    transform: perspective(800px) rotateX(0deg);}.douban-card-right {    position: relative;    display: flex;    flex-direction: column;    margin-left: 12px;    font-size: 16px;    font-family: "Courier New", Courier, monospace;    line-height: 1.3;    color: antiquewhite;}.douban-card-item {    margin-top: 4px;}</style><div class="douban-card-block">    <a class="douban-card" href="https://book.douban.com/subject/33457122">        <div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/s/public/s33309978.jpg');">        </div>        <div class="douban-card-left">            <div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/s/public/s33309978.jpg');">            </div>            <div class="douban-card-status">见字如晤</div>        </div>        <div class="douban-card-right" style="line-height: 1.7;">            <div class="douban-card-item"><span>书名: </span><strong>人生海海</strong></div>            <div class="douban-card-item"><span>作者: </span><span>麥家</span></div>            <div class="douban-card-item"><span>出版年份: </span><span>2019-7-1</span></div>            <div class="douban-card-item"><span>评分: </span><span>8.6</span></div>        </div>    </a></div><style>    .douban-card-block {    display: flex;    justify-content: center;    align-items: center;    width: 100%;    max-height: 400px;}.douban-card {    display: flex;    margin: 30px 10px;    padding: 15px;    border-radius: 15px;    position: relative;    justify-content: center;    align-items: center;    overflow: hidden;    color: antiquewhite;    text-decoration: none;}.douban-card:hover {    text-decoration: none;}.douban-card-bgimg {    position: absolute;    width: 115%;    height: 115%;    filter: blur(15px) brightness(0.6);    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-img {    position: relative;    height: 130px;    width: 80px;    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-left:hover .douban-card-img {    filter: blur(5px) brightness(0.6);    transform: perspective(800px) rotateX(180deg);}.douban-card-left .douban-card-img {    transition: all 500ms ease;}.douban-card-left {    position: relative;    display: flex;    flex-direction: column;    align-items: center;}.douban-card-left .douban-card-status {    height: 130px;    width: 80px;    text-align: center;    font-weight: bold;    position: absolute;    left: 0;    top: 30%;    transform: rotateX(180deg);    backface-visibility: hidden;    transition: all 500ms ease;}.douban-card-left:hover .douban-card-status {    transform: perspective(800px) rotateX(0deg);}.douban-card-right {    position: relative;    display: flex;    flex-direction: column;    margin-left: 12px;    font-size: 16px;    font-family: "Courier New", Courier, monospace;    line-height: 1.3;    color: antiquewhite;}.douban-card-item {    margin-top: 4px;}</style><div class="douban-card-block"><a class="douban-card" href="https://music.douban.com/subject/6120125"><div class="douban-card-bgimg" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/m/public/s7056097.jpg');"></div><div class="douban-card-left"><div class="douban-card-img" style="background-image: url('https://images.weserv.nl/?url=https://img1.doubanio.com/view/subject/m/public/s7056097.jpg');"></div>            <div class="douban-card-status">余音绕梁</div>        </div><div class="douban-card-right"><div class="douban-card-item"><span>音乐名: </span><strong>我怀念的</strong></div><div class="douban-card-item"><span>表演者: </span><span>孙燕姿</span></div><div class="douban-card-item"><span>发行时间: </span><span>2007-03-09</span></div><div class="douban-card-item"><span>评分: </span><span>9.4</span></div></div></a></div><style>    .douban-card-block {    display: flex;    justify-content: center;    align-items: center;    width: 100%;    max-height: 400px;}.douban-card {    display: flex;    margin: 30px 10px;    padding: 15px;    border-radius: 15px;    position: relative;    justify-content: center;    align-items: center;    overflow: hidden;    color: antiquewhite;    text-decoration: none;}.douban-card:hover {    text-decoration: none;}.douban-card-bgimg {    position: absolute;    width: 115%;    height: 115%;    filter: blur(15px) brightness(0.6);    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-img {    position: relative;    height: 130px;    width: 80px;    background-size: 100%;    background-position: center;    background-repeat: no-repeat;}.douban-card-left:hover .douban-card-img {    filter: blur(5px) brightness(0.6);    transform: perspective(800px) rotateX(180deg);}.douban-card-left .douban-card-img {    transition: all 500ms ease;}.douban-card-left {    position: relative;    display: flex;    flex-direction: column;    align-items: center;}.douban-card-left .douban-card-status {    height: 130px;    width: 80px;    text-align: center;    font-weight: bold;    position: absolute;    left: 0;    top: 30%;    transform: rotateX(180deg);    backface-visibility: hidden;    transition: all 500ms ease;}.douban-card-left:hover .douban-card-status {    transform: perspective(800px) rotateX(0deg);}.douban-card-right {    position: relative;    display: flex;    flex-direction: column;    margin-left: 12px;    font-size: 16px;    font-family: "Courier New", Courier, monospace;    line-height: 1.3;    color: antiquewhite;}.douban-card-item {    margin-top: 4px;}</style><h3 id="参数阐述"><a href="#参数阐述" class="headerlink" title="参数阐述"></a>参数阐述</h3><ul><li><p>第一项<code>douban</code> 代表插件名</p></li><li><p>第二项可选:<code>movie</code>,<code>book</code>,<code>music</code></p></li><li><p>第三项请填入对应的<code>id</code>例如:</p></li></ul><p><img src="https://img.tanknee.cn/blogpicbed/2020/07/2020070821522816eaefa.png" alt=""></p><p>填写subject后面的那串数字就好</p>]]></content>
       
       
       
@@ -236,9 +259,9 @@
       
         <tags>
             
-            <tag> 文件 </tag>
-            
             <tag> 网站 </tag>
+            
+            <tag> 文件 </tag>
             
             <tag> typecho </tag>
             
@@ -293,19 +316,19 @@
             
             <tag> 字符 </tag>
             
-            <tag> int </tag>
-            
             <tag> length </tag>
             
             <tag> node </tag>
             
-            <tag> line </tag>
+            <tag> int </tag>
             
             <tag> arr </tag>
             
             <tag> this </tag>
             
             <tag> flag </tag>
+            
+            <tag> line </tag>
             
             <tag> o </tag>
             
@@ -350,9 +373,9 @@
             
             <tag> Java </tag>
             
-            <tag> int </tag>
-            
             <tag> length </tag>
+            
+            <tag> int </tag>
             
             <tag> this </tag>
             
@@ -391,9 +414,9 @@
             
             <tag> 算法 </tag>
             
-            <tag> int </tag>
-            
             <tag> length </tag>
+            
+            <tag> int </tag>
             
             <tag> 数据 </tag>
             
@@ -434,13 +457,13 @@
             
             <tag> 算法 </tag>
             
-            <tag> int </tag>
-            
-            <tag> temp </tag>
-            
             <tag> length </tag>
             
+            <tag> int </tag>
+            
             <tag> arr </tag>
+            
+            <tag> temp </tag>
             
             <tag> 排序 </tag>
             
@@ -506,19 +529,19 @@
             
             <tag> 服务器 </tag>
             
+            <tag> 网站 </tag>
+            
             <tag> 对象 </tag>
             
             <tag> 算法 </tag>
-            
-            <tag> 网站 </tag>
             
             <tag> 字符 </tag>
             
             <tag> 操作 </tag>
             
-            <tag> 疫情 </tag>
-            
             <tag> 页面 </tag>
+            
+            <tag> 疫情 </tag>
             
             <tag> javascript </tag>
             
@@ -555,6 +578,8 @@
             
             <tag> 参数 </tag>
             
+            <tag> line </tag>
+            
             <tag> linecount </tag>
             
             <tag> echo </tag>
@@ -562,8 +587,6 @@
             <tag> bin </tag>
             
             <tag> 行计数器 </tag>
-            
-            <tag> line </tag>
             
         </tags>
       
@@ -594,8 +617,6 @@
             
             <tag> 地址 </tag>
             
-            <tag> 参数 </tag>
-            
             <tag> addtime </tag>
             
             <tag> curedcount </tag>
@@ -603,6 +624,8 @@
             <tag> deadcount </tag>
             
             <tag> cityname </tag>
+            
+            <tag> 参数 </tag>
             
         </tags>
       
@@ -629,11 +652,11 @@
             
             <tag> 服务器 </tag>
             
+            <tag> 文件 </tag>
+            
             <tag> 对象 </tag>
             
             <tag> 列表 </tag>
-            
-            <tag> 文件 </tag>
             
             <tag> 汇编 </tag>
             
@@ -643,13 +666,13 @@
             
             <tag> 操作 </tag>
             
-            <tag> length </tag>
-            
-            <tag> node </tag>
-            
             <tag> 图床 </tag>
             
             <tag> markdown </tag>
+            
+            <tag> length </tag>
+            
+            <tag> node </tag>
             
             <tag> 时候 </tag>
             
@@ -725,11 +748,11 @@
       
         <tags>
             
+            <tag> 文件 </tag>
+            
             <tag> 节点 </tag>
             
             <tag> 算法 </tag>
-            
-            <tag> 文件 </tag>
             
             <tag> 字符 </tag>
             
@@ -737,13 +760,13 @@
             
             <tag> 变量 </tag>
             
-            <tag> int </tag>
-            
-            <tag> temp </tag>
-            
             <tag> length </tag>
             
             <tag> node </tag>
+            
+            <tag> int </tag>
+            
+            <tag> temp </tag>
             
             <tag> tree- </tag>
             
@@ -774,19 +797,19 @@
             
             <tag> 服务器 </tag>
             
-            <tag> 文件 </tag>
-            
-            <tag> server </tag>
-            
             <tag> 网站 </tag>
+            
+            <tag> 文件 </tag>
             
             <tag> 域名 </tag>
             
             <tag> 宝塔 </tag>
             
-            <tag> ssl </tag>
+            <tag> server </tag>
             
             <tag> 地址 </tag>
+            
+            <tag> ssl </tag>
             
             <tag> gitea </tag>
             
@@ -839,15 +862,15 @@
             
             <tag> 变量 </tag>
             
-            <tag> int </tag>
-            
-            <tag> temp </tag>
-            
             <tag> length </tag>
             
             <tag> node </tag>
             
+            <tag> int </tag>
+            
             <tag> arr </tag>
+            
+            <tag> temp </tag>
             
         </tags>
       
@@ -1030,13 +1053,13 @@
             
             <tag> 创建 </tag>
             
-            <tag> scode </tag>
-            
-            <tag> Java </tag>
-            
             <tag> abc </tag>
             
+            <tag> scode </tag>
+            
             <tag> string </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -1129,9 +1152,9 @@
       
         <tags>
             
-            <tag> 文件 </tag>
-            
             <tag> 网站 </tag>
+            
+            <tag> 文件 </tag>
             
             <tag> 宝塔 </tag>
             
@@ -1164,9 +1187,9 @@
       
         <tags>
             
-            <tag> 函数 </tag>
-            
             <tag> 文件 </tag>
+            
+            <tag> 函数 </tag>
             
             <tag> img_src </tag>
             
@@ -1273,15 +1296,17 @@
             
             <tag> 服务器 </tag>
             
-            <tag> 文件 </tag>
-            
-            <tag> mysql </tag>
-            
             <tag> 网站 </tag>
+            
+            <tag> 文件 </tag>
             
             <tag> wordpress </tag>
             
             <tag> 数据库 </tag>
+            
+            <tag> mysql </tag>
+            
+            <tag> ssl </tag>
             
             <tag> option_id </tag>
             
@@ -1290,8 +1315,6 @@
             <tag> where </tag>
             
             <tag> select </tag>
-            
-            <tag> ssl </tag>
             
         </tags>
       
@@ -1355,9 +1378,9 @@
       
         <tags>
             
-            <tag> 文件 </tag>
-            
             <tag> 网站 </tag>
+            
+            <tag> 文件 </tag>
             
             <tag> 域名 </tag>
             
