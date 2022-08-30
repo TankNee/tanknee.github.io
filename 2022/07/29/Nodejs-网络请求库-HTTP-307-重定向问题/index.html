@@ -1,5 +1,96 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><script async defer data-website-id="736fdcdf-b838-4814-978f-eb419e113fdd" src="https://dashboard.tanknee.cn/umami.js"></script><script src="/freecdn-loader.min.js"></script><meta><title>Nodejs 网络请求库 HTTP 307 重定向问题 - 归舟棹远</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="归舟棹远"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="归舟棹远"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="起因是我要做一个网站的登录操作模拟，之前尝试的时候都没啥问题，一个 POST 请求就全部搞定了，也没啥花里胡哨的东西，请求载荷里带上账号密码和时间戳，稳稳当当就能拿到登录 cookie，可惜好景不长，前几天的时候发现这个接口出了点小变化，即直接使用 POST 给接口发请求，收到的 Response 的状态码为 307，这可把我难住了，因为 3XX 的状态码理论上都是库、浏览器自动处理的，不应该作为"><meta property="og:type" content="blog"><meta property="og:title" content="Nodejs 网络请求库 HTTP 307 重定向问题"><meta property="og:url" content="https://www.tanknee.cn/2022/07/29/Nodejs-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93-HTTP-307-%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/"><meta property="og:site_name" content="归舟棹远"><meta property="og:description" content="起因是我要做一个网站的登录操作模拟，之前尝试的时候都没啥问题，一个 POST 请求就全部搞定了，也没啥花里胡哨的东西，请求载荷里带上账号密码和时间戳，稳稳当当就能拿到登录 cookie，可惜好景不长，前几天的时候发现这个接口出了点小变化，即直接使用 POST 给接口发请求，收到的 Response 的状态码为 307，这可把我难住了，因为 3XX 的状态码理论上都是库、浏览器自动处理的，不应该作为"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://img.tanknee.cn/blogpicbed/2022/07/29/22072962e3d33fc90bb.png/webp"><meta property="article:published_time" content="2022-07-29T03:31:14.000Z"><meta property="article:modified_time" content="2022-07-29T12:33:46.004Z"><meta property="article:author" content="TankNee"><meta property="article:tag" content="http"><meta property="article:tag" content="Nodejs"><meta property="article:tag" content="项目"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://img.tanknee.cn/blogpicbed/2022/07/29/22072962e3d33fc90bb.png/webp"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.tanknee.cn/2022/07/29/Nodejs-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93-HTTP-307-%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/"},"headline":"Nodejs 网络请求库 HTTP 307 重定向问题","image":[],"datePublished":"2022-07-29T03:31:14.000Z","dateModified":"2022-07-29T12:33:46.004Z","author":{"@type":"Person","name":"TankNee"},"publisher":{"@type":"Organization","name":"归舟棹远","logo":{"@type":"ImageObject","url":"https://www.tanknee.cn/img/logo.svg"}},"description":"起因是我要做一个网站的登录操作模拟，之前尝试的时候都没啥问题，一个 POST 请求就全部搞定了，也没啥花里胡哨的东西，请求载荷里带上账号密码和时间戳，稳稳当当就能拿到登录 cookie，可惜好景不长，前几天的时候发现这个接口出了点小变化，即直接使用 POST 给接口发请求，收到的 Response 的状态码为 307，这可把我难住了，因为 3XX 的状态码理论上都是库、浏览器自动处理的，不应该作为"}</script><link rel="canonical" href="https://www.tanknee.cn/2022/07/29/Nodejs-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93-HTTP-307-%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><script async defer data-website-id="736fdcdf-b838-4814-978f-eb419e113fdd" src="https://dashboard.tanknee.cn/umami.js"></script><script src="/freecdn-loader.min.js"></script><meta><title>Nodejs 网络请求库 HTTP 307 重定向问题 - 归舟棹远</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="归舟棹远"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="归舟棹远"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="起因是我要做一个网站的登录操作模拟，之前尝试的时候都没啥问题，一个 POST 请求就全部搞定了，也没啥花里胡哨的东西，请求载荷里带上账号密码和时间戳，稳稳当当就能拿到登录 cookie，可惜好景不长，前几天的时候发现这个接口出了点小变化，即直接使用 POST 给接口发请求，收到的 Response 的状态码为 307，这可把我难住了，因为 3XX 的状态码理论上都是库、浏览器自动处理的，不应该作为"><meta property="og:type" content="blog"><meta property="og:title" content="Nodejs 网络请求库 HTTP 307 重定向问题"><meta property="og:url" content="https://www.tanknee.cn/2022/07/29/Nodejs-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93-HTTP-307-%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/"><meta property="og:site_name" content="归舟棹远"><meta property="og:description" content="起因是我要做一个网站的登录操作模拟，之前尝试的时候都没啥问题，一个 POST 请求就全部搞定了，也没啥花里胡哨的东西，请求载荷里带上账号密码和时间戳，稳稳当当就能拿到登录 cookie，可惜好景不长，前几天的时候发现这个接口出了点小变化，即直接使用 POST 给接口发请求，收到的 Response 的状态码为 307，这可把我难住了，因为 3XX 的状态码理论上都是库、浏览器自动处理的，不应该作为"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://img.tanknee.cn/blogpicbed/2022/07/29/22072962e3d33fc90bb.png/webp"><meta property="article:published_time" content="2022-07-29T03:31:14.000Z"><meta property="article:modified_time" content="2022-07-29T12:33:46.004Z"><meta property="article:author" content="TankNee"><meta property="article:tag" content="http"><meta property="article:tag" content="Nodejs"><meta property="article:tag" content="项目"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://img.tanknee.cn/blogpicbed/2022/07/29/22072962e3d33fc90bb.png/webp"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.tanknee.cn/2022/07/29/Nodejs-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93-HTTP-307-%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/"},"headline":"Nodejs 网络请求库 HTTP 307 重定向问题","image":[],"datePublished":"2022-07-29T03:31:14.000Z","dateModified":"2022-07-29T12:33:46.004Z","author":{"@type":"Person","name":"TankNee"},"publisher":{"@type":"Organization","name":"归舟棹远","logo":{"@type":"ImageObject","url":"https://www.tanknee.cn/img/logo.svg"}},"description":"起因是我要做一个网站的登录操作模拟，之前尝试的时候都没啥问题，一个 POST 请求就全部搞定了，也没啥花里胡哨的东西，请求载荷里带上账号密码和时间戳，稳稳当当就能拿到登录 cookie，可惜好景不长，前几天的时候发现这个接口出了点小变化，即直接使用 POST 给接口发请求，收到的 Response 的状态码为 307，这可把我难住了，因为 3XX 的状态码理论上都是库、浏览器自动处理的，不应该作为"}</script><link rel="canonical" href="https://www.tanknee.cn/2022/07/29/Nodejs-%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%BA%93-HTTP-307-%E9%87%8D%E5%AE%9A%E5%90%91%E9%97%AE%E9%A2%98/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {

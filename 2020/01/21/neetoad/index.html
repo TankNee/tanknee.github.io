@@ -1,5 +1,96 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><script async defer data-website-id="736fdcdf-b838-4814-978f-eb419e113fdd" src="https://dashboard.tanknee.cn/umami.js"></script><script src="/freecdn-loader.min.js"></script><meta><title>Neeto - 我所期待的MD编辑器 - 归舟棹远</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="归舟棹远"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="归舟棹远"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="或许，这个简陋的项目更应该被称为Electron &amp;amp;&amp;amp; JavaScript 的最佳实践！  Neeto的起源最初这个项目是基于Steve Kinney的 《Electron跨平台开发实战》 一书第三章的Fire Sale项目。这本书写的挺好，通俗易懂，并且比较有借鉴价值。本来的计划是抛开那本书重新构建Neeto的架构，但有些代码我也不想做重复工作，所以就没有另开一个工程。"><meta property="og:type" content="blog"><meta property="og:title" content="Neeto - 我所期待的MD编辑器"><meta property="og:url" content="https://www.tanknee.cn/2020/01/21/neetoad/"><meta property="og:site_name" content="归舟棹远"><meta property="og:description" content="或许，这个简陋的项目更应该被称为Electron &amp;amp;&amp;amp; JavaScript 的最佳实践！  Neeto的起源最初这个项目是基于Steve Kinney的 《Electron跨平台开发实战》 一书第三章的Fire Sale项目。这本书写的挺好，通俗易懂，并且比较有借鉴价值。本来的计划是抛开那本书重新构建Neeto的架构，但有些代码我也不想做重复工作，所以就没有另开一个工程。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://pic.tanknee.cn/blogpicbed/2020/01/20200121fafdbc463733c.png/webp"><meta property="article:published_time" content="2020-01-21T13:16:27.000Z"><meta property="article:modified_time" content="2022-06-18T01:56:44.224Z"><meta property="article:author" content="TankNee"><meta property="article:tag" content="对象"><meta property="article:tag" content="列表"><meta property="article:tag" content="服务器"><meta property="article:tag" content="文件"><meta property="article:tag" content="汇编"><meta property="article:tag" content="类型"><meta property="article:tag" content="按钮"><meta property="article:tag" content="操作"><meta property="article:tag" content="图床"><meta property="article:tag" content="markdown"><meta property="article:tag" content="length"><meta property="article:tag" content="node"><meta property="article:tag" content="时候"><meta property="article:tag" content="neeto"><meta property="article:tag" content="file"><meta property="article:tag" content="typora"><meta property="article:tag" content="图片"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://pic.tanknee.cn/blogpicbed/2020/01/20200121fafdbc463733c.png/webp"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.tanknee.cn/2020/01/21/neetoad/"},"headline":"Neeto - 我所期待的MD编辑器","image":[],"datePublished":"2020-01-21T13:16:27.000Z","dateModified":"2022-06-18T01:56:44.224Z","author":{"@type":"Person","name":"TankNee"},"publisher":{"@type":"Organization","name":"归舟棹远","logo":{"@type":"ImageObject","url":"https://www.tanknee.cn/img/logo.svg"}},"description":"或许，这个简陋的项目更应该被称为Electron &amp;&amp; JavaScript 的最佳实践！  Neeto的起源最初这个项目是基于Steve Kinney的 《Electron跨平台开发实战》 一书第三章的Fire Sale项目。这本书写的挺好，通俗易懂，并且比较有借鉴价值。本来的计划是抛开那本书重新构建Neeto的架构，但有些代码我也不想做重复工作，所以就没有另开一个工程。"}</script><link rel="canonical" href="https://www.tanknee.cn/2020/01/21/neetoad/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><script async defer data-website-id="736fdcdf-b838-4814-978f-eb419e113fdd" src="https://dashboard.tanknee.cn/umami.js"></script><script src="/freecdn-loader.min.js"></script><meta><title>Neeto - 我所期待的MD编辑器 - 归舟棹远</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="归舟棹远"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="归舟棹远"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="或许，这个简陋的项目更应该被称为Electron &amp;amp;&amp;amp; JavaScript 的最佳实践！  Neeto的起源最初这个项目是基于Steve Kinney的 《Electron跨平台开发实战》 一书第三章的Fire Sale项目。这本书写的挺好，通俗易懂，并且比较有借鉴价值。本来的计划是抛开那本书重新构建Neeto的架构，但有些代码我也不想做重复工作，所以就没有另开一个工程。"><meta property="og:type" content="blog"><meta property="og:title" content="Neeto - 我所期待的MD编辑器"><meta property="og:url" content="https://www.tanknee.cn/2020/01/21/neetoad/"><meta property="og:site_name" content="归舟棹远"><meta property="og:description" content="或许，这个简陋的项目更应该被称为Electron &amp;amp;&amp;amp; JavaScript 的最佳实践！  Neeto的起源最初这个项目是基于Steve Kinney的 《Electron跨平台开发实战》 一书第三章的Fire Sale项目。这本书写的挺好，通俗易懂，并且比较有借鉴价值。本来的计划是抛开那本书重新构建Neeto的架构，但有些代码我也不想做重复工作，所以就没有另开一个工程。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://pic.tanknee.cn/blogpicbed/2020/01/20200121fafdbc463733c.png/webp"><meta property="article:published_time" content="2020-01-21T13:16:27.000Z"><meta property="article:modified_time" content="2022-06-18T01:56:44.224Z"><meta property="article:author" content="TankNee"><meta property="article:tag" content="服务器"><meta property="article:tag" content="文件"><meta property="article:tag" content="汇编"><meta property="article:tag" content="对象"><meta property="article:tag" content="列表"><meta property="article:tag" content="类型"><meta property="article:tag" content="按钮"><meta property="article:tag" content="length"><meta property="article:tag" content="操作"><meta property="article:tag" content="node"><meta property="article:tag" content="图床"><meta property="article:tag" content="markdown"><meta property="article:tag" content="时候"><meta property="article:tag" content="neeto"><meta property="article:tag" content="file"><meta property="article:tag" content="typora"><meta property="article:tag" content="图片"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://pic.tanknee.cn/blogpicbed/2020/01/20200121fafdbc463733c.png/webp"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.tanknee.cn/2020/01/21/neetoad/"},"headline":"Neeto - 我所期待的MD编辑器","image":[],"datePublished":"2020-01-21T13:16:27.000Z","dateModified":"2022-06-18T01:56:44.224Z","author":{"@type":"Person","name":"TankNee"},"publisher":{"@type":"Organization","name":"归舟棹远","logo":{"@type":"ImageObject","url":"https://www.tanknee.cn/img/logo.svg"}},"description":"或许，这个简陋的项目更应该被称为Electron &amp;&amp; JavaScript 的最佳实践！  Neeto的起源最初这个项目是基于Steve Kinney的 《Electron跨平台开发实战》 一书第三章的Fire Sale项目。这本书写的挺好，通俗易懂，并且比较有借鉴价值。本来的计划是抛开那本书重新构建Neeto的架构，但有些代码我也不想做重复工作，所以就没有另开一个工程。"}</script><link rel="canonical" href="https://www.tanknee.cn/2020/01/21/neetoad/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/cookieconsent/3.1.1/cookieconsent.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -116,7 +207,7 @@
 <p>最后一些屁话，应该没有人真的会看到这里吧。说真的，大学越活越糊涂我是真的有点难受，学习也整不起来，技术也学不明白，身体也没有很好//PS:本武汉（回来的）人已经14天未见异常了，所以我不是患者！！但是我好像有点感冒…</p>
 </blockquote>
 <h2 id="如果你对Neeto感兴趣"><a href="#如果你对Neeto感兴趣" class="headerlink" title="如果你对Neeto感兴趣"></a>如果你对Neeto感兴趣</h2><p>可以前往<a target="_blank" rel="noopener" href="https://neeto.cn">Neeto官网</a> 查看源码和更多信息，项目已经在GitHub和Gitea开源了，如果可以的话，能为我点个Star吗！！！！<strong>这对我真的很重要</strong>(cxx语气)</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>Neeto - 我所期待的MD编辑器</p><p><a href="https://www.tanknee.cn/2020/01/21/neetoad/">https://www.tanknee.cn/2020/01/21/neetoad/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>TankNee</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>01/21/2020</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>06/18/2022</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%AF%B9%E8%B1%A1/">对象</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%88%97%E8%A1%A8/">列表</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%96%87%E4%BB%B6/">文件</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%B1%87%E7%BC%96/">汇编</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%B1%BB%E5%9E%8B/">类型</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%8C%89%E9%92%AE/">按钮</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%93%8D%E4%BD%9C/">操作</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BE%E5%BA%8A/">图床</a><a class="link-muted mr-2" rel="tag" href="/tags/markdown/">markdown</a><a class="link-muted mr-2" rel="tag" href="/tags/length/">length</a><a class="link-muted mr-2" rel="tag" href="/tags/node/">node</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%97%B6%E5%80%99/">时候</a><a class="link-muted mr-2" rel="tag" href="/tags/neeto/">neeto</a><a class="link-muted mr-2" rel="tag" href="/tags/file/">file</a><a class="link-muted mr-2" rel="tag" href="/tags/typora/">typora</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BE%E7%89%87/">图片</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://img.tanknee.cn/profile/AliPay.jpg" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://img.tanknee.cn/profile/wechatPay.jpg" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/01/29/ncov/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">WuHan-nCoV-2019疫情数据接口</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/01/09/neeto/"><span class="level-item">Neeto - 为补全缺憾而生的Markdown编辑器</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content" id="valine-thread"></div><script src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/valine/1.4.16/Valine.min.js"></script><script>new Valine({
+</div><div class="article-licensing box"><div class="licensing-title"><p>Neeto - 我所期待的MD编辑器</p><p><a href="https://www.tanknee.cn/2020/01/21/neetoad/">https://www.tanknee.cn/2020/01/21/neetoad/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>TankNee</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>01/21/2020</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>06/18/2022</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%96%87%E4%BB%B6/">文件</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%B1%87%E7%BC%96/">汇编</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%AF%B9%E8%B1%A1/">对象</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%88%97%E8%A1%A8/">列表</a><a class="link-muted mr-2" rel="tag" href="/tags/%E7%B1%BB%E5%9E%8B/">类型</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%8C%89%E9%92%AE/">按钮</a><a class="link-muted mr-2" rel="tag" href="/tags/length/">length</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%93%8D%E4%BD%9C/">操作</a><a class="link-muted mr-2" rel="tag" href="/tags/node/">node</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BE%E5%BA%8A/">图床</a><a class="link-muted mr-2" rel="tag" href="/tags/markdown/">markdown</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%97%B6%E5%80%99/">时候</a><a class="link-muted mr-2" rel="tag" href="/tags/neeto/">neeto</a><a class="link-muted mr-2" rel="tag" href="/tags/file/">file</a><a class="link-muted mr-2" rel="tag" href="/tags/typora/">typora</a><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BE%E7%89%87/">图片</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://img.tanknee.cn/profile/AliPay.jpg" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://img.tanknee.cn/profile/wechatPay.jpg" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/01/29/ncov/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">WuHan-nCoV-2019疫情数据接口</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/01/09/neeto/"><span class="level-item">Neeto - 为补全缺憾而生的Markdown编辑器</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content" id="valine-thread"></div><script src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/valine/1.4.16/Valine.min.js"></script><script>new Valine({
             el: '#valine-thread',
             appId: "tJv0hJ0qmpEgSvlqwrqQbBL9-gzGzoHsz",
             appKey: "YQyMpfNKSaHjrlBu3kMjwAo1",
